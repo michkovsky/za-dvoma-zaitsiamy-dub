@@ -1,14 +1,17 @@
 """Inventory resources without importing heavy ML libraries or installing anything."""
 import ctypes
+import argparse
 import datetime
 import importlib.util
 import json
 import os
 import platform
+from pathlib import Path
 import shutil
 import subprocess
 import sys
-from common import ROOT
+import tempfile
+from common import ROOT, external_work_directory, protect_source_directories
 
 def probe(command):
     try:
@@ -20,7 +23,15 @@ def probe(command):
         return {'command': command, 'error': str(error)}
 
 def main():
-    target = ROOT/'local/runtime.json'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, help='Report JSON path; overrides DUB_WORK_DIR.')
+    args = parser.parse_args()
+    work = external_work_directory() if args.output is None else None
+    target = args.output if args.output is not None else (
+        work/'reports/runtime.json' if work else ROOT/'local/runtime.json')
+    target = protect_source_directories(target, allow_checkout=args.output is None and work is None)
+    if target.suffix.lower() != '.json':
+        raise ValueError('Diagnostic output must be a JSON file.')
     target.parent.mkdir(parents=True, exist_ok=True)
     flags = dict.fromkeys(['sse4_2','avx','avx2','fma','f16c'])
     cpu_name = platform.processor()
@@ -65,11 +76,20 @@ def main():
         'python':sys.version,'python_executable':sys.executable,
         'cpu':{'name':cpu_name,'logical_processors':os.cpu_count(),
                'features':flags,'optional_cpuinfo_probe':extra},
-        'memory':memory,'workspace_disk':shutil.disk_usage(ROOT)._asdict(),
+        'memory':memory,'workspace_disk':shutil.disk_usage(target.parent)._asdict(),
         'gpu_inventory':gpu,'tools':tools,
         'qualification':'Inventory only. null means unknown. Test each actual operation separately.'}
-    target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print('Saved local/runtime.json. CPU instruction availability:',flags)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8',
+                dir=target.parent, prefix='.runtime-', suffix='.tmp', delete=False) as handle:
+            temporary = Path(handle.name)
+            handle.write(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+        os.replace(temporary, target)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+    print(f'Saved {target}. CPU instruction availability:',flags)
     if any(value is None for value in flags.values()):
         print('Some CPU features are unknown; verify before selecting binaries that require them.')
 

@@ -1,4 +1,5 @@
 {
   "video": "C:/path/to/original-film.mp4",
-  "audio": "C:/path/to/ukrainian-audio.webm"
+  "audio": "C:/path/to/ukrainian-audio.webm",
+  "work_dir": ""
 }
