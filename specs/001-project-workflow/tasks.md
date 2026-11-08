@@ -73,3 +73,14 @@ Initial author convergence found two remaining evidence gaps in quickstart.md; i
 
 - [x] T017 Record the actual draft PR URL and branch in specs/001-project-workflow/quickstart.md per FR-012 (partial).
 - [x] T018 Record the observed remote validation result and main-baseline check in specs/001-project-workflow/quickstart.md per FR-011, SC-003 (partial).
+
+
+## Phase 8: Review corrections
+
+The earlier convergence result applies to the pre-review head. Copilot exposed additional FR-006 safety cases.
+
+- [x] T019 Preserve existing spec.md, FR/SC IDs and clarifications in .agents/skills/speckit-specify/SKILL.md per FR-006 (partial).
+- [x] T020 Guard read-only prerequisite context using pipeline/speckit_readonly.py and analyze/converge skills per FR-006 (contradicts).
+- [x] T021 Remove checklist's plan prerequisite in .agents/skills/speckit-checklist/SKILL.md per FR-006 (partial).
+- [x] T022 Record Copilot review dispositions and reproducible .specify/patches/codex-safety.patch per FR-008, FR-009.
+- [x] T023 Add six real feature-context regression scenarios in tests/test_speckit_safety.py, execute them locally and include in .github/workflows/validate.yml per FR-006, FR-011.

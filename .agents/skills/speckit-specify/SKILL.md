@@ -93,8 +93,9 @@ Given that feature description, do this:
    **Create the directory and spec file**:
    - Run `python .specify/scripts/python/resolve_template.py spec-template --json` from the repository root and parse `TEMPLATE_CONTENT` as the active `spec-template`. The shared resolver composes project overrides, preset layers, and extension layers over the core template, including `append`, `prepend`, and `wrap` strategies. If it fails, stop and report the resolution error; do not continue with only one contributing template layer.
    - `mkdir -p SPECIFY_FEATURE_DIRECTORY`
-   - Write `TEMPLATE_CONTENT` to `SPECIFY_FEATURE_DIRECTORY/spec.md` as the starting point. Do not copy a template file from disk instead: when a preset composes `spec-template`, no single file holds the full template.
-   - Set `SPEC_FILE` to `SPECIFY_FEATURE_DIRECTORY/spec.md`
+   - Set `SPEC_FILE` to `SPECIFY_FEATURE_DIRECTORY/spec.md` and check whether it exists **before writing**.
+   - **New file only**: write resolved `TEMPLATE_CONTENT` as the starting point. Do not copy a single template layer instead of the composed content.
+   - **Existing file**: first read its complete current contents. Do not overwrite it with the template or reset it. Use the resolved template only to check structure; apply only the requested changes while preserving existing requirements, FR/SC IDs, clarifications and unrelated content. If the request does not identify the intended change clearly, ask before editing. New requirements get unused IDs; never renumber existing ones merely to match the template.
    - Persist the resolved path to `.specify/feature.json`:
      ```json
      {
@@ -107,7 +108,7 @@ Given that feature description, do this:
    **IMPORTANT**:
    - You must only create one feature per `$speckit-specify` invocation
    - The spec directory name and the git branch name are independent — they may be the same but that is the user's choice
-   - The spec directory and file are always created by this command, never by the hook
+   - This command creates the directory/file only when new, or updates the existing spec without resetting it; the hook never creates the spec.
 
 4. Use `TEMPLATE_CONTENT` to understand required sections.
 

@@ -67,3 +67,8 @@ pipeline/validate.py             # existing check, behavior preserved
 ## Complexity Tracking
 
 No constitution exception. Nine upstream skills and CLI dependencies are required by the adopted framework; no community extension or additional model service is installed. Branch creation and PR publishing use existing Git/gh rather than extra Spec Kit extensions.
+
+
+## Review-driven correction
+
+До FR-006 додано три сценарії безпеки контексту. Мінімальний стандартнобібліотечний pipeline/speckit_readonly.py задає SPECIFY_FEATURE_NO_PERSIST=1 лише дочірньому процесу й делегує upstream checker без послаблення передумов. Для checklist використовуються paths-only плюс окремий resolver. Збереження spec.md при повторному specify задається виправленою агентною інструкцією. Чотири локальні зміни skills збережені git-патчем; core upstream scripts не змінюються. Шість subprocess regression tests запускаються локально та в CI. Окремий звіт рецензії з рішеннями — reviews/copilot.md.

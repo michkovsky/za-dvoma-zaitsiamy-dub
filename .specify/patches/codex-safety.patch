@@ -1,0 +1,67 @@
+diff --git a/.agents/skills/speckit-analyze/SKILL.md b/.agents/skills/speckit-analyze/SKILL.md
+index e734ed1..910fc8b 100644
+--- a/.agents/skills/speckit-analyze/SKILL.md
++++ b/.agents/skills/speckit-analyze/SKILL.md
+@@ -66,7 +66,7 @@ Identify inconsistencies, duplications, ambiguities, and underspecified items ac
+ 
+ ### 1. Initialize Analysis Context
+ 
+-Run `python .specify/scripts/python/check_prerequisites.py --json --require-spec --require-tasks --include-tasks` once from repo root and parse JSON for FEATURE_DIR and AVAILABLE_DOCS. Derive absolute paths:
++Run `python pipeline/speckit_readonly.py --json --require-spec --require-tasks --include-tasks` once from repo root (the wrapper sets SPECIFY_FEATURE_NO_PERSIST=1 only in the child environment) and parse JSON for FEATURE_DIR and AVAILABLE_DOCS. Derive absolute paths:
+ 
+ - SPEC = FEATURE_DIR/spec.md
+ - PLAN = FEATURE_DIR/plan.md
+diff --git a/.agents/skills/speckit-checklist/SKILL.md b/.agents/skills/speckit-checklist/SKILL.md
+index 9d9fa61..90112a0 100644
+--- a/.agents/skills/speckit-checklist/SKILL.md
++++ b/.agents/skills/speckit-checklist/SKILL.md
+@@ -84,7 +84,10 @@ You **MUST** consider the user input before proceeding (if not empty).
+ 
+ ## Execution Steps
+ 
+-1. **Setup**: Run `python .specify/scripts/python/check_prerequisites.py --json --template checklist-template` from repo root and parse JSON for FEATURE_DIR, AVAILABLE_DOCS list, and TEMPLATE_CONTENT.
++1. **Setup**: Run `python pipeline/speckit_readonly.py --json --paths-only` from repo root and parse FEATURE_DIR and FEATURE_SPEC. This path lookup does not require plan.md or tasks.md.
++   - Verify that FEATURE_SPEC exists and is non-empty; otherwise stop and report that `$speckit-specify` is required. Do not create or replace spec.md here.
++   - Run `python .specify/scripts/python/resolve_template.py checklist-template --json` separately and use its composed TEMPLATE_CONTENT. Stop if template resolution fails.
++   - Build AVAILABLE_DOCS by inspecting optional plan.md, tasks.md, research.md and other relevant documents in FEATURE_DIR. Absence of plan.md or tasks.md must not block a spec-quality checklist.
+    - All file paths must be absolute.
+    - For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
+ 
+diff --git a/.agents/skills/speckit-converge/SKILL.md b/.agents/skills/speckit-converge/SKILL.md
+index d836eb3..58d15e3 100644
+--- a/.agents/skills/speckit-converge/SKILL.md
++++ b/.agents/skills/speckit-converge/SKILL.md
+@@ -94,7 +94,7 @@ skip constitution checks gracefully rather than failing.
+ 
+ ### 1. Initialize Convergence Context
+ 
+-Run `python .specify/scripts/python/check_prerequisites.py --json --require-spec --require-tasks --include-tasks` once from repo root and parse JSON for FEATURE_DIR and AVAILABLE_DOCS. Derive absolute paths:
++Run `python pipeline/speckit_readonly.py --json --require-spec --require-tasks --include-tasks` once from repo root (the wrapper sets SPECIFY_FEATURE_NO_PERSIST=1 only in the child environment) and parse JSON for FEATURE_DIR and AVAILABLE_DOCS. Derive absolute paths:
+ 
+ - SPEC = FEATURE_DIR/spec.md
+ - PLAN = FEATURE_DIR/plan.md
+diff --git a/.agents/skills/speckit-specify/SKILL.md b/.agents/skills/speckit-specify/SKILL.md
+index 67fbb3c..5fd89e7 100644
+--- a/.agents/skills/speckit-specify/SKILL.md
++++ b/.agents/skills/speckit-specify/SKILL.md
+@@ -93,8 +93,9 @@ Given that feature description, do this:
+    **Create the directory and spec file**:
+    - Run `python .specify/scripts/python/resolve_template.py spec-template --json` from the repository root and parse `TEMPLATE_CONTENT` as the active `spec-template`. The shared resolver composes project overrides, preset layers, and extension layers over the core template, including `append`, `prepend`, and `wrap` strategies. If it fails, stop and report the resolution error; do not continue with only one contributing template layer.
+    - `mkdir -p SPECIFY_FEATURE_DIRECTORY`
+-   - Write `TEMPLATE_CONTENT` to `SPECIFY_FEATURE_DIRECTORY/spec.md` as the starting point. Do not copy a template file from disk instead: when a preset composes `spec-template`, no single file holds the full template.
+-   - Set `SPEC_FILE` to `SPECIFY_FEATURE_DIRECTORY/spec.md`
++   - Set `SPEC_FILE` to `SPECIFY_FEATURE_DIRECTORY/spec.md` and check whether it exists **before writing**.
++   - **New file only**: write resolved `TEMPLATE_CONTENT` as the starting point. Do not copy a single template layer instead of the composed content.
++   - **Existing file**: first read its complete current contents. Do not overwrite it with the template or reset it. Use the resolved template only to check structure; apply only the requested changes while preserving existing requirements, FR/SC IDs, clarifications and unrelated content. If the request does not identify the intended change clearly, ask before editing. New requirements get unused IDs; never renumber existing ones merely to match the template.
+    - Persist the resolved path to `.specify/feature.json`:
+      ```json
+      {
+@@ -107,7 +108,7 @@ Given that feature description, do this:
+    **IMPORTANT**:
+    - You must only create one feature per `$speckit-specify` invocation
+    - The spec directory name and the git branch name are independent — they may be the same but that is the user's choice
+-   - The spec directory and file are always created by this command, never by the hook
++   - This command creates the directory/file only when new, or updates the existing spec without resetting it; the hook never creates the spec.
+ 
+ 4. Use `TEMPLATE_CONTENT` to understand required sections.
+ 

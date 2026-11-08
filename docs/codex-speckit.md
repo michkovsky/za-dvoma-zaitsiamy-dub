@@ -30,3 +30,8 @@ gh налаштовано локально, поза репозиторієм. �
 CLI version/check та init завершилися успішно. Установлено дев’ять speckit skills поруч із чотирма доменними. Офіційні resolve_template, setup_plan, setup_tasks і check_prerequisites працюють із Python середовища інструментів. Initial init спочатку вставив персональний шлях до Python; повторне генерування з venv Scripts на початку PATH дало переносимі python-команди. Перед свідомими змінами всі tracked SHA-256 збіглися з початковими.
 
 Автовиявлення skills у новій сесії й вкладений codex exec досі не перевірені. У цьому чаті етапи виконані читанням установлених інструкцій. Повторювана інструкція setup — specs/001-project-workflow/quickstart.md. GitHub branch protection не вмикався.
+
+
+## Зауваження після незалежного review
+
+Copilot review виявив три дефекти згенерованих інструкцій 1.3.2. Локальні виправлення явно відділено від upstream: .specify/patches/README.md. Після init/refresh їх потрібно перевірити й за потреби повторно застосувати. Analyze/converge використовують pipeline/speckit_readonly.py, а не голий checker, який може змінити feature.json. Вимоги spec.md не скидаються при повторному specify; checklist може бути створений до плану. Звіт і межі перевірки: specs/001-project-workflow/reviews/copilot.md.

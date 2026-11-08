@@ -17,3 +17,5 @@ jobs:
           python-version: '3.12'
       - name: Validate CSV records and project references
         run: python pipeline/validate.py
+      - name: Verify Spec Kit feature-context safety
+        run: python -m unittest discover -s tests -v

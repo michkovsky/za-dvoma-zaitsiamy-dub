@@ -84,7 +84,10 @@ You **MUST** consider the user input before proceeding (if not empty).
 
 ## Execution Steps
 
-1. **Setup**: Run `python .specify/scripts/python/check_prerequisites.py --json --template checklist-template` from repo root and parse JSON for FEATURE_DIR, AVAILABLE_DOCS list, and TEMPLATE_CONTENT.
+1. **Setup**: Run `python pipeline/speckit_readonly.py --json --paths-only` from repo root and parse FEATURE_DIR and FEATURE_SPEC. This path lookup does not require plan.md or tasks.md.
+   - Verify that FEATURE_SPEC exists and is non-empty; otherwise stop and report that `$speckit-specify` is required. Do not create or replace spec.md here.
+   - Run `python .specify/scripts/python/resolve_template.py checklist-template --json` separately and use its composed TEMPLATE_CONTENT. Stop if template resolution fails.
+   - Build AVAILABLE_DOCS by inspecting optional plan.md, tasks.md, research.md and other relevant documents in FEATURE_DIR. Absence of plan.md or tasks.md must not block a spec-quality checklist.
    - All file paths must be absolute.
    - For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
 

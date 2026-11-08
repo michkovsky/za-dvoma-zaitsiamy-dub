@@ -16,6 +16,8 @@ The checked-in scaffold is already initialized. Do not reinitialize by default. 
 
 ```powershell
 specify init --here --force --non-interactive --integration codex --script py --integration-options="--events false"
+git apply --check .specify/patches/codex-safety.patch
+git apply .specify/patches/codex-safety.patch
 ```
 
 ## Select this feature and validate
@@ -23,7 +25,7 @@ specify init --here --force --non-interactive --integration codex --script py --
 ```powershell
 $env:SPECIFY_FEATURE_DIRECTORY='specs/001-project-workflow'
 python .specify/scripts/python/resolve_template.py spec-template --json
-python .specify/scripts/python/check_prerequisites.py --json --require-spec --require-tasks --include-tasks
+python pipeline/speckit_readonly.py --json --require-spec --require-tasks --include-tasks
 python pipeline/validate.py
 ```
 
@@ -73,3 +75,8 @@ Read-only analysis under installed speckit-analyze instructions: 12/12 FR items 
 ## Final author convergence
 
 After delivery evidence was recorded, all 12 FR items, three user stories, four success criteria, plan decisions and seven constitution principles were assessed against the implementation. All 18 tasks are complete for draft delivery; zero actionable implementation gaps remain. tasks.md was left unchanged by this final convergence pass. Owner acceptance, independent model review, new-session discovery and nested dispatch are not reclassified as completed.
+
+
+## Copilot follow-up (supersedes earlier review status)
+
+Independent Copilot review of head 124fee0 is now available; three findings accepted, see reviews/copilot.md. Four generated skills have local, replayable corrections. Six real subprocess regression tests passed locally; patch replay on clean upstream copies passed. Run: python -m unittest discover -s tests -v. New-head CI and independent reassessment are separate from the earlier successful runs; no automatic thread resolution or owner approval is implied.
