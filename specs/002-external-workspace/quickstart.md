@@ -4,7 +4,7 @@ Run python -B -m unittest discover -s tests -v and python -B pipeline/validate.p
 
 ## Recorded local results
 
-Nine output-path scenarios and six existing safety cases passed (15 total), including rejection of outputs inside source directories and explicit outputs inside the checkout before writes. Project validator passed. Hardware inventory completed externally, showing AVX available, AVX2 unavailable, FMA/F16C unknown; GPU inventory found GTX 1650 with 4 GB VRAM. Disk inventory measures the report destination filesystem. This does not qualify ML inference libraries.
+Ten output-path scenarios and six existing safety cases passed (16 total), including rejection of outputs inside source directories and explicit outputs inside the checkout before writes, and safe report replacement without changing a hardlinked repository file. Project validator passed. Hardware inventory completed externally, showing AVX available, AVX2 unavailable, FMA/F16C unknown; GPU inventory found GTX 1650 with 4 GB VRAM. Disk inventory measures the report destination filesystem. This does not qualify ML inference libraries.
 
 Video and separate audio decoded 0.25 seconds at source 00:26:30 to null, exit 0. No probe media files were written. Original directory still contains the same three files with unchanged size/mtime. Local mapping contains work_dir; production dry-run without DUB_WORK_DIR selected external exports. Known setup template files removed; tmp is empty. No junction, global profile change, media/model installation or legacy artifact migration.
 

@@ -10,6 +10,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import tempfile
 from common import ROOT, external_work_directory, protect_source_directories
 
 def probe(command):
@@ -78,7 +79,16 @@ def main():
         'memory':memory,'workspace_disk':shutil.disk_usage(target.parent)._asdict(),
         'gpu_inventory':gpu,'tools':tools,
         'qualification':'Inventory only. null means unknown. Test each actual operation separately.'}
-    target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8',
+                dir=target.parent, prefix='.runtime-', suffix='.tmp', delete=False) as handle:
+            temporary = Path(handle.name)
+            handle.write(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+        os.replace(temporary, target)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
     print(f'Saved {target}. CPU instruction availability:',flags)
     if any(value is None for value in flags.values()):
         print('Some CPU features are unknown; verify before selecting binaries that require them.')

@@ -111,5 +111,17 @@ class OutputPathsTests(unittest.TestCase):
         self.assertNotEqual(self.preview('--output-dir',str(self.root/'generated')).returncode,0)
         self.assertFalse((self.root/'generated').exists())
 
+    def test_report_replaces_hardlink_without_changing_linked_file(self):
+        original=self.root/'tracked.json'
+        original.write_bytes(b'keep this file')
+        self.work.mkdir()
+        target=self.work/'runtime.json'
+        os.link(original,target)
+        result=self.run_cli('diagnose_runtime.py','--output',str(target))
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertEqual(original.read_bytes(),b'keep this file')
+        self.assertIn('cpu',json.loads(target.read_text('utf-8')))
+        self.assertEqual(list(self.work.iterdir()),[target])
+
 if __name__=='__main__':
     unittest.main()
