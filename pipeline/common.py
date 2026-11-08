@@ -7,9 +7,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-def protect_source_directories(target):
+def protect_source_directories(target, *, allow_checkout=False):
     """Reject generated output beside or below configured source media."""
     target = Path(target).resolve()
+    if not allow_checkout and target.is_relative_to(ROOT.resolve()):
+        raise ValueError('Generated output must be outside the repository.')
     config = ROOT/'local/media.json'
     if config.is_file():
         data = json.loads(config.read_text('utf-8-sig'))

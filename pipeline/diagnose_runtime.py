@@ -28,7 +28,7 @@ def main():
     work = external_work_directory() if args.output is None else None
     target = args.output if args.output is not None else (
         work/'reports/runtime.json' if work else ROOT/'local/runtime.json')
-    target = protect_source_directories(target)
+    target = protect_source_directories(target, allow_checkout=args.output is None and work is None)
     if target.suffix.lower() != '.json':
         raise ValueError('Diagnostic output must be a JSON file.')
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -75,7 +75,7 @@ def main():
         'python':sys.version,'python_executable':sys.executable,
         'cpu':{'name':cpu_name,'logical_processors':os.cpu_count(),
                'features':flags,'optional_cpuinfo_probe':extra},
-        'memory':memory,'workspace_disk':shutil.disk_usage(ROOT)._asdict(),
+        'memory':memory,'workspace_disk':shutil.disk_usage(target.parent)._asdict(),
         'gpu_inventory':gpu,'tools':tools,
         'qualification':'Inventory only. null means unknown. Test each actual operation separately.'}
     target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

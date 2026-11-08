@@ -25,7 +25,8 @@ def main():
     work = external_work_directory() if args.output_dir is None else None
     output_dir = args.output_dir if args.output_dir is not None else (
         work/'exports' if work else ROOT/'media/scenes')
-    target = protect_source_directories(output_dir/f'{args.id}.mp4')
+    target = protect_source_directories(output_dir/f'{args.id}.mp4',
+        allow_checkout=args.output_dir is None and work is None)
     command = ['ffmpeg', '-hide_banner', '-nostdin', '-n', '-ss', str(start),
         '-i', config['video'], '-ss', str(start), '-i', config['audio'],
         '-map', '0:v:0', '-map', '1:a:0', '-t', str(end-start),

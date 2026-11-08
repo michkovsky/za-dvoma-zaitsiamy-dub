@@ -103,5 +103,13 @@ class OutputPathsTests(unittest.TestCase):
         self.assertEqual(original.read_bytes(),b'original media')
         self.assertEqual(list(sources.iterdir()),[original])
 
+    def test_explicit_outputs_cannot_write_checkout(self):
+        config=self.root/'local/media.json'
+        before=config.read_bytes()
+        self.assertNotEqual(self.run_cli('diagnose_runtime.py','--output',str(config)).returncode,0)
+        self.assertEqual(config.read_bytes(),before)
+        self.assertNotEqual(self.preview('--output-dir',str(self.root/'generated')).returncode,0)
+        self.assertFalse((self.root/'generated').exists())
+
 if __name__=='__main__':
     unittest.main()
