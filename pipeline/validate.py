@@ -30,14 +30,23 @@ def main():
     characters = {row['id'] for row in registry}
     cast = {row['id']: row for row in read_csv(ROOT/'source/cast-credits.csv')}
     for row in registry:
+        for field in ['in_script', 'in_film', 'in_credits']:
+            if row[field] not in ['yes', 'no', 'unknown']:
+                raise ValueError(f'Invalid {field}: {row["id"]}')
         credit = cast.get(row['credit_id']) if row['credit_id'] else None
         if row['credit_id'] and credit is None:
             raise ValueError(f'Unknown credit: {row["id"]}')
         if credit and credit['character_id'] != row['id']:
             raise ValueError(f'Credit/character mismatch: {row["id"]}')
-        if row['film_status'] == 'credited':
-            if not credit or credit['kind'] != 'named_role' or credit['role'] != row['name']:
+        if row['in_credits'] == 'yes':
+            if not credit or credit['kind'] != 'named_role' or credit['role'] != row['credit_name']:
                 raise ValueError(f'Unsupported credited role: {row["id"]}')
+            if row['in_film'] != 'yes':
+                raise ValueError(f'Named film credit must confirm presence: {row["id"]}')
+        elif row['credit_name'] or (credit and credit['kind'] == 'named_role'):
+            raise ValueError(f'Inconsistent credit presence: {row["id"]}')
+        if row['in_script'] == 'yes' and not row['script_name']:
+            raise ValueError(f'Missing script name: {row["id"]}')
     for row in cast.values():
         seconds(row['timecode'])
         if row['character_id'] and row['character_id'] not in characters:

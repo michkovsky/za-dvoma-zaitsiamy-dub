@@ -19,4 +19,4 @@ ID: персонажі `pronya`, `khymka`, `sirko`, `yavdokha`, `parrot`; піл
 
 Примітки можуть бути вільним текстом; не створювати окрему мову команд у клітинках. Фонетичні підказки синтезатору зберігати окремо від читабельного перекладу. Опис файлів не означає, що всі сцени вже мають заповнені таблиці.
 
-Реєстр characters/index.csv містить титрову назву, альтернативні імена, film_status, посилання credit_id, актора та джерела. Повний набір акторських титрів — source/cast-credits.csv. Їхні типи: named_role, episode_actor, intermedia_actor; лише named_role прямо встановлює пару роль/виконавець. Розгорнуті джерела й розбіжності — source/character-sources.md.
+Реєстр characters/index.csv містить основне name, aliases, незалежні in_script/in_film/in_credits (yes/no/unknown), script_name, credit_name, credit_id, актора та джерела. Семантика — characters/rules.md. Повний набір акторських титрів — source/cast-credits.csv. Їхні типи: named_role, episode_actor, intermedia_actor; лише named_role прямо встановлює пару роль/виконавець. Розгорнуті джерела й розбіжності — source/character-sources.md.
