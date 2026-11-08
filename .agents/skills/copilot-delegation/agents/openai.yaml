@@ -1,0 +1,6 @@
+interface:
+  display_name: "Делегування Copilot CLI"
+  short_description: "Оцінка доречності й виконання доручень Copilot"
+  default_prompt: "Використай $copilot-delegation, щоб оцінити доречність залучення Copilot до поточної задачі."
+policy:
+  allow_implicit_invocation: true
