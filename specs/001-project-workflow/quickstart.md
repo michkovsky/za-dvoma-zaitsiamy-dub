@@ -2,12 +2,14 @@
 
 ## Local setup
 
-Use a working Python 3.11+ executable (Store aliases alone may not work).
+Use a working Python 3.11+ executable (Store aliases alone may not work). The initial installation used local/tools/spec-kit; after adoption of the external-workspace policy, new setups must use the configured external DUB_WORK_DIR. The historical results below are unchanged.
 
 ```powershell
-python -m venv local/tools/spec-kit
-./local/tools/spec-kit/Scripts/python.exe -m pip install -r requirements-tools.txt
-$env:Path="$PWD/local/tools/spec-kit/Scripts;"+$env:Path
+if (-not $env:DUB_WORK_DIR) { throw 'Configure the external DUB_WORK_DIR first; see docs/local-workspace.md.' }
+$specKitEnv = Join-Path $env:DUB_WORK_DIR 'tools/spec-kit'
+python -m venv $specKitEnv
+& (Join-Path $specKitEnv 'Scripts/python.exe') -m pip install -r requirements-tools.txt
+$env:Path=(Join-Path $specKitEnv 'Scripts')+';'+$env:Path
 specify version
 specify check
 ```

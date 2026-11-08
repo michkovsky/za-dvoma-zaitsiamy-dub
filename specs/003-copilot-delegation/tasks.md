@@ -16,6 +16,6 @@ Input: spec.md, plan.md, research.md, data-model.md, quickstart.md.
 
 ## Phase 4: Delivery
 - [x] T007 Assess convergence against spec/plan/tasks and tracked scope; record evidence in specs/003-copilot-delegation/quickstart.md (FR-001–FR-007).
-- [ ] T008 Publish draft PR, check CI and request Copilot review; wait for response and address findings, record outcome in PR (SC-003).
+- [x] T008 Publish draft PR, check CI and request Copilot review; wait for response and address findings, record outcome in PR (SC-003). Докази PR №4 на перевіреному SHA наведені в quickstart.md; позначку узгоджено після фактичного злиття.
 
 Dependencies: T001→T002→T003→T004→T005→T006→T007→T008. MVP is US1; US2 extends the same skill, so edits are sequential. After T003, AGENTS.md and CONTRIBUTING.md references can be edited independently; no extra agents are needed. No implementation tests are added for a documentation-only change.

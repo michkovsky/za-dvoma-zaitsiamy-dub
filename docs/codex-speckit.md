@@ -2,7 +2,7 @@
 
 ## Вибір конфігурації
 
-Використовуємо офіційний specify-cli з PyPI в ізольованому local/tools/spec-kit/. Інтеграція codex, скрипти py, автоматичні events=false. Залежності синтезу та системний Python не змінюються. Перевірена версія specify-cli==1.3.2 зафіксована в requirements-tools.txt.
+Використовуємо офіційний specify-cli з PyPI в ізольованому середовищі tools/spec-kit зовнішнього work_dir. local/tools/spec-kit/ — історичний шлях початкової інсталяції, не актуальна вимога зберігати середовище в checkout. Інтеграція codex, скрипти py, автоматичні events=false. Залежності синтезу та системний Python не змінюються. Перевірена версія specify-cli==1.3.2 зафіксована в requirements-tools.txt.
 
 Офіційні джерела: [встановлення](https://github.github.io/spec-kit/installation.html), [наявний проєкт](https://github.github.io/spec-kit/how-to/existing-projects.html), [Codex](https://github.github.io/spec-kit/integrations/codex.html), [синтаксис викликів](https://github.github.io/spec-kit/integrations/cli.html). Документацію перевірено 2026-11-08; опис старих slash-команд на інших сторінках не замінює інструкції встановленої версії.
 

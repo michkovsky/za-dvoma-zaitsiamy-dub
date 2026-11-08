@@ -2,6 +2,19 @@
 
 **Branch**: `codex/004-scene-work-plan` | **Date**: 2026-11-08 | **Spec**: [spec.md](spec.md)
 
+## Історія пакета
+
+Один пакет Spec Kit може послідовно розвиватися кількома окремими задачами/PR. Номер пакета й feature pointer визначають контекст; назва Git-гілки фіксує етап, а не має збігатися в історичних документах. Злиття етапу не означає виконання implementation tasks.
+
+| Етап | Гілка | PR |
+| --- | --- | --- |
+| Specify | codex/004-scene-work-planning | [№5](https://github.com/michkovsky/za-dvoma-zaitsiamy-dub/pull/5) |
+| Plan | codex/004-scene-work-plan | [№6](https://github.com/michkovsky/za-dvoma-zaitsiamy-dub/pull/6) |
+| Tasks | codex/004-scene-work-tasks | [№7](https://github.com/michkovsky/za-dvoma-zaitsiamy-dub/pull/7) |
+| Усунення висновків analyze й узгодження документів | codex/004-scene-analysis-fixes | [№8](https://github.com/michkovsky/za-dvoma-zaitsiamy-dub/pull/8) |
+
+Далі — початкове резюме плану; нові документальні уточнення зведено в [реєстрі аудиту](reviews/pdf-audit.md).
+
 ## Summary
 
 Підготувати правила, формати, шаблон пакета сцени та перевірки, які дозволяють уточнювати карту фільму без втрати матеріалів. Повне транскрибування фільму виконується подальшими пакетами.

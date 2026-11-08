@@ -1,6 +1,6 @@
 id,character,file,source_start,source_end,sha256,status,note
 pronya,pronya,media/references/pronya.wav,,,1b8787038859a7d582bb905dddfb6e398500b0df18c21e1fa58ca277debc8b6f,approved,Початковий прийнятий профіль; точний інтервал джерела треба відновити з історії.
-khymka,khymka,media/references/khymka-v2.wav,1951.15,1959.05,14a6f7bed4d0f45c45bab4dd41eae63c77a338ce980f1de83005d77a36701d62,approved,Погоджений варіант A. Не підміняти khymka-v3.
-sirko,sirko,media/references/sirko.wav,1721.2,1730.6,97e4cf7794281cfb63cf8cf14aade58393860f9e50051d0cbe418c62330f2d60,approved,Погоджена перша проба.
-yavdokha,yavdokha,media/references/yavdokha-v4.wav,2464.2,2472.0,f2b050a0689277a0bf0348281a6cc975825e4fb42dd1498280caf5a1b4230de6,reference,Тембр зі сцени приданого; горделиву емоцію не переносити на всі сцени.
-yavdokha-scarf,yavdokha,media/references/yavdokha-scarf.wav,1627.15,1630.8,84d75f8287091ce36dfd4609bbf30c076aa28d345e01d82a8f1c1fc07057925e,reference,Підказка стану для сконфуженої репліки про хустку.
+khymka,khymka,media/references/khymka-v2.wav,00:32:31.150,00:32:39.050,14a6f7bed4d0f45c45bab4dd41eae63c77a338ce980f1de83005d77a36701d62,approved,Погоджений варіант A. Не підміняти khymka-v3.
+sirko,sirko,media/references/sirko.wav,00:28:41.200,00:28:50.600,97e4cf7794281cfb63cf8cf14aade58393860f9e50051d0cbe418c62330f2d60,approved,Погоджена перша проба.
+yavdokha,yavdokha,media/references/yavdokha-v4.wav,00:41:04.200,00:41:12.000,f2b050a0689277a0bf0348281a6cc975825e4fb42dd1498280caf5a1b4230de6,reference,Тембр зі сцени приданого; горделиву емоцію не переносити на всі сцени.
+yavdokha-scarf,yavdokha,media/references/yavdokha-scarf.wav,00:27:07.150,00:27:10.800,84d75f8287091ce36dfd4609bbf30c076aa28d345e01d82a8f1c1fc07057925e,reference,Підказка стану для сконфуженої репліки про хустку.
