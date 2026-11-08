@@ -17,6 +17,22 @@ FIXTURE = ROOT / 'tests' / 'fixtures' / 'scenes' / 'coverage' / 'complete'
 
 
 class SceneValidationTests(unittest.TestCase):
+    def test_nonempty_coverage_cannot_substitute_audio_for_video(self):
+        scenes = self.read_rows('scenes/index.csv')
+        (self.root / 'scenes/index.csv').write_text(
+            ','.join(scenes[0].keys()) + '\n', encoding='utf-8')
+        media = self.read_rows('source/media.csv')
+        self.write_rows('source/media.csv', media + [dict(media[0], id='audio')])
+        timing = self.read_rows('source/timing.csv')
+        self.write_rows('source/timing.csv', timing + [dict(
+            timing[0], source_id='audio', reference_source_id='video', offset='0')])
+        row = self.read_rows('scenes/coverage.csv')[0]
+        self.write_rows('scenes/coverage.csv', [dict(
+            row, source_id='audio', start='00:00:00.000', end='00:02:00.000',
+            kind='unresolved', scene_id='')])
+        with self.assertRaisesRegex(ValueError, 'video'):
+            validate_scenes(self.root)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
@@ -204,6 +220,22 @@ class ChangeValidationTests(unittest.TestCase):
     setUp = SceneValidationTests.setUp
     read_rows = SceneValidationTests.read_rows
     write_rows = SceneValidationTests.write_rows
+
+    def test_retired_id_cannot_return_through_a_disconnected_root(self):
+        old = self.snapshot('S001')
+        left = self.snapshot('S003', end='00:00:40.000')
+        right = self.snapshot('S004', start='00:00:40.000')
+        self.change('CH001', 'split', [old], [left, right])
+        forged = self.snapshot('S001', 2, start='00:00:00.000', end='00:00:20.000')
+        revived = self.snapshot('S001', 3, start='00:00:00.000', end='00:00:20.000')
+        self.change('CH002', 'boundary', [forged], [revived])
+        self.current([revived, left, right])
+        # The resurrected ID takes the formerly unresolved interval, so coverage
+        # is valid and cannot mask the disconnected version history.
+        self.write_rows('scenes/coverage.csv', [row for row in self.read_rows(
+            'scenes/coverage.csv') if row['kind'] != 'unresolved'])
+        with self.assertRaisesRegex(ValueError, 'root|корен|revision'):
+            validate_scenes(self.root)
 
     def snapshot(self, scene_id, revision=1, start='00:00:20.000', end='00:01:00.000'):
         return (scene_id, str(revision), 'video', start, end)
@@ -612,6 +644,35 @@ class DialogueAndPackageTests(unittest.TestCase):
             '| S001-L001 | Потребує перевірки | draft |\n', encoding='utf-8')
         with self.assertRaisesRegex(ValueError, 'limitation|обмеження'):
             validate_scenes(self.root)
+
+    def test_editorial_decisions_are_affirmative_and_bound_to_their_own_id(self):
+        owner = self.root / 'scenes' / 'S002' / 'README.md'
+        for marker, updates, error in (
+                ('прийняте обмеження', dict(speaker='unknown', status='verified',
+                                           note='Непевний мовець.'), 'limitation|обмеження'),
+                ('виняток часової належності', dict(start='00:00:59.000',
+                     end='00:01:02.000'), 'README|boundary')):
+            rows = self.read_rows('scenes/S002/dialogue.uk.csv')
+            original = [dict(row) for row in rows]
+            self.line(**updates)
+            neighbor = self.root / 'scenes' / 'S001'
+            neighbor.mkdir(exist_ok=True)
+            (neighbor / 'README.md').write_text(
+                'Контекст: [S001-L001](../S002/dialogue.uk.csv#S001-L001).',
+                encoding='utf-8')
+            for claim in (
+                    f'S001-L001: {marker} — не погоджено; очікуємо рішення.',
+                    f'S001-L002: {marker} — дозволено з причиною. '
+                    'S001-L001: обмеження ще не погоджено.'):
+                with self.subTest(marker=marker, claim=claim):
+                    owner.write_text(claim, encoding='utf-8')
+                    with self.assertRaisesRegex(ValueError, error):
+                        validate_scenes(self.root)
+            owner.write_text(
+                'S001-L002: обмеження не погоджено. '
+                f'S001-L001: {marker} — явна причина цього запису.', encoding='utf-8')
+            validate_scenes(self.root)
+            self.write_rows('scenes/S002/dialogue.uk.csv', original)
 
     def test_audio_plus_two_requires_verified_timing(self):
         media = self.read_rows('source/media.csv')

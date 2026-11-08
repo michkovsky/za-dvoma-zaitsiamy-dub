@@ -397,6 +397,14 @@ def _validate_changes(root, scene_by_id, timings, diagnostics):
             if key not in creating and key[0] in reservations:
                 raise ValueError(f'{record}: new ID reused as a root version: {key[0]}')
 
+    roots_by_scene = defaultdict(set)
+    for version in established:
+        if version not in creating:
+            roots_by_scene[version[0]].add(version)
+    for scene_id, roots in roots_by_scene.items():
+        if len(roots) > 1:
+            raise ValueError(f'{path}: disconnected scene revision roots for {scene_id}')
+
     for scene_id, (row, _start, _end) in scene_by_id.items():
         key = (scene_id, int(row['revision']))
         historical = [
@@ -463,17 +471,32 @@ def _has_editorial_record(path, line_id, phrase):
         # every ID appearing elsewhere in that table. Require actual prose.
         block = '\n'.join(line for line in block.splitlines()
                           if not line.lstrip().startswith('|'))
-        match = re.search(phrase, block, re.IGNORECASE)
-        if match and re.search(
-                r'(?:\bне|\bnot|потрібн\w*|запропонован\w*|required|pending)'
-                r'\s+(?:(?:явне|explicit)\s+)?$',
-                block[:match.start()], re.IGNORECASE):
-            continue
-        if match and block[match.end():].lstrip().startswith('?'):
-            continue
-        if (re.search(rf'(?<![\w-]){re.escape(line_id)}(?![\w-])', block)
-                and match and re.search(r'\w', block[match.end():])):
-            return True
+        # An ID-labelled claim ends at the next ID-labelled claim, even when
+        # both are written in one paragraph. Never borrow another line's marker.
+        claims = list(re.finditer(
+            r'(?<![\w-])(?P<id>[A-Za-z][A-Za-z0-9_-]*\d[A-Za-z0-9_-]*)'
+            r'(?![\w-])\s*[:—–]', block))
+        for index, claim in enumerate(claims):
+            if claim['id'] != line_id:
+                continue
+            end = claims[index + 1].start() if index + 1 < len(claims) else len(block)
+            statement = block[claim.end():end]
+            match = re.search(phrase, statement, re.IGNORECASE)
+            if not match:
+                continue
+            if re.search(
+                    r'(?:\bне|\bnot|потрібн\w*|запропонован\w*|required|pending)'
+                    r'\s+(?:(?:явне|explicit)\s+)?$',
+                    statement[:match.start()], re.IGNORECASE):
+                continue
+            explanation = statement[match.end():].lstrip(' \t:;—–-')
+            if explanation.startswith('?') or re.match(
+                    r'(?:(?:ще|still|yet)\s+)?(?:не\s+(?:погоджен\w*|прийнят\w*|'
+                    r'схвален\w*)|not\s+(?:approved|accepted|agreed)|pending\b|'
+                    r'очіку\w*|await\w*)', explanation, re.IGNORECASE):
+                continue
+            if re.search(r'\w', explanation):
+                return True
     return False
 
 
@@ -719,6 +742,9 @@ def validate_scenes(root=ROOT):
     unresolved = {}
     for row in coverage:
         source_id = _required_value(row, 'source_id', coverage_file)
+        if source_id != 'video':
+            raise ValueError(f'{coverage_file}: row {row["_line"]}: '
+                             'primary coverage source_id must be video')
         if source_id not in source_ids:
             raise ValueError(
                 f'{coverage_file}: row {row["_line"]}: unknown source_id {source_id}'
