@@ -7,6 +7,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+def protect_source_directories(target):
+    """Reject generated output beside or below configured source media."""
+    target = Path(target).resolve()
+    config = ROOT/'local/media.json'
+    if config.is_file():
+        data = json.loads(config.read_text('utf-8-sig'))
+        for key in ('video', 'audio'):
+            if data.get(key):
+                source = Path(data[key]).resolve()
+                if target.is_relative_to(source.parent) or (
+                        target.exists() and source.exists() and target.samefile(source)):
+                    raise ValueError('Generated output must be outside source media directories.')
+    return target
+
 def external_work_directory():
     """Optional session-local workspace, never inside the checkout."""
     value = os.environ.get('DUB_WORK_DIR', '').strip()
@@ -24,7 +38,7 @@ def external_work_directory():
     path = path.resolve()
     if path.is_relative_to(ROOT.resolve()):
         raise ValueError('DUB_WORK_DIR must be outside the repository.')
-    return path
+    return protect_source_directories(path)
 
 def seconds(value):
     if not re.fullmatch(r'\d{2,}:\d{2}:\d{2}\.\d{3}', value):

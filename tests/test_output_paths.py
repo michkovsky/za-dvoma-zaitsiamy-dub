@@ -21,7 +21,8 @@ class OutputPathsTests(unittest.TestCase):
             shutil.copy2(ROOT/'pipeline'/name,self.root/'pipeline'/name)
         (self.root/'local').mkdir()
         (self.root/'local/media.json').write_text(json.dumps(
-            {'video':'original.mp4','audio':'ukrainian.webm'}), encoding='utf-8')
+            {'video':str(Path(self.temp.name)/'sources/original.mp4'),
+             'audio':str(Path(self.temp.name)/'sources/ukrainian.webm')}), encoding='utf-8')
         self.env = os.environ.copy()
         self.env.update(DUB_WORK_DIR=str(self.work),PYTHONDONTWRITEBYTECODE='1',PYTHONUTF8='1')
 
@@ -85,6 +86,22 @@ class OutputPathsTests(unittest.TestCase):
             result=self.preview()
             self.assertNotEqual(result.returncode,0)
             self.assertFalse((self.root/'cache').exists())
+
+    def test_source_directories_are_protected(self):
+        sources=Path(self.temp.name)/'sources'
+        sources.mkdir()
+        original=sources/'original.mp4'
+        original.write_bytes(b'original media')
+        for path in [sources, sources/'nested']:
+            self.env['DUB_WORK_DIR']=str(path)
+            self.assertNotEqual(self.preview().returncode,0)
+        self.env['DUB_WORK_DIR']=str(self.work)
+        self.assertNotEqual(self.preview('--output-dir',str(sources)).returncode,0)
+        for path in [original,sources/'report.json']:
+            result=self.run_cli('diagnose_runtime.py','--output',str(path))
+            self.assertNotEqual(result.returncode,0)
+        self.assertEqual(original.read_bytes(),b'original media')
+        self.assertEqual(list(sources.iterdir()),[original])
 
 if __name__=='__main__':
     unittest.main()

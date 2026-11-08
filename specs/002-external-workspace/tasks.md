@@ -11,6 +11,7 @@
 - [x] T007 [US2] Update docs/local-workspace.md and runtime/media skill routing (FR-005, FR-007).
 ## Phase 4: Verify and deliver
 - [x] T008 Remove only this operation's known temporary files, validate and assess convergence (FR-007).
-- [ ] T009 Publish draft PR, check CI and request Copilot review; no merge (SC-003).
+- [x] T009 Publish draft PR, check CI and request Copilot review; no merge (SC-003).
+- [x] T010 Address Copilot source-directory/output protection findings with regression coverage (FR-001–FR-004). Final review outcome is recorded in the PR.
 
 T001–T002 precede code; tests/setup follow implementation; delivery follows local checks. FR coverage: 001→003/004/005, 002–004→003/004, 005→005/007, 006→006, 007→007/008. Owner approval is outside delivery.

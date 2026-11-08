@@ -10,7 +10,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
-from common import ROOT, external_work_directory
+from common import ROOT, external_work_directory, protect_source_directories
 
 def probe(command):
     try:
@@ -28,6 +28,9 @@ def main():
     work = external_work_directory() if args.output is None else None
     target = args.output if args.output is not None else (
         work/'reports/runtime.json' if work else ROOT/'local/runtime.json')
+    target = protect_source_directories(target)
+    if target.suffix.lower() != '.json':
+        raise ValueError('Diagnostic output must be a JSON file.')
     target.parent.mkdir(parents=True, exist_ok=True)
     flags = dict.fromkeys(['sse4_2','avx','avx2','fma','f16c'])
     cpu_name = platform.processor()
