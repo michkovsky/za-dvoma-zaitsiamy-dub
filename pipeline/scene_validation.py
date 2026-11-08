@@ -574,19 +574,18 @@ def _has_editorial_record(path, line_id, phrase):
             end = claims[index + 1].start() if index + 1 < len(claims) else len(block)
             statement = block[claim.end():end]
             statement = re.sub(r'(?<!\w)_+|_+(?!\w)', '', statement)
-            statement = statement.replace('*', '').replace('~', '')
-            match = re.search(r'(?<!\w)(?:' + phrase + r')(?!\w)', statement, re.IGNORECASE)
+            statement = statement.replace('*', '').replace('~', '').strip()
+            # The documented assertion is ID: marker -- reason. A marker
+            # buried after an unapproved/hypothetical preamble is not an assertion.
+            match = re.match(r'(?:' + phrase + r')(?!\w)', statement, re.IGNORECASE)
             if not match:
                 continue
-            if re.search(
-                    r'(?:\bне|\bnot|потрібн\w*|запропонован\w*|required|pending)'
-                    r'\s+(?:(?:явне|explicit)\s+)?$',
-                    statement[:match.start()], re.IGNORECASE):
-                continue
-            explanation = re.sub(r'^[\s:;—–-]+', '', statement[match.end():])
+            explanation = re.sub(r'^[^\w?]+', '', statement[match.end():])
             if explanation.startswith('?') or re.match(
-                    r'(?:(?:ще|still|yet)\s+)?(?:не\s+(?:погоджен\w*|прийнят\w*|'
-                    r'схвален\w*)|not\s+(?:approved|accepted|agreed)|pending\b|'
+                    r'(?:(?:ще|still|yet)\s+)?(?:не(?:\s+(?:було\s+|є\s+|ще\s+)?)?'
+                    r'(?:погоджен\w*|прийнят\w*|схвален\w*)|'
+                    r'not\s+(?:yet\s+)?(?:approved|accepted|agreed)|'
+                    r'un(?:approved|accepted)\b|rejected\b|відхилен\w*|pending\b|'
                     r'очіку\w*|await\w*)', explanation, re.IGNORECASE):
                 continue
             if re.search(r'\w', explanation):

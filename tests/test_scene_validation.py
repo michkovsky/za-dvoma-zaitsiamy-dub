@@ -685,7 +685,12 @@ class DialogueAndPackageTests(unittest.TestCase):
                 'Контекст: [S001-L001](../S002/dialogue.uk.csv#S001-L001).',
                 encoding='utf-8')
             for claim in (
+                    f'S001-L001: не погоджено {marker} — причина.',
+                    f'S001-L001: not approved {marker} — reason.',
                     f'S001-L001: {marker} — не погоджено; очікуємо рішення.',
+                    f'S001-L001: {marker} — «не погоджено»; очікуємо рішення.',
+                    f'S001-L001: {marker} — not yet approved.',
+                    f'S001-L001: {marker} — непогоджено; очікуємо рішення.',
                     f'S001-L001: {marker} —\nне погоджено; очікуємо рішення.',
                     f'S001-L001: {marker} — **не погоджено**; очікуємо рішення.',
                     f'S001-L001: {marker} — _не погоджено_; очікуємо рішення.',
