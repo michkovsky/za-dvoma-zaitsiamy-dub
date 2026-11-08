@@ -1,0 +1,4 @@
+id,timecode,local_file,sha256,source
+CE40,00:00:40.000,local/credits/full-40.jpg,66a93e1ee1162f282653c408d2f2829218946e9f7d7ea28972b5cc3c3a792be7,video
+CE50,00:00:50.000,local/credits/full-50.jpg,badfa0ec078fff6dc3a4ce31653568c9a6bbec2749bf66d1de5bf117b1dd4025,video
+CE60,00:01:00.000,local/credits/full-60.jpg,8d4a744b0b311ccd8b711f82614381a938ff9930931a5eadd4a219a4e120dbb0,video

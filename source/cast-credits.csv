@@ -1,0 +1,23 @@
+id,kind,role,actor,timecode,character_id
+CR001,named_role,Голохвостий,О. БОРИСОВ,00:00:40.000,golokhvostyi
+CR002,named_role,Проня,М. КРИНИЦИНА,00:00:40.000,pronya
+CR003,named_role,Сірко,М. ЯКОВЧЕНКО,00:00:40.000,sirko
+CR004,named_role,Сірчиха,А. КУШНІРЕНКО,00:00:40.000,yavdokha
+CR005,named_role,Секлета,Н. КОПЕРЖИНСЬКА,00:00:50.000,sekleta
+CR006,named_role,Галя,Н. НАУМ,00:00:50.000,halia
+CR007,named_role,Степан,А. ЮРЧЕНКО,00:00:50.000,stepan
+CR008,named_role,Пляшка,К. ЄРШОВ,00:00:50.000,pliashka
+CR009,named_role,Химка,Т. ЛИТВИНЕНКО,00:00:50.000,khymka
+CR010,named_role,М-ль Ніно,О. ВІКЛАНД,00:00:50.000,nino
+CR011,episode_actor,,Л. АЛФІМОВА,00:01:00.000,meronia
+CR012,episode_actor,,Н. АНТОНОВА,00:01:00.000,boarding_servant
+CR013,episode_actor,,О. БИКОВ,00:01:00.000,creditor
+CR014,episode_actor,,В. ГРУДИНІН,00:01:00.000,bas
+CR015,episode_actor,,С. КАРАМАШ,00:01:00.000,ustia
+CR016,episode_actor,,В. КОСТИРЕНКО,00:01:00.000,friend-kostyrenko
+CR017,episode_actor,,М. ТАЛЮРА,00:01:00.000,musician
+CR018,episode_actor,,Р. ШАБЛОВСЬКА,00:01:00.000,
+CR019,intermedia_actor,,В. ШИРЯЄВ,00:01:00.000,
+CR020,intermedia_actor,,В. КОРЕЦЬКИЙ,00:01:00.000,
+CR021,intermedia_actor,,Ф. ІВАНОВА,00:01:00.000,
+CR022,intermedia_actor,,Н. ЛАПШИНА,00:01:00.000,
