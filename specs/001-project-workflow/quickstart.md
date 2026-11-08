@@ -36,7 +36,7 @@ Fresh Codex session: open repository root, then invoke $speckit-specify and subs
 - specify check: reports ready; unrelated agent CLIs not installed are informational.
 - Existing tracked SHA-256 comparison after init and constitution restoration: no changed files before deliberate edits.
 - Official spec/constitution resolver and setup_plan: exit 0.
-- Remaining prerequisite/task, text validation and PR CI results are recorded after execution below; pending items are not implied passed.
+- Task/prerequisite checks, local text validation and first remote CI results are recorded below with their actual scope.
 
 ## Owner review
 
@@ -57,3 +57,19 @@ Read-only analysis under installed speckit-analyze instructions: 12/12 FR items 
 - Portable registration assertion: nine upstream skills without personal absolute interpreter paths; py scripts/events=false confirmed; no .codex/config.toml created.
 - GitHub Actions YAML parses; contents:read only, official actions pinned to resolved commit SHAs. This local syntax check does not claim remote CI success.
 - Initial convergence: two partial evidence gaps (draft PR URL and remote result) appended as T017–T018; no additional implementation or independent model review claimed.
+
+
+## Remote delivery evidence
+
+- Draft PR: https://github.com/michkovsky/za-dvoma-zaitsiamy-dub/pull/1, branch 001-project-workflow → main.
+- Initial reviewed workflow head: 80e96420ada659eeeb68a1a670ef620bb5771bb4.
+- GitHub Actions run: https://github.com/michkovsky/za-dvoma-zaitsiamy-dub/actions/runs/42474876285 — completed, success.
+- Linux/Python text validation result: 14 CSV tables, 1015 keyframe anchors, 30 character records; zero local media and evidence hashes checked because those files are absent in CI. No audio/video quality claim follows from this result.
+- Remote main remains 8f436649d8e5ba09bfc629a4624aa7f7554466ad, the baseline before this feature. PR is draft, not merged, auto-merge not enabled.
+- Evidence is tied to the run/head above. Subsequent documentation-only evidence commit triggers another run; latest status is visible in the PR.
+- Independent model review: not performed. Owner review/merge approval: pending and outside feature delivery.
+
+
+## Final author convergence
+
+After delivery evidence was recorded, all 12 FR items, three user stories, four success criteria, plan decisions and seven constitution principles were assessed against the implementation. All 18 tasks are complete for draft delivery; zero actionable implementation gaps remain. tasks.md was left unchanged by this final convergence pass. Owner acceptance, independent model review, new-session discovery and nested dispatch are not reclassified as completed.

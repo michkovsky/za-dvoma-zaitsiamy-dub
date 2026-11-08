@@ -42,8 +42,8 @@ Independent test: review template can capture reviewer/model, head, question, ev
 ## Phase 6: Polish and delivery
 
 - [x] T014 Run convergence against current tasks and document gaps without self-approving owner review in specs/001-project-workflow/quickstart.md (FR-004, FR-012).
-- [ ] T015 Commit/push only 001-project-workflow and open draft PR linked to specs/001-project-workflow/spec.md (FR-001, FR-002, FR-012).
-- [ ] T016 Observe PR validation and verify main remains at baseline; report actual results in specs/001-project-workflow/quickstart.md (FR-011, FR-012, SC-003, SC-004).
+- [x] T015 Commit/push only 001-project-workflow and open draft PR linked to specs/001-project-workflow/spec.md (FR-001, FR-002, FR-012).
+- [x] T016 Observe PR validation and verify main remains at baseline; report actual results in specs/001-project-workflow/quickstart.md (FR-011, FR-012, SC-003, SC-004).
 
 ## Dependencies and delivery
 
@@ -71,5 +71,5 @@ T001–T004 precede T005; T005 precedes implementation T006–T013. T014 follows
 
 Initial author convergence found two remaining evidence gaps in quickstart.md; implementation files otherwise satisfy the reviewed design. Delivery is still pending T015–T016.
 
-- [ ] T017 Record the actual draft PR URL and branch in specs/001-project-workflow/quickstart.md per FR-012 (partial).
-- [ ] T018 Record the observed remote validation result and main-baseline check in specs/001-project-workflow/quickstart.md per FR-011, SC-003 (partial).
+- [x] T017 Record the actual draft PR URL and branch in specs/001-project-workflow/quickstart.md per FR-012 (partial).
+- [x] T018 Record the observed remote validation result and main-baseline check in specs/001-project-workflow/quickstart.md per FR-011, SC-003 (partial).
