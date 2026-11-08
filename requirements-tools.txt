@@ -1,0 +1,2 @@
+# Development/process tooling only; install in an isolated environment.
+specify-cli==1.3.2

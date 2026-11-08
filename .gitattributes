@@ -3,3 +3,4 @@
 *.csv text eol=lf
 *.json text eol=lf
 *.py text eol=lf
+*.patch text eol=lf -whitespace
