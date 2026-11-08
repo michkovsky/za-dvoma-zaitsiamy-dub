@@ -444,10 +444,38 @@ def _validate_packages(root, scene_by_id, diagnostics):
             raise ValueError(f'{path}: Scene binding does not match current scene {scene_id}')
 
 
+def _without_inline_code(text):
+    """Remove Markdown code spans using equal-length backtick delimiters."""
+    runs = list(re.finditer(r'`+', text))
+    parts = []
+    cursor = 0
+    index = 0
+    while index < len(runs):
+        opening = runs[index]
+        preceding = text[:opening.start()]
+        backslashes = len(preceding) - len(preceding.rstrip('\\'))
+        if backslashes % 2:
+            index += 1
+            continue
+        closing_index = next((j for j in range(index + 1, len(runs))
+                              if len(runs[j][0]) == len(opening[0])), None)
+        if closing_index is None:
+            index += 1
+            continue
+        parts.append(text[cursor:opening.start()])
+        parts.append(' ')
+        cursor = runs[closing_index].end()
+        index = closing_index + 1
+    parts.append(text[cursor:])
+    return ''.join(parts)
+
+
 def _prose_blocks(path):
     if not path.is_file():
         return []
-    lines = path.read_text(encoding='utf-8-sig').splitlines()
+    text = path.read_text(encoding='utf-8-sig')
+    text = re.sub(r'<!--(?:.*?-->|.*\Z)', ' ', text, flags=re.DOTALL)
+    lines = text.splitlines()
     prose = []
     fence = None
     for line in lines:
@@ -461,7 +489,8 @@ def _prose_blocks(path):
             prose.append('')
         elif not line.startswith(('    ', '\t')):
             prose.append(line)
-    return [block for block in re.split(r'\n\s*\n', '\n'.join(prose)) if block.strip()]
+    return [_without_inline_code(block) for block in re.split(
+        r'\n\s*\n', '\n'.join(prose)) if block.strip()]
 
 
 def _has_editorial_record(path, line_id, phrase):
@@ -489,7 +518,7 @@ def _has_editorial_record(path, line_id, phrase):
                     r'\s+(?:(?:явне|explicit)\s+)?$',
                     statement[:match.start()], re.IGNORECASE):
                 continue
-            explanation = statement[match.end():].lstrip(' \t:;—–-')
+            explanation = re.sub(r'^[\s:;—–-]+', '', statement[match.end():])
             if explanation.startswith('?') or re.match(
                     r'(?:(?:ще|still|yet)\s+)?(?:не\s+(?:погоджен\w*|прийнят\w*|'
                     r'схвален\w*)|not\s+(?:approved|accepted|agreed)|pending\b|'

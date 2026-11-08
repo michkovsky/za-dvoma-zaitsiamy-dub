@@ -662,6 +662,11 @@ class DialogueAndPackageTests(unittest.TestCase):
                 encoding='utf-8')
             for claim in (
                     f'S001-L001: {marker} — не погоджено; очікуємо рішення.',
+                    f'S001-L001: {marker} —\nне погоджено; очікуємо рішення.',
+                    f'Приклад, рішення ще не прийнято: `S001-L001: {marker} — причина`.',
+                    f'Приклад: ``S001-L001: {marker} — причина з `літералом` ``.',
+                    f'Приклад: `S001-L001: {marker} —\nпричина в коді`.',
+                    f'<!-- S001-L001: {marker} — прихований приклад -->',
                     f'S001-L002: {marker} — дозволено з причиною. '
                     'S001-L001: обмеження ще не погоджено.'):
                 with self.subTest(marker=marker, claim=claim):
@@ -671,6 +676,9 @@ class DialogueAndPackageTests(unittest.TestCase):
             owner.write_text(
                 'S001-L002: обмеження не погоджено. '
                 f'S001-L001: {marker} — явна причина цього запису.', encoding='utf-8')
+            validate_scenes(self.root)
+            owner.write_text(f'S001-L001: {marker} —\nявна причина з `терміном`.',
+                             encoding='utf-8')
             validate_scenes(self.root)
             self.write_rows('scenes/S002/dialogue.uk.csv', original)
 
