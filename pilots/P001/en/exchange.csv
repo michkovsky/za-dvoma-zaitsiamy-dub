@@ -1,0 +1,12 @@
+id,start,end,speaker,text,tempo,status
+P001-E001,00:00:10.650,00:00:11.160,khymka,Hah?,1,approved
+P001-E002,00:00:11.220,00:00:12.150,pronya,Stop barking!,1,approved
+P001-E003,00:00:12.200,00:00:14.650,khymka,I'm not barking. I'm hah-ing!,1.305,approved
+P001-E004,00:00:14.700,00:00:15.250,pronya,Hush!,1.091,approved
+P001-E005,00:00:15.280,00:00:15.839,khymka,I am!,1,approved
+P001-E006,00:00:15.910,00:00:16.460,pronya,Hush!,1.091,approved
+P001-E007,00:00:16.490,00:00:17.049,khymka,I am!,1,approved
+P001-E008,00:00:17.120,00:00:17.910,pronya,"Hush, you fool!",1.19,approved
+P001-E009,00:00:17.960,00:00:18.700,parrot,Khymka's a fool!,1.136,approved
+P001-E010,00:00:18.750,00:00:20.140,pronya,Finish up! Then help me dress.,1,approved
+P001-E011,00:00:21.000,00:00:21.570,khymka,Coming!,1,approved

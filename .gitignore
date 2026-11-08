@@ -1,0 +1,9 @@
+/local/
+/media/
+/models/
+/cache/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
