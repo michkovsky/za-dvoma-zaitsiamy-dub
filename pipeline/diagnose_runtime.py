@@ -1,14 +1,16 @@
 """Inventory resources without importing heavy ML libraries or installing anything."""
 import ctypes
+import argparse
 import datetime
 import importlib.util
 import json
 import os
 import platform
+from pathlib import Path
 import shutil
 import subprocess
 import sys
-from common import ROOT
+from common import ROOT, external_work_directory
 
 def probe(command):
     try:
@@ -20,7 +22,12 @@ def probe(command):
         return {'command': command, 'error': str(error)}
 
 def main():
-    target = ROOT/'local/runtime.json'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, help='Report JSON path; overrides DUB_WORK_DIR.')
+    args = parser.parse_args()
+    work = external_work_directory() if args.output is None else None
+    target = args.output if args.output is not None else (
+        work/'reports/runtime.json' if work else ROOT/'local/runtime.json')
     target.parent.mkdir(parents=True, exist_ok=True)
     flags = dict.fromkeys(['sse4_2','avx','avx2','fma','f16c'])
     cpu_name = platform.processor()
@@ -69,7 +76,7 @@ def main():
         'gpu_inventory':gpu,'tools':tools,
         'qualification':'Inventory only. null means unknown. Test each actual operation separately.'}
     target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print('Saved local/runtime.json. CPU instruction availability:',flags)
+    print(f'Saved {target}. CPU instruction availability:',flags)
     if any(value is None for value in flags.values()):
         print('Some CPU features are unknown; verify before selecting binaries that require them.')
 
