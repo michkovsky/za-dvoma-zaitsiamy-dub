@@ -20,3 +20,4 @@
 - SC-002, рев’ю: окреме завдання перевірки актуального SHA за spec з read-only доступом, знахідками path/line/evidence, без редагувань і mutations. Приймання: звірити докази, записати рішення за model-review. Шаблон skill містить усі ці поля.
 - SC-003: публікація, CI й висновок Copilot фіксуються в PR; злиття не виконується.
 - Convergence після implement: 7 FR, 6 acceptance scenarios, 3 SC, рішення дизайну та 7 принципів перевірені. Реалізовані вимоги й межі виконані; прогалин, що потребують нових implementation tasks, немає. Залишено delivery T008; незалежне рев’ю не підміняється цим авторським висновком.
+- Delivery T008: [PR 4](https://github.com/michkovsky/za-dvoma-zaitsiamy-dub/pull/4) відкрито як draft; CI пройшов. Copilot review коміту 91459a5: Approval recommended, No open issues. Після цього додано лише цей запис і позначку завершення T008; актуальний підсумок повторного рев’ю фіксується в PR без нових комітів. Злиття не виконувалося.
