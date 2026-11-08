@@ -1,1 +1,1 @@
-id,title,start,end,status
+id,title,start,end,status,source_id,lifecycle,revision,package

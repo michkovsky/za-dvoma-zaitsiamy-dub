@@ -16,12 +16,26 @@ ID: персонажі `pronya`, `khymka`, `sirko`, `yavdokha`, `parrot`; піл
 |---|---|
 | glossary.csv | id, source, meaning, adaptation_requirement, context |
 | languages/<код>/glossary.csv | concept_id, rendering, status, note |
-| scenes/index.csv | id, title, start, end, status |
-| dialogue.uk.csv | id, start, end, speaker, text, status, note |
+| scenes/index.csv | id, title, start, end, status, source_id, lifecycle, revision, package |
+| scenes/coverage.csv | id, source_id, start, end, kind, scene_id, status, note |
+| source/timing.csv | source_id, duration, reference_source_id, offset, note |
+| scenes/changes/index.csv | change_id, type, state, from_scene, from_revision, to_scene, to_revision, record |
+| сценовий dialogue.uk.csv | id, start, end, speaker, text, status, note, source_id |
+| пілотний dialogue.uk.csv | id, start, end, speaker, text, status, note |
 | мовний dialogue.csv | id, source_id, speaker, text, status, note |
 | performed.csv | id, source_id, start, end, speaker, text, status, note |
 
 Примітки можуть бути вільним текстом; не створювати окрему мову команд у клітинках. Фонетичні підказки синтезатору зберігати окремо від читабельного перекладу. Опис файлів не означає, що всі сцени вже мають заповнені таблиці.
+
+## Сцени, перенесення й часові шкали
+
+scene ID не визначає хронологію. Виданий ID репліки зберігається після перенесення; префікс — походження, поточний власник — єдиний каталог із canonical-рядком. Переклади й виконання розв'язують source_id глобально, а не будують шлях із префікса. Перед видачею нового ID перевіряти канонічні рядки та історичні refs/change-record; ID не перевидається після вилучення чи відхилення. Старий каталог не зберігає дубль тексту.
+
+У scene-dialogue source_id означає video/audio часову шкалу; у мовному dialogue/performed — ID оригінальної репліки. Timing: t_video=t_source+offset, video має offset=0; без запису не припускати синхронність audio. Час source/timing duration має HH:MM:SS.mmm, offset — десяткові секунди зі знаком. Межі [start,end), revision — додатне ціле, lifecycle active/superseded, package — відносний шлях або порожнє значення до планування.
+
+Coverage розділяє scene/credits/transition/unresolved, не має розривів/перекриття в [0,duration); scene-сегмент точно відповідає active-сцені, superseded не входить у покриття. Порожній реєстр означає «покриття не побудовано». Proposed-зміни не змінюють чинну карту. Boundary зберігає ID та збільшує revision; split/merge видає нові scene ID. Історія й точні машинні блоки — [контракт](../specs/004-scene-work-planning/contracts/scene-records.md), процедура — [scene-workflow.md](scene-workflow.md).
+
+Scene speaker: відомий ID, навмисний хор відомих ID через + або unknown із note. Кандидати на мовця не записуються як хор; verified/approved з unknown потребує явно прийнятого обмеження у README сцени. Перетин реплікою межі має одного canonical-власника й явне контекстне посилання/пояснення; автоматично різати рядок не можна. P001 і відносний час його виконання зберігаються.
 
 Реєстр characters/index.csv містить основне name, aliases, незалежні in_script/in_film/in_credits (yes/no/unknown), script_name, credit_name, credit_id, актора та джерела. Семантика — characters/rules.md. Повний набір акторських титрів — source/cast-credits.csv. Їхні типи: named_role, episode_actor, intermedia_actor; лише named_role прямо встановлює пару роль/виконавець. Розгорнуті джерела й розбіжності — source/character-sources.md.
 

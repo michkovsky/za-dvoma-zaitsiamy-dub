@@ -1,0 +1,5 @@
+id,source_id,start,end,kind,scene_id,status,note
+C001,video,00:00:00.000,00:00:20.000,unresolved,,draft,Умовний нерозібраний фрагмент
+C002,video,00:00:20.000,00:01:00.000,scene,S001,verified,
+C003,video,00:01:00.000,00:01:50.000,scene,S002,draft,
+C004,video,00:01:50.000,00:02:00.000,credits,,verified,Умовні титри
