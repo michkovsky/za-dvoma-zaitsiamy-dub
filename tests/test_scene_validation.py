@@ -517,6 +517,30 @@ class MarkdownParserTests(unittest.TestCase):
         result = parse_csv_sections(self.path, self.schemas)
         self.assertEqual(result['After'][0]['revision'], '2')
 
+    def test_html_comments_hide_sections_but_not_csv_literal_content(self):
+        binding = '## Scene binding\n```csv\nscene_id,revision,source_id\nS001,1,video\n```\n'
+        for text, schemas in (
+                (self.original, self.schemas),
+                (binding, {'Scene binding': ('scene_id', 'revision', 'source_id')})):
+            with self.subTest(schemas=schemas):
+                self.path.write_text('<!--\n' + text + '\n-->\n', encoding='utf-8')
+                with self.assertRaisesRegex(ValueError, 'missing sections'):
+                    parse_csv_sections(self.path, schemas)
+                prefix = '<!--\n' + text + '\n-->\n'
+                self.path.write_text(prefix + text, encoding='utf-8')
+                result = parse_csv_sections(self.path, schemas)
+                section = next(iter(schemas))
+                first_data = next(line for line in text.splitlines()
+                                  if line.startswith(('CH001,', 'S001,')))
+                expected_line = (prefix + text).rfind(first_data)
+                expected_line = (prefix + text)[:expected_line].count('\n') + 1
+                self.assertEqual(result[section][0]['_line'], expected_line)
+        literal = self.original.replace('CH001,boundary,proposed,pending',
+                                        'CH001,boundary,proposed,<!--literal-->')
+        self.path.write_text(literal, encoding='utf-8')
+        self.assertEqual(parse_csv_sections(self.path, self.schemas)[
+            'Change metadata'][0]['decision'], '<!--literal-->')
+
     def test_complete_editorial_fixture_has_exact_structural_blocks(self):
         fixture = ROOT / 'tests' / 'fixtures' / 'scenes' / 'changes' / 'proposed-boundary.md'
         result = parse_csv_sections(fixture, self.schemas)
@@ -663,10 +687,15 @@ class DialogueAndPackageTests(unittest.TestCase):
             for claim in (
                     f'S001-L001: {marker} — не погоджено; очікуємо рішення.',
                     f'S001-L001: {marker} —\nне погоджено; очікуємо рішення.',
+                    f'S001-L001: {marker} — **не погоджено**; очікуємо рішення.',
+                    f'S001-L001: {marker} — _не погоджено_; очікуємо рішення.',
+                    f'S001-L001: **не** {marker} — очікуємо рішення.',
+                    f'S001-L001: {marker} — <strong>не погоджено</strong>.',
                     f'Приклад, рішення ще не прийнято: `S001-L001: {marker} — причина`.',
                     f'Приклад: ``S001-L001: {marker} — причина з `літералом` ``.',
                     f'Приклад: `S001-L001: {marker} —\nпричина в коді`.',
                     f'<!-- S001-L001: {marker} — прихований приклад -->',
+                    f'Приклад: <code>S001-L001: {marker} — приклад коду</code>.',
                     f'S001-L002: {marker} — дозволено з причиною. '
                     'S001-L001: обмеження ще не погоджено.'):
                 with self.subTest(marker=marker, claim=claim):
@@ -679,6 +708,8 @@ class DialogueAndPackageTests(unittest.TestCase):
             validate_scenes(self.root)
             owner.write_text(f'S001-L001: {marker} —\nявна причина з `терміном`.',
                              encoding='utf-8')
+            validate_scenes(self.root)
+            owner.write_text(f'S001-L001: **{marker}** — явна причина.', encoding='utf-8')
             validate_scenes(self.root)
             self.write_rows('scenes/S002/dialogue.uk.csv', original)
 
@@ -737,6 +768,8 @@ class DialogueAndPackageTests(unittest.TestCase):
         self.line(speaker='unknown', status='approved', note='Непевний мовець.')
         for text in (
             'S001-L001: не прийняте обмеження; потрібне рішення.',
+            'S001-L001: неприйняте обмеження — лишилось невирішеним.',
+            'S001-L001: unaccepted limitation — still pending.',
             'S001-L001: потрібне явне прийняте обмеження для цього мовця.',
             'S001-L001: прийняте обмеження? Ще очікуємо відповідь.',
         ):

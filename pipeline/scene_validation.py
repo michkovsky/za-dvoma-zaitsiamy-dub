@@ -4,6 +4,7 @@ import io
 import re
 from collections import defaultdict, deque
 from decimal import Decimal
+from html.parser import HTMLParser
 from pathlib import Path, PureWindowsPath
 from urllib.parse import unquote, urlsplit
 
@@ -147,6 +148,43 @@ def _coverage_for_source(rows, source_id, duration, path):
     return segments
 
 
+def _lines_without_html_comments(text):
+    """Ignore comments outside fences, retaining every original line number."""
+    result = []
+    comment = False
+    fence = None
+    for line in text.splitlines():
+        if fence is not None:
+            result.append(line)
+            if re.fullmatch(rf' {{0,3}}{re.escape(fence[0])}{{{fence[1]},}}\s*', line):
+                fence = None
+            continue
+        opening = re.match(r'^ {0,3}(`{3,}|~{3,})', line) if not comment else None
+        if opening:
+            fence = (opening[1][0], len(opening[1]))
+            result.append(line)
+            continue
+        pieces = []
+        position = 0
+        while position < len(line):
+            if comment:
+                closing = line.find('-->', position)
+                if closing < 0:
+                    break
+                position = closing + 3
+                comment = False
+            else:
+                start = line.find('<!--', position)
+                if start < 0:
+                    pieces.append(line[position:])
+                    break
+                pieces.append(line[position:start])
+                position = start + 4
+                comment = True
+        result.append(''.join(pieces))
+    return result
+
+
 def parse_csv_sections(path, schemas):
     """Read exact top-level Markdown headings followed immediately by CSV fences.
 
@@ -154,7 +192,7 @@ def parse_csv_sections(path, schemas):
     Unrelated fenced code is ignored. Every requested section occurs once.
     """
     path = Path(path)
-    lines = path.read_text(encoding='utf-8-sig').splitlines()
+    lines = _lines_without_html_comments(path.read_text(encoding='utf-8-sig'))
     sections = {}
     index = 0
     fence = None
@@ -470,12 +508,34 @@ def _without_inline_code(text):
     return ''.join(parts)
 
 
+class _VisibleProse(HTMLParser):
+    """Collect visible text, excluding HTML code and non-prose containers."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.hidden = []
+        self.parts = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {'code', 'pre', 'script', 'style'}:
+            self.hidden.append(tag)
+        elif not self.hidden and tag in {'br', 'p', 'div'}:
+            self.parts.append('\n')
+
+    def handle_endtag(self, tag):
+        if self.hidden and tag == self.hidden[-1]:
+            self.hidden.pop()
+        elif not self.hidden and tag in {'p', 'div'}:
+            self.parts.append('\n')
+
+    def handle_data(self, data):
+        if not self.hidden:
+            self.parts.append(data)
+
+
 def _prose_blocks(path):
     if not path.is_file():
         return []
-    text = path.read_text(encoding='utf-8-sig')
-    text = re.sub(r'<!--(?:.*?-->|.*\Z)', ' ', text, flags=re.DOTALL)
-    lines = text.splitlines()
+    lines = _lines_without_html_comments(path.read_text(encoding='utf-8-sig'))
     prose = []
     fence = None
     for line in lines:
@@ -489,8 +549,11 @@ def _prose_blocks(path):
             prose.append('')
         elif not line.startswith(('    ', '\t')):
             prose.append(line)
-    return [_without_inline_code(block) for block in re.split(
-        r'\n\s*\n', '\n'.join(prose)) if block.strip()]
+    blocks = re.split(r'\n\s*\n', '\n'.join(prose))
+    visible = _VisibleProse()
+    visible.feed('\n\n'.join(_without_inline_code(block) for block in blocks))
+    visible.close()
+    return [block for block in re.split(r'\n\s*\n', ''.join(visible.parts)) if block.strip()]
 
 
 def _has_editorial_record(path, line_id, phrase):
@@ -510,7 +573,9 @@ def _has_editorial_record(path, line_id, phrase):
                 continue
             end = claims[index + 1].start() if index + 1 < len(claims) else len(block)
             statement = block[claim.end():end]
-            match = re.search(phrase, statement, re.IGNORECASE)
+            statement = re.sub(r'(?<!\w)_+|_+(?!\w)', '', statement)
+            statement = statement.replace('*', '').replace('~', '')
+            match = re.search(r'(?<!\w)(?:' + phrase + r')(?!\w)', statement, re.IGNORECASE)
             if not match:
                 continue
             if re.search(
