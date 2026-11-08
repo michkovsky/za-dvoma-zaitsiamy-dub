@@ -1,0 +1,3 @@
+id,title,start,end,status,source_id,lifecycle,revision,package
+S001,Умовна сцена 1,00:00:20.000,00:01:00.000,verified,video,active,1,
+S002,Умовна сцена 2,00:01:00.000,00:01:50.000,draft,video,active,1,
