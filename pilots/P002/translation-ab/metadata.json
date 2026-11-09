@@ -20,7 +20,12 @@
     "premium_requests": 1,
     "response_sha256": "062f9b10e16b24cb0cdb7643f6a94476b3616fabe7ee3dcee3fb2b115d78048b",
     "tool_executions": 0,
-    "rows": 38
+    "rows": 38,
+    "historical_input_hash_format": "source_sha256, prompt_sha256 and non-null context_sha256: SHA-256 of archived UTF-8 file bytes with CRLF; preserved unchanged. These hash files, not CLI argument serialization.",
+    "published_inputs_utf8_lf_sha256": {
+      "source.json": "9861d9a18ef7679fcbc20f6d60855f3005a4fc1a9fb7331636f52f4a89a4830f",
+      "A.prompt.txt": "f25fd31a5405ee9e2ce131b8e9f5ad6543746c168dd6fd0aed81492f7ed6b69d"
+    }
   },
   {
     "condition": "B",
@@ -43,6 +48,12 @@
     "premium_requests": 1,
     "response_sha256": "2fb5e5e5c2ffcb019488659aed179b5ded9889858a25fdce04d666075f6227fd",
     "tool_executions": 0,
-    "rows": 38
+    "rows": 38,
+    "historical_input_hash_format": "source_sha256, prompt_sha256 and non-null context_sha256: SHA-256 of archived UTF-8 file bytes with CRLF; preserved unchanged. These hash files, not CLI argument serialization.",
+    "published_inputs_utf8_lf_sha256": {
+      "source.json": "9861d9a18ef7679fcbc20f6d60855f3005a4fc1a9fb7331636f52f4a89a4830f",
+      "B.prompt.txt": "39ac10b499882524de57833594cef56bf31383dc8434ba5501f5a8a1d9ba789e",
+      "context.uk.md": "1841bed29f45eab3260bc651348e34d088a9560de3797abe557a916ed2463d29"
+    }
   }
 ]
