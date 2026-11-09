@@ -1,0 +1,20 @@
+{
+  "status": "approved short recording A12 by UC-013; full-scene transition not approved",
+  "runs": [
+    {
+      "candidate": "A",
+      "display_text": "Go to Kondurevych.",
+      "tts_text": "Go to Kondurevich.",
+      "profile": "sirko",
+      "conditioning": "baseline cached identity and speech prompt; no short scene speech tokens",
+      "seed": 2062,
+      "exaggeration": 0.25,
+      "cfg_weight": 0.4,
+      "temperature": 0.6,
+      "seconds": 2.16,
+      "wav_sha256": "00263a14c7c9a9d0f8f077a830a7898e767c0346a2185192deae32fa2b994400",
+      "mp3_sha256": "ebf50960989f9c307a2541e8aae468c960fe573eb51cebf4447eaeaaccd46598",
+      "clipped_samples": 0
+    }
+  ]
+}

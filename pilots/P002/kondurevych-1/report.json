@@ -1,0 +1,35 @@
+{
+  "status": "draft; awaiting listening, fluent rapid surname required by UC-011",
+  "runs": [
+    {
+      "candidate": "A",
+      "display_text": "Go to Kondurevych’s.",
+      "tts_text": "Go to Kondurevich's.",
+      "profile": "sirko",
+      "conditioning": "baseline cached identity and speech prompt; no short scene speech tokens",
+      "seed": 2062,
+      "exaggeration": 0.25,
+      "cfg_weight": 0.4,
+      "temperature": 0.6,
+      "seconds": 2.24,
+      "wav_sha256": "c4f62bca048ae4b575948a1a2092584884380e0c86449f3acc43a1a4412c28b6",
+      "mp3_sha256": "b59fca406ee1f8fc7dd1c1d8351c718314d156e39d5f9e8e04ab396bd27c87df",
+      "clipped_samples": 0
+    },
+    {
+      "candidate": "B",
+      "display_text": "Go to Kondurevych’s.",
+      "tts_text": "Go to Kondoorevich's.",
+      "profile": "sirko",
+      "conditioning": "baseline cached identity and speech prompt; no short scene speech tokens",
+      "seed": 2062,
+      "exaggeration": 0.25,
+      "cfg_weight": 0.4,
+      "temperature": 0.6,
+      "seconds": 2.72,
+      "wav_sha256": "cfc9fb5c110f3bbe5f6817514d5f1e664a59b4383a8dafe32ee05db7d03a566c",
+      "mp3_sha256": "b0509553cdded00be3678283da22d78d66f7d75877155c26d8e831a74d238d8a",
+      "clipped_samples": 0
+    }
+  ]
+}

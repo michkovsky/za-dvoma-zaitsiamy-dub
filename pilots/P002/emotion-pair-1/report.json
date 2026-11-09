@@ -1,0 +1,99 @@
+{
+  "references": [
+    {
+      "name": "calm",
+      "start": 91.05,
+      "end": 92.3,
+      "sha256": "5c7b03775446293f1682ec5d6803792f9daa797c0651d912da02db1eb7f2b5ac",
+      "source": "separated UK voices; speaker confirmed by user; exact boundaries proposed"
+    },
+    {
+      "name": "despair",
+      "start": 92.3,
+      "end": 94.0,
+      "sha256": "7f17cc797cbbe4f0844ef643643a9110aa6a2b5ffcce77233674c07990eeda9d",
+      "source": "separated UK voices; speaker confirmed by user; exact boundaries proposed"
+    },
+    {
+      "name": "original-pair",
+      "start": 90.8,
+      "end": 94.1,
+      "sha256": "1f96f04c860f4c235b798e48f200329acec7546f5ff6d1f0659c65d2cc0eb533",
+      "source": "separated UK voices; speaker confirmed by user; exact boundaries proposed"
+    }
+  ],
+  "runs": [
+    {
+      "name": "calm",
+      "text": "Go to Kon-doo-rev-ich's.",
+      "reference": "calm",
+      "exaggeration": 0.25,
+      "cfg_weight": 0.4,
+      "temperature": 0.6,
+      "seed": 1062,
+      "seconds": 10.281,
+      "audio_seconds": 2.24,
+      "style_token_count": 32,
+      "style_tokens_sha256": "604242fc5c008e6af68d6bad2a27b9297463e326a40f1347d0cd9ee60f5a313b",
+      "speaker_embedding_preserved": true,
+      "waveform_identity_preserved": true,
+      "sha256": "58753b2d777cc6baecf19a27e7d3dc0ef3d87dd3ba9f3316504a3498f4231bc3"
+    },
+    {
+      "name": "despair-A",
+      "text": "Pon-chun...",
+      "reference": "despair",
+      "exaggeration": 0.8,
+      "cfg_weight": 0.35,
+      "temperature": 0.65,
+      "seed": 1063,
+      "seconds": 7.64,
+      "audio_seconds": 1.24,
+      "style_token_count": 43,
+      "style_tokens_sha256": "14cc3958347f4a9e58bcf084abf8b795b66ac013939ca3af96b8de4f81268b55",
+      "speaker_embedding_preserved": true,
+      "waveform_identity_preserved": true,
+      "sha256": "765ea85bd7a98a1207751ab26407b373f7a8a60ef8ce948242578910cf85d987"
+    },
+    {
+      "name": "despair-B",
+      "text": "Pon-chun...",
+      "reference": "despair",
+      "exaggeration": 0.98,
+      "cfg_weight": 0.25,
+      "temperature": 0.75,
+      "seed": 1064,
+      "seconds": 6.406,
+      "audio_seconds": 1.12,
+      "style_token_count": 43,
+      "style_tokens_sha256": "14cc3958347f4a9e58bcf084abf8b795b66ac013939ca3af96b8de4f81268b55",
+      "speaker_embedding_preserved": true,
+      "waveform_identity_preserved": true,
+      "sha256": "1ab47ac37f1aefe49ded598470453483dd1ea0567862e17ca83cb4d26b3a1c9c"
+    }
+  ],
+  "previous_method": "same cached Sirko conditioning for both lines; scalar exaggeration and timing only",
+  "new_method": "different original UK speech-condition tokens; cached Sirko speaker embedding and waveform reference retained",
+  "limitations": "short proposed reference windows; possible spillover; audition requires user listening; A/B differ in decoder params and are not a causal ablation",
+  "outputs": {
+    "pair-A.mp3": "c820bb00a1932758931fdf260997e2d2aa514cf77262c237e822838d85c71ab7",
+    "pair-A.wav": "9c505a95b22e0c82af026f3e7fa798b3270eb258878617bf5d232305d174f093",
+    "pair-B.mp3": "04e572fce774d712ae09c1a32072845221a5b3af5009149a26b878829247270c",
+    "pair-B.wav": "566d7ac413e55c82e5a1a02da3af577fe6cf0c592a107cb00712dcf224bcac15"
+  },
+  "technical_qa": [
+    {
+      "file": "pair-A.wav",
+      "duration": 2.95775,
+      "peak": 0.214080810546875,
+      "clipped_samples": 0
+    },
+    {
+      "file": "pair-B.wav",
+      "duration": 2.887958333333333,
+      "peak": 0.2799072265625,
+      "clipped_samples": 0
+    }
+  ],
+  "audition_status": "rejected surname pronunciation by user UC-011; no emotional A/B selection"
+}
