@@ -29,7 +29,7 @@
 ## Phase 5: Перевірки й подання
 
 - [x] T010 Оновити pilots/README.md і specs/README.md; виконати validator, diff check, перевірку незмінності pilots/P001; записати фактичні межі перевірки в pilots/P002/workflow.md. FR-001,007,008; SC-001,004.
-- [ ] T011 Виконати дозволене read-only Copilot CLI review конкретного snapshot; зберегти висновок і рішення в specs/005-p002-two-pass/reviews/copilot.md, підготувати draft PR без злиття. FR-007,008; SC-004.
+- [x] T011 Виконати дозволене read-only Copilot CLI review конкретного snapshot; зберегти висновок і рішення в specs/005-p002-two-pass/reviews/copilot.md, підготувати draft PR без злиття. FR-007,008; SC-004. Подання: PR #11, draft; слухові й редакторські T012/T014/T015 лишаються відкритими.
 
 ## Dependencies & Execution Order
 
