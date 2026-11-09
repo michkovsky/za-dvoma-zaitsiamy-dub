@@ -1,0 +1,238 @@
+Режим: контрольний переклад для кінодубляжу, англійська мова. Поверни лише JSON-об’єкт з полем lines — масивом об’єктів ref, text_en, delivery_uk, uncertainty_uk. По одному запису на кожен вхідний ref, у тому самому порядку. Зберігай окремі відповіді, повтори та обірване закінчення. delivery_uk — коротка конкретна акторська вказівка українською; uncertainty_uk — непевність джерела/трактування. Позначки [?] з джерела залишай також у text_en. Не виправляй український оригінал і не вигадуй відсутнього тексту. Мовців дано як чернеткові метадані, не уточнюй unknown самостійно.
+
+Надай природний стислий сценічний переклад із збереженням змісту, адресата, наміру, комічних повторів та гри слів. Точний ліпсинк і тривалість тут не оцінюються. Імена передавай Pronya, Khymka, Sirko, Yavdokha, Holokhvostyi; не вводь нової системи адаптації імен. Це експериментальний кандидат, не зміна погодженого дубляжу. Не використовуй інструментів, пам’яті інших сесій, пошуку, зовнішніх файлів чи підпорядкованих агентів. Нічого не редагуй, не коміть і не публікуй. Увесь дозволений контекст міститься нижче.
+
+UK SOURCE (ідентичний в обох умовах; решта слів чернеткові навіть без [?]):
+[
+  {
+    "ref": "P001-L001",
+    "speaker": "pronya",
+    "text": "Тату, мамо, зачиняйте крамницю і йдіть в кімнату [?].",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L002",
+    "speaker": "pronya",
+    "text": "Химко! Химко!",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L003",
+    "speaker": "khymka",
+    "text": "Га!",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L004",
+    "speaker": "pronya",
+    "text": "Не гавкай!",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L005",
+    "speaker": "khymka",
+    "text": "Я не гавкаю. Я гакаю.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L006",
+    "speaker": "pronya",
+    "text": "Мовчи!",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L007",
+    "speaker": "khymka",
+    "text": "Мовчу.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L008",
+    "speaker": "pronya",
+    "text": "Мовчи!",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L009",
+    "speaker": "khymka",
+    "text": "Мовчу.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L010",
+    "speaker": "pronya",
+    "text": "Мовчи, дурна!",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L011",
+    "speaker": "parrot",
+    "text": "Химка дурна!",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L012",
+    "speaker": "pronya",
+    "text": "Закінчуй швидше приборку. Будеш мене переодягати.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L013",
+    "speaker": "khymka",
+    "text": "Зараз!",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L014",
+    "speaker": "sirko+yavdokha",
+    "text": "Доню, чого ви нас кликали?",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L015",
+    "speaker": "pronya",
+    "text": "Кликала.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L016",
+    "speaker": "pronya",
+    "text": "Мамо! Мамо, знімайте цю міщанську хустку і вдягайте цього чепчика.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L017",
+    "speaker": "pronya",
+    "text": "А ви, тату, цього галстука. [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L018",
+    "speaker": "yavdokha",
+    "text": "Та куди ж воно?",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L019",
+    "speaker": "pronya",
+    "text": "Куди? Така зараз мода.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L020",
+    "speaker": "yavdokha",
+    "text": "Та і мати моя, і бабка таку носили. [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L021",
+    "speaker": "pronya",
+    "text": "Що ви зо мною робите?",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L022",
+    "speaker": "pronya",
+    "text": "Говорити, як люди, не вмієте. Ходити не вмієте. У хаті й кругом простота.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L023",
+    "speaker": "unknown",
+    "text": "Простота — не гріх.",
+    "status": "UC-001 words confirmed; speaker unknown"
+  },
+  {
+    "ref": "UC-001-second-response",
+    "speaker": "unknown",
+    "text": "Не гріх.",
+    "status": "UC-001 words confirmed; speaker unknown"
+  },
+  {
+    "ref": "P001-L024",
+    "speaker": "pronya",
+    "text": "Так нащо було мене по-благородному вчити? [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L025",
+    "speaker": "sirko+yavdokha",
+    "text": "Так ми ж хотіли… [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L026",
+    "speaker": "pronya",
+    "text": "Сьогодні у мене буде благородний кавалер.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L027",
+    "speaker": "sirko+yavdokha",
+    "text": "Може, буде сватати? [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L028",
+    "speaker": "sirko+yavdokha",
+    "text": "Хто?",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L029",
+    "speaker": "pronya",
+    "text": "Голохвостий.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L030",
+    "speaker": "sirko+yavdokha",
+    "text": "Цилюрник з-за Канави? [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L031",
+    "speaker": "pronya",
+    "text": "Не цилюрник, а полікмахтер! [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L032",
+    "speaker": "pronya",
+    "text": "Образований, вчений. [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L033",
+    "speaker": "sirko+yavdokha",
+    "text": "А чи багатий?",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L034",
+    "speaker": "pronya",
+    "text": "Багатий?",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L035",
+    "speaker": "pronya",
+    "text": "Багатий, дуже.",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L036",
+    "speaker": "sirko+yavdokha",
+    "text": "То ж якраз ще й дочка знають. [?]",
+    "status": "draft"
+  },
+  {
+    "ref": "P001-L037",
+    "speaker": "pronya",
+    "text": "Так от, глядіть, щоб… [?]",
+    "status": "draft"
+  }
+]
+
+SCENE CONTEXT:
+(додаткового опису немає)

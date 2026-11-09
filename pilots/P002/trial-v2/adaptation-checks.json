@@ -1,0 +1,20 @@
+{
+  "base_trial": "trial-v1",
+  "changed_text_keys": [
+    "trial-034",
+    "trial-035",
+    "trial-036"
+  ],
+  "preserved_cue_count": 61,
+  "le_bragtale_mentions": 1,
+  "ragtail_mentions": 2,
+  "holokhvostyi_mentions": 0,
+  "hah_ing_preserved": true,
+  "phonetics_separate_from_display": true,
+  "captions_burned": true,
+  "caption_frames_visually_checked": [
+    "caption-le-bragtale.png",
+    "caption-ragtail.png"
+  ],
+  "uk_inputs_and_other_words_unchanged": true
+}

@@ -1,0 +1,16 @@
+{
+  "approved_pair": "P002-A13",
+  "pair_input_sha256": "e7cd647bcdc43638b6b9f56d2e811f647c7609d935af8752f6e28919f8b98ad3",
+  "leading_silence_removed_seconds": 0.522625,
+  "internal_pause_seconds": 0.13,
+  "pair_tempo": 1,
+  "shared_pair_gain": 2.4353520308371284,
+  "pair_end": 93.90958333333333,
+  "unchanged_62_cues": true,
+  "v3_reconstruction_max_error": 3.0517496943154032e-05,
+  "unintended_overlaps_over_30ms": [],
+  "full_wav_duration": 109.53299319727891,
+  "clipped_samples": 0,
+  "peak": 0.8358154296875,
+  "limitation": "Pair approved; new full mix and video synchronization require listening/viewing"
+}

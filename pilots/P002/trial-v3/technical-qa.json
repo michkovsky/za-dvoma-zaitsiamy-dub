@@ -1,0 +1,44 @@
+{
+  "duration": 109.53299319727891,
+  "clipped_samples": 0,
+  "peak": 0.8358154296875,
+  "unintended_overlaps_over_30ms": [],
+  "intentional_chorus_pairs": [
+    [
+      "trial-013",
+      "trial-014"
+    ],
+    [
+      "trial-027",
+      "trial-028"
+    ],
+    [
+      "trial-030",
+      "trial-031"
+    ],
+    [
+      "trial-032",
+      "trial-033"
+    ],
+    [
+      "trial-035",
+      "trial-036"
+    ],
+    [
+      "trial-039",
+      "trial-040"
+    ],
+    [
+      "trial-043",
+      "trial-044"
+    ]
+  ],
+  "user_confirmed_interruptions": [
+    [
+      "trial-053",
+      "trial-054"
+    ]
+  ],
+  "max_tempo": 1.519949494949494,
+  "output_hashes_verified": 8
+}

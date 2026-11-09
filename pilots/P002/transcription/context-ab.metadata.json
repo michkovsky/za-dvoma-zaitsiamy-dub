@@ -1,0 +1,269 @@
+[
+  {
+    "condition": "A",
+    "prompt": null,
+    "input_sha256": "fa07e1df3fa39e10d57beb51eb4fe7aab6f37bd110d6143359ebf4eeac4179b8",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:11:14.305380+00:00",
+    "exit_code": 0,
+    "wall_seconds": 20.235,
+    "outputs": {
+      "raw.json": "90eead97bcb701797ef6d6694e6a43dfd2210bb01ae0632852d1885b1da5e5d2",
+      "raw.txt": "55a7ad36058a99e7708dcf645517ea117f3f1ac3e69929daef4e33ab6cacacde"
+    },
+    "experiment": "context-ab",
+    "output_directory": "A"
+  },
+  {
+    "condition": "B",
+    "prompt": "Сцена в домі родини: дочка готується до візиту кавалера, дає накази служниці та батькам. Домашні відповідають, іноді одночасно. Чути папугу. Розмовна українська та суржик.",
+    "input_sha256": "fa07e1df3fa39e10d57beb51eb4fe7aab6f37bd110d6143359ebf4eeac4179b8",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:11:36.873513+00:00",
+    "exit_code": 0,
+    "wall_seconds": 20.328,
+    "outputs": {
+      "raw.json": "90eead97bcb701797ef6d6694e6a43dfd2210bb01ae0632852d1885b1da5e5d2",
+      "raw.txt": "55a7ad36058a99e7708dcf645517ea117f3f1ac3e69929daef4e33ab6cacacde"
+    },
+    "experiment": "context-ab",
+    "output_directory": "B"
+  },
+  {
+    "condition": "C",
+    "prompt": "Проня кличе батьків і служницю Химку, поспішаючи підготувати домашніх до візиту кавалера. Химка різко відгукується; Проня сердиться на її манеру відповідати. Служниця буквально заперечує докір, а потім відповідає навіть на наказ замовкнути. Папуга підхоплює сварку. Проня обриває перепалку дорученням закінчити прибирання й допомогти їй переодягтися. Батьки приходять на поклик. Дочка вимагає змінити їхнє вбрання; мати захищає звичний одяг і родинні звичаї. Явдоха веде відповідь, Сірко підтакує та повторює за дружиною, подекуди вони говорять разом. Проня переходить від роздратування до демонстративної образи через брак належних манер у домашніх. Батьки спокійно заперечують її докір. Згадуючи кавалера, дочка набуває гордовитої значущості; батьків цікавлять його наміри й достаток. Розмовна українська та суржик.",
+    "input_sha256": "fa07e1df3fa39e10d57beb51eb4fe7aab6f37bd110d6143359ebf4eeac4179b8",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:11:59.524429+00:00",
+    "exit_code": 0,
+    "wall_seconds": 20.187,
+    "outputs": {
+      "raw.json": "90eead97bcb701797ef6d6694e6a43dfd2210bb01ae0632852d1885b1da5e5d2",
+      "raw.txt": "55a7ad36058a99e7708dcf645517ea117f3f1ac3e69929daef4e33ab6cacacde"
+    },
+    "experiment": "context-ab",
+    "output_directory": "C"
+  },
+  {
+    "condition": "A",
+    "window": 0,
+    "prompt": null,
+    "input_sha256": "f188d99ed853e1c10ffbaf245e927a0c196db0a48672710426d7a40816ec2fbe",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:13:02.596221+00:00",
+    "exit_code": 0,
+    "wall_seconds": 7.828,
+    "outputs": {
+      "raw.json": "9159660d6b06069a2f2fbcb4ce76942ddf0ab1f3af9eee2fcb9f0e8403c18185",
+      "raw.txt": "dbcb052686b970042abca1c52356dfb5d07ef489ce30e34cce6ab11ddde42379"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "A-0"
+  },
+  {
+    "condition": "A",
+    "window": 1,
+    "prompt": null,
+    "input_sha256": "de67d2e3b4b4132d7723de031b4ad925d3c0296aa8adcf7b82be6746b9b1b323",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:13:33.636175+00:00",
+    "exit_code": 0,
+    "wall_seconds": 6.813,
+    "outputs": {
+      "raw.json": "6de6b4cde323fd510fdd624cfdb6ac50975aa9058996b8801ad4cc74ec048115",
+      "raw.txt": "28fc7a98917e0eda3237db13182da1f0301c2f2a75ac3b6b843526414da54ea2"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "A-1"
+  },
+  {
+    "condition": "A",
+    "window": 2,
+    "prompt": null,
+    "input_sha256": "1c04115e7f67814958c1ea24a06b29a63578498e0fdd5b8b24820a93f7778081",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:14:03.185260+00:00",
+    "exit_code": 0,
+    "wall_seconds": 7.359,
+    "outputs": {
+      "raw.json": "4f0b74075c6006d0aabcea1ff76ac53d66b85a43f881da99107420c7e18e8aa3",
+      "raw.txt": "3a03745fe659232cc4b2f1124438d06f1daec735eb37333981c16e79da75a265"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "A-2"
+  },
+  {
+    "condition": "B",
+    "window": 0,
+    "prompt": "Сцена в домі родини: дочка готується до візиту кавалера, дає накази служниці та батькам. Домашні відповідають, іноді одночасно. Чути папугу. Розмовна українська та суржик.",
+    "input_sha256": "f188d99ed853e1c10ffbaf245e927a0c196db0a48672710426d7a40816ec2fbe",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:13:12.638617+00:00",
+    "exit_code": 0,
+    "wall_seconds": 8.766,
+    "outputs": {
+      "raw.json": "b0646f34264944087f146ef4fb44ba16193fcf48d6866701026fbae47332bbcc",
+      "raw.txt": "fcb5c0f93d370e14c8367c482e2808e0f555b3b0d0550a12c78e3587ed51c4fc"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "B-0"
+  },
+  {
+    "condition": "B",
+    "window": 1,
+    "prompt": "Сцена в домі родини: дочка готується до візиту кавалера, дає накази служниці та батькам. Домашні відповідають, іноді одночасно. Чути папугу. Розмовна українська та суржик.",
+    "input_sha256": "de67d2e3b4b4132d7723de031b4ad925d3c0296aa8adcf7b82be6746b9b1b323",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:13:42.788210+00:00",
+    "exit_code": 0,
+    "wall_seconds": 8.765,
+    "outputs": {
+      "raw.json": "5aac4a8125ab9ef3e6ac313993332c80699ebbb4ad18f0465829d7eccf981d6d",
+      "raw.txt": "415de32c39f64c2eb562eebfe21ceaecee4bc683a7605bb2b17ebbbd280ae9e2"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "B-1"
+  },
+  {
+    "condition": "B",
+    "window": 2,
+    "prompt": "Сцена в домі родини: дочка готується до візиту кавалера, дає накази служниці та батькам. Домашні відповідають, іноді одночасно. Чути папугу. Розмовна українська та суржик.",
+    "input_sha256": "1c04115e7f67814958c1ea24a06b29a63578498e0fdd5b8b24820a93f7778081",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:14:12.752068+00:00",
+    "exit_code": 0,
+    "wall_seconds": 9.516,
+    "outputs": {
+      "raw.json": "88a4b6ebd5b3e7d378eff9277a5997aacd93a4897c04e3c987306a94b9b153f8",
+      "raw.txt": "778f7e2efcdcea011d42c8209ef1e6103ac743a1a9d08a1eebc005564e854687"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "B-2"
+  },
+  {
+    "condition": "C",
+    "window": 0,
+    "prompt": "Проня кличе Химку й батьків. Служниця різко відповідає, буквально заперечує докір; Проня сердиться й наказує замовкнути. Папуга повторює сварку. Дочка вимагає змінити одяг; мати захищає родинні звичаї, батько підтакує й повторює. Проня ображена браком манер, батьки спокійно заперечують. Про кавалера вона говорить гордовито, домашні питають про його статки. Українська та суржик.",
+    "input_sha256": "f188d99ed853e1c10ffbaf245e927a0c196db0a48672710426d7a40816ec2fbe",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:13:23.625965+00:00",
+    "exit_code": 0,
+    "wall_seconds": 7.75,
+    "outputs": {
+      "raw.json": "847eaaf9c08fc9e7c27abe4c8656abe9d9427c45f171c46c80b9f7bf297641bb",
+      "raw.txt": "0c26440070e8d5273d2cd2fe38b34b2426567502b307383a9395ca5f7d7247e3"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "C-0"
+  },
+  {
+    "condition": "C",
+    "window": 1,
+    "prompt": "Проня кличе Химку й батьків. Служниця різко відповідає, буквально заперечує докір; Проня сердиться й наказує замовкнути. Папуга повторює сварку. Дочка вимагає змінити одяг; мати захищає родинні звичаї, батько підтакує й повторює. Проня ображена браком манер, батьки спокійно заперечують. Про кавалера вона говорить гордовито, домашні питають про його статки. Українська та суржик.",
+    "input_sha256": "de67d2e3b4b4132d7723de031b4ad925d3c0296aa8adcf7b82be6746b9b1b323",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:13:53.765820+00:00",
+    "exit_code": 0,
+    "wall_seconds": 7.187,
+    "outputs": {
+      "raw.json": "2a81e67594b5afab15ed51ffdbc260d3f814c8df0f723657c87075b16cbe313e",
+      "raw.txt": "4f0a7717760d5d77de73f400a6d23b642026de4021d76ac99d200c1b14fa5209"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "C-1"
+  },
+  {
+    "condition": "C",
+    "window": 2,
+    "prompt": "Проня кличе Химку й батьків. Служниця різко відповідає, буквально заперечує докір; Проня сердиться й наказує замовкнути. Папуга повторює сварку. Дочка вимагає змінити одяг; мати захищає родинні звичаї, батько підтакує й повторює. Проня ображена браком манер, батьки спокійно заперечують. Про кавалера вона говорить гордовито, домашні питають про його статки. Українська та суржик.",
+    "input_sha256": "1c04115e7f67814958c1ea24a06b29a63578498e0fdd5b8b24820a93f7778081",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:14:24.486242+00:00",
+    "exit_code": 0,
+    "wall_seconds": 9.562,
+    "outputs": {
+      "raw.json": "39235dc9965380356d8428777882514a85eb6ec148d02d597411ead348334a35",
+      "raw.txt": "fcb5c0f93d370e14c8367c482e2808e0f555b3b0d0550a12c78e3587ed51c4fc"
+    },
+    "experiment": "context-ab-enabled",
+    "output_directory": "C-2"
+  },
+  {
+    "condition": "A",
+    "window": 0,
+    "prompt": null,
+    "input_sha256": "fa07e1df3fa39e10d57beb51eb4fe7aab6f37bd110d6143359ebf4eeac4179b8",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:14:38.544964+00:00",
+    "exit_code": 0,
+    "wall_seconds": 21.813,
+    "outputs": {
+      "raw.json": "40a4c74bce96c398df45a1dfa8e4b1a36ce935c89c67ea29d7cd8b4e5d00aeaf",
+      "raw.txt": "228dd04e1a5d3bbb5a4a42fd13ee6e5414f5268dadc8e78fbf71f62b175abc6c"
+    },
+    "experiment": "context-ab-continuous",
+    "output_directory": "A-0"
+  },
+  {
+    "condition": "B",
+    "window": 0,
+    "prompt": "Сцена в домі родини: дочка готується до візиту кавалера, дає накази служниці та батькам. Домашні відповідають, іноді одночасно. Чути папугу. Розмовна українська та суржик.",
+    "input_sha256": "fa07e1df3fa39e10d57beb51eb4fe7aab6f37bd110d6143359ebf4eeac4179b8",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:15:02.575909+00:00",
+    "exit_code": 0,
+    "wall_seconds": 17.672,
+    "outputs": {
+      "raw.json": "33372ae7c1360a26bacf91b27f653830e15d2ee19f5ce15dd808bfabfc907c4c",
+      "raw.txt": "fac0e265e215326af2fe7119c69f9c7d92bb678a8cd9b44b4582f84b5ba88119"
+    },
+    "experiment": "context-ab-continuous",
+    "output_directory": "B-0"
+  },
+  {
+    "condition": "C",
+    "window": 0,
+    "prompt": "Проня кличе Химку й батьків. Служниця різко відповідає, буквально заперечує докір; Проня сердиться й наказує замовкнути. Папуга повторює сварку. Дочка вимагає змінити одяг; мати захищає родинні звичаї, батько підтакує й повторює. Проня ображена браком манер, батьки спокійно заперечують. Про кавалера вона говорить гордовито, домашні питають про його статки. Українська та суржик.",
+    "input_sha256": "fa07e1df3fa39e10d57beb51eb4fe7aab6f37bd110d6143359ebf4eeac4179b8",
+    "source_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+    "started_utc": "2026-11-09T12:15:22.500750+00:00",
+    "exit_code": 0,
+    "wall_seconds": 22.532,
+    "outputs": {
+      "raw.json": "aa62d1c7bd06689af6bf4482c199ad9cb185bda480489a74db3978305a05196e",
+      "raw.txt": "4f81ad99fd3c8d6c63d1b16b5b4166a16f62bf151a2f1febd13f0018784ddad1"
+    },
+    "experiment": "context-ab-continuous",
+    "output_directory": "C-0"
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "condition": "A",
+    "session_id": "19aaa800-5a83-4f51-a81d-7ab9df8b942d",
+    "requested_model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "cli_version": "1.0.107",
+    "base_sha": "e6f9291f78d88487861c72f53e65355870ea951d",
+    "source_sha256": "1e69e52901f625e1c8b3c5f6b74656b02b5ecca37053e970f534125ba4586b44",
+    "prompt_sha256": "fad8ea5a48334d0d16d2427fd4229c0322a5a5bbff9a3cdc196ff8ee7baea871",
+    "context_sha256": null,
+    "exit_code": 0,
+    "wall_seconds": 32.094,
+    "outputs": {
+      "events.jsonl": "ea569c7530cddbf8398e5ed2fe06d3a33e1398412616dfefcad1ae433be3475f",
+      "session.md": "422bc43ba74c1a381dc5c54cf9e787533562e15fbb9d7b50a13f9ee769427908",
+      "usage.json": "b1372bcd4c51c51be55164017b2a1e5fc80eb769630f149116d391c8265a8a23"
+    },
+    "actual_model": "gpt-6-luna",
+    "premium_requests": 1,
+    "response_sha256": "062f9b10e16b24cb0cdb7643f6a94476b3616fabe7ee3dcee3fb2b115d78048b",
+    "tool_executions": 0,
+    "rows": 38,
+    "historical_input_hash_format": "source_sha256, prompt_sha256 and non-null context_sha256: SHA-256 of archived UTF-8 file bytes with CRLF; preserved unchanged. These hash files, not CLI argument serialization.",
+    "published_inputs_utf8_lf_sha256": {
+      "source.json": "9861d9a18ef7679fcbc20f6d60855f3005a4fc1a9fb7331636f52f4a89a4830f",
+      "A.prompt.txt": "f25fd31a5405ee9e2ce131b8e9f5ad6543746c168dd6fd0aed81492f7ed6b69d"
+    }
+  },
+  {
+    "condition": "B",
+    "session_id": "6130d4b6-745f-47a4-b42b-0ed35dd34435",
+    "requested_model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "cli_version": "1.0.107",
+    "base_sha": "e6f9291f78d88487861c72f53e65355870ea951d",
+    "source_sha256": "1e69e52901f625e1c8b3c5f6b74656b02b5ecca37053e970f534125ba4586b44",
+    "prompt_sha256": "f77f8e9d3e85f1b44834131fcc60283979c34bbbb81604de244f554134a2e1e4",
+    "context_sha256": "b6eafaa9f826ebe81fd00326e0a27768cdd2896bafa9e27d75c8cc1f359a71e3",
+    "exit_code": 0,
+    "wall_seconds": 32.875,
+    "outputs": {
+      "events.jsonl": "355de1f5c6685f5c9ceb17fd9385a1d3503820e8d4eb1db6db315b73a155ff51",
+      "session.md": "9c1acc8da0d77379ec9f87f9263983c90aa387a1cf459d9670399fe19b7d89ce",
+      "usage.json": "f805c6ebba235e307417b8e2bf8dde6c2fcf97a5c87db0aa71b0a6c7445a9bd1"
+    },
+    "actual_model": "gpt-6-luna",
+    "premium_requests": 1,
+    "response_sha256": "2fb5e5e5c2ffcb019488659aed179b5ded9889858a25fdce04d666075f6227fd",
+    "tool_executions": 0,
+    "rows": 38,
+    "historical_input_hash_format": "source_sha256, prompt_sha256 and non-null context_sha256: SHA-256 of archived UTF-8 file bytes with CRLF; preserved unchanged. These hash files, not CLI argument serialization.",
+    "published_inputs_utf8_lf_sha256": {
+      "source.json": "9861d9a18ef7679fcbc20f6d60855f3005a4fc1a9fb7331636f52f4a89a4830f",
+      "B.prompt.txt": "39ac10b499882524de57833594cef56bf31383dc8434ba5501f5a8a1d9ba789e",
+      "context.uk.md": "1841bed29f45eab3260bc651348e34d088a9560de3797abe557a916ed2463d29"
+    }
+  }
+]

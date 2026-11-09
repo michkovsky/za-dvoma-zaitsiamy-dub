@@ -1,0 +1,31 @@
+{
+  "duration": 109.533,
+  "cues": 64,
+  "max_tempo": 1.519949494949494,
+  "fast_cues": [],
+  "dialogue_peak": 0.8,
+  "decode_exit": 0,
+  "outputs": {
+    "P002-trial-v4.mp4": "e2ca031c19db613a9c1373bbeff8425ba6e7c3c0f3491e807b0b65a1959283af",
+    "P002-trial-v4.wav": "e7823b866d8ba6e391a8b7ab35d221853cb6d230f6e559c0f2fa8d73abec0f2e",
+    "dialogue.wav": "1dec81f9e9386829868e3ddf390f03ca3bb816f03247341a620cd4bdbe5f1150",
+    "scene-background.wav": "fc95096d6f1a420a1d532b80c1c0611247962631b7ee0328359d4ef3c90127f1",
+    "P002-trial-v4.en.srt": "a6d89363a588dfc5cd4a47f494a0a5489f6909f00d7a3135a031ff4e2388967f",
+    "P002-trial-v4.en.ass": "388bad8c06e024a814b143ae58a0660b01ec6b4b49d837bdbf9d1956e308597e",
+    "P002-emotion-review-v4.mp4": "f7c0eb76b5f1ec8f46958eb7c88e6fb01223db34d717004dde854a18d30e2eb1",
+    "caption-kondurevych.png": "c7b3bcaf29df8634343ee0bc1eb7dcfa062267559568af39c84430cd650f6b9f"
+  },
+  "end_padding_samples_per_channel": 2955,
+  "captions": {
+    "mode": "burned into video pixels",
+    "groups": 57,
+    "chorus_duplicates_merged": 7,
+    "frame_checks": [
+      "caption-le-bragtale.png",
+      "caption-ragtail.png",
+      "caption-kondurevych.png"
+    ]
+  },
+  "generated_source_cues_inherited_from_prior_trials": 33,
+  "new_generations_this_revision": 0
+}

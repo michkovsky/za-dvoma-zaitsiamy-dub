@@ -1,0 +1,29 @@
+{
+  "evidence": [
+    "UC-004",
+    "UC-005",
+    "UC-006",
+    "UC-007",
+    "UC-008",
+    "UC-009"
+  ],
+  "separate_no_sin_speaker": "sirko",
+  "first_answer_speaker": "unresolved",
+  "five_rubles": true,
+  "old_man_speaker": "yavdokha",
+  "calls": [
+    "sirko",
+    "yavdokha"
+  ],
+  "response": "khymka",
+  "destination_speaker": "sirko",
+  "destination_uk": "до Кондуревича",
+  "pension_uk": "Пенсійон",
+  "pension_english": "Ponchun… (user-proposed invented form; short pronunciation accepted UC-009; scene performance under test)",
+  "character_knowledge": "Sirko sees pansion as fashionable; course-length/result knowledge not attributed",
+  "unchanged": [
+    "Le Bragtale / Ragtail",
+    "whole hah-ing",
+    "source UK ASR runs"
+  ]
+}

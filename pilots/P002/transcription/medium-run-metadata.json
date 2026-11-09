@@ -1,0 +1,21 @@
+{
+  "stage": "pass-2-medium-retry",
+  "started_utc": "2026-11-09T10:51:36.701709+00:00",
+  "input_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+  "model_sha256": "19fea4b380c3a618ec4723c3eef2eb785ffba0d0538cf43f8f235e7b3b34220f",
+  "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+  "model": "medium-q5_0",
+  "beam_size": 5,
+  "best_of": 5,
+  "max_context": 0,
+  "fallback": true,
+  "prompt": "Сцена в домі родини: дочка готується до візиту кавалера, дає накази служниці та батькам. Домашні відповідають, іноді одночасно. Чути папугу. Розмовна українська та суржик.",
+  "exit_code": 0,
+  "finished_utc": "2026-11-09T10:54:21.766213+00:00",
+  "wall_seconds": 162.797,
+  "outputs": {
+    "raw.json": "d7745f303381046d88e477242023402cc781de13460a1f5011dc3492c1a8b8c0",
+    "raw.srt": "076a0622add82139c854c957ec3928fcfd4ca0a42c2afc9b865cd0d4aab2bb2f",
+    "raw.txt": "49cc19418511fdcb8a22404ad2f0ed1350309a9bbbbe65cb4da4713ca01dee9d"
+  }
+}
