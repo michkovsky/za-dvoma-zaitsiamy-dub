@@ -1,0 +1,77 @@
+[
+  {
+    "id": "LC-001",
+    "title": "Дві відповіді про простоту",
+    "trial_start": 47.8,
+    "trial_end": 53.8,
+    "uk_source_start": 1637.267,
+    "uk_source_end": 1643.267,
+    "duration": 6.0,
+    "files": {
+      "uk": {
+        "wav": "LC-001-uk.wav",
+        "mp3": "LC-001-uk.mp3",
+        "wav_sha256": "a627a65878966340acdc86ab918cc16cb965bd85bdb9d537a8c4248114ff2dc7",
+        "mp3_sha256": "692f6cdb73bab3010a81099a554aab2dbcccf0bec305235bc430533610c4d111"
+      },
+      "ru": {
+        "wav": "LC-001-ru.wav",
+        "mp3": "LC-001-ru.mp3",
+        "wav_sha256": "7f96a141778ecca1b8c30b3c8e5c1091600ddae90e32cd2c9cadfb37649b125e",
+        "mp3_sha256": "446d105c5e83d344fc04c92672ff835c0be0e0db8c04465e6a01df8b8a99755d"
+      }
+    },
+    "status": "awaiting user listening response",
+    "ru_role": "auxiliary; local sync approximate; does not confirm UK words"
+  },
+  {
+    "id": "LC-002",
+    "title": "Шампанське, ціна й заперечення",
+    "trial_start": 81.0,
+    "trial_end": 90.5,
+    "uk_source_start": 1670.467,
+    "uk_source_end": 1679.967,
+    "duration": 9.5,
+    "files": {
+      "uk": {
+        "wav": "LC-002-uk.wav",
+        "mp3": "LC-002-uk.mp3",
+        "wav_sha256": "f7165adca665110f7143e8369a3bc237748e4f241221078f8b6ce128954d2945",
+        "mp3_sha256": "c390914cecabedd55b432317327c8694ebb46a8c2180ff594c3bc525441114f9"
+      },
+      "ru": {
+        "wav": "LC-002-ru.wav",
+        "mp3": "LC-002-ru.mp3",
+        "wav_sha256": "63552397b57c7831e0ba6904c73297f423d07ed3bfa10cbd714a2888d3d72898",
+        "mp3_sha256": "70c871cb7f940d7af5a48e9c88c6369379a680e68f7407b98fa76edcc782598b"
+      }
+    },
+    "status": "awaiting user listening response",
+    "ru_role": "auxiliary; local sync approximate; does not confirm UK words"
+  },
+  {
+    "id": "LC-003",
+    "title": "Доручення Химці: адресат і місце",
+    "trial_start": 89.0,
+    "trial_end": 96.0,
+    "uk_source_start": 1678.467,
+    "uk_source_end": 1685.467,
+    "duration": 7.0,
+    "files": {
+      "uk": {
+        "wav": "LC-003-uk.wav",
+        "mp3": "LC-003-uk.mp3",
+        "wav_sha256": "572cf4c268d0db49373a92c83cc0949972a01a89df177f946ab96deddb897a58",
+        "mp3_sha256": "0d856eba67c5a542ea04e4a0cb1834cdea365296937eca7d79a360cb6fc026f6"
+      },
+      "ru": {
+        "wav": "LC-003-ru.wav",
+        "mp3": "LC-003-ru.mp3",
+        "wav_sha256": "9b5f7aa52f5a33681febc726079cdd5c40604bed50d535c29723b62e83081533",
+        "mp3_sha256": "2777a2133530be2d20b1d8ac017bbf5c7e2141273c0179fae841728f2910b680"
+      }
+    },
+    "status": "awaiting user listening response",
+    "ru_role": "auxiliary; local sync approximate; does not confirm UK words"
+  }
+]
