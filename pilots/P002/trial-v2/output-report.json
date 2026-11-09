@@ -1,0 +1,27 @@
+{
+  "duration": 109.533,
+  "cues": 61,
+  "new_generations": 33,
+  "max_tempo": 1.519949494949494,
+  "fast_cues": [],
+  "dialogue_peak": 0.8,
+  "decode_exit": 0,
+  "outputs": {
+    "P002-trial-v2.mp4": "721eef1f5bd1519149ee4c80fac871112e4448faa479d30e5e75675b4d74aa0f",
+    "P002-trial-v2.wav": "5d4e581c2c9e227657375ed9a3fb598fb7a23e2c1d424534693abf538de42aa6",
+    "dialogue.wav": "94d954e89a1af843e710b870324a2223ccf615740aa94f7c6f346506979ea0bd",
+    "scene-background.wav": "fc95096d6f1a420a1d532b80c1c0611247962631b7ee0328359d4ef3c90127f1",
+    "P002-trial-v2.en.srt": "4270c44c7c3eaeb43eb068c4a2a2997b3ccabfc4b5ab7894c95f0b692c87cbe4",
+    "P002-trial-v2.en.ass": "647bdd5ac3eabb88eb3d3803366e79ea9fedc6d54e9516c3fadaa887d6d85a6a"
+  },
+  "end_padding_samples_per_channel": 2955,
+  "captions": {
+    "mode": "burned into video pixels",
+    "groups": 53,
+    "chorus_duplicates_merged": 8,
+    "frame_checks": [
+      "caption-le-bragtale.png",
+      "caption-ragtail.png"
+    ]
+  }
+}

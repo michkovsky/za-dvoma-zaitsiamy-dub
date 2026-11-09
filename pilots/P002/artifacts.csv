@@ -1,3 +1,5 @@
 id,file,sha256,status,scope,feedback
 P002-A01,exports/P002/trial-v1/P002-trial-v1.mp4,5be65180d2be2ea2178a5aa29bb0d522acf05174ebe11605af5810aa2ff3cfb8,draft,Пробне озвучення повної підготовки; непевні слова/мовці й синхрон не погоджені,
 P002-A02,exports/P002/trial-v1/P002-trial-v1.wav,29f357b0bb724590648ce797ff77098326fa8972d336ae642e54e54b0cf230c6,draft,Пробне озвучення повної підготовки; непевні слова/мовці й синхрон не погоджені,
+P002-A03,exports/P002/trial-v2/P002-trial-v2.mp4,721eef1f5bd1519149ee4c80fac871112e4448faa479d30e5e75675b4d74aa0f,draft,Виправлені Ragtail / Le Bragtale; видимі субтитри у MP4; звучання не погоджене,
+P002-A04,exports/P002/trial-v2/P002-trial-v2.wav,5d4e581c2c9e227657375ed9a3fb598fb7a23e2c1d424534693abf538de42aa6,draft,Виправлені Ragtail / Le Bragtale; видимі субтитри у MP4; звучання не погоджене,
