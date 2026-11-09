@@ -1,0 +1,17 @@
+{
+  "duration": 109.533,
+  "cues": 61,
+  "new_generations": 30,
+  "max_tempo": 1.519949494949494,
+  "fast_cues": [],
+  "dialogue_peak": 0.8,
+  "decode_exit": 0,
+  "outputs": {
+    "P002-trial-v1.mp4": "5be65180d2be2ea2178a5aa29bb0d522acf05174ebe11605af5810aa2ff3cfb8",
+    "P002-trial-v1.wav": "29f357b0bb724590648ce797ff77098326fa8972d336ae642e54e54b0cf230c6",
+    "dialogue.wav": "d935854792c217cdf492c68053fc08766e1d2f5eeac12be58720f0912a174278",
+    "scene-background.wav": "fc95096d6f1a420a1d532b80c1c0611247962631b7ee0328359d4ef3c90127f1",
+    "P002-trial-v1.en.srt": "2399f6609c987ad9aff398fcadab3960c0278c640c28ce801c64927776b66eac"
+  },
+  "end_padding_samples_per_channel": 2955
+}

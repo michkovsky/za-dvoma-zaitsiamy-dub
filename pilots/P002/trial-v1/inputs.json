@@ -1,0 +1,57 @@
+{
+  "references": [
+    {
+      "id": "pronya",
+      "file": "references/pronya.wav",
+      "sha256": "1b8787038859a7d582bb905dddfb6e398500b0df18c21e1fa58ca277debc8b6f",
+      "status": "approved"
+    },
+    {
+      "id": "khymka",
+      "file": "references/khymka-v2.wav",
+      "sha256": "14a6f7bed4d0f45c45bab4dd41eae63c77a338ce980f1de83005d77a36701d62",
+      "status": "approved"
+    },
+    {
+      "id": "sirko",
+      "file": "references/sirko.wav",
+      "sha256": "97e4cf7794281cfb63cf8cf14aade58393860f9e50051d0cbe418c62330f2d60",
+      "status": "approved"
+    },
+    {
+      "id": "yavdokha",
+      "file": "references/yavdokha-v4.wav",
+      "sha256": "f2b050a0689277a0bf0348281a6cc975825e4fb42dd1498280caf5a1b4230de6",
+      "status": "reference"
+    },
+    {
+      "id": "yavdokha-scarf",
+      "file": "references/yavdokha-scarf.wav",
+      "sha256": "84d75f8287091ce36dfd4609bbf30c076aa28d345e01d82a8f1c1fc07057925e",
+      "status": "reference"
+    }
+  ],
+  "inputs": {
+    "uk-asr.wav": "eb93b5b70653d11d30c8f670069defd42b81f1bdc7820c2d8fa8f13b35f49737",
+    "ru-asr.wav": "a16532cc2ec04559d6a469550d38339d146f184ef120323304de2748d066c920",
+    "source-44100.wav": "60003d01f7cae809e57d96c9d3732f1645790581beaacd5a1e73aa05288e6ece"
+  },
+  "conditioning": {
+    "khymka-v2-conditioning.pt": "fff06d912c95587ada20c65af1f7e6e77fbd504981d5c6da2112866d6f283362",
+    "pronya-conditioning.pt": "8e6de891070c22def72c84315e27b629c73cc073202354af47cb44534e5b524c",
+    "sirko-conditioning.pt": "384c657bdffab80ea9eeb7dba1a174641c264c418cf03cf9ba25731d13fc9a7b",
+    "yavdokha-confused-conditioning.pt": "1c529abef05f35e4ff582c3be35f7cfbb673b6c65971f9b63bc720570bd547ea",
+    "yavdokha-v4-conditioning.pt": "d8e866e9e821d8553f4c90552a62b96a6f4a188f3a394e7c366884ce74d9b4a9"
+  },
+  "runtime_probe": {
+    "torch": "2.6.0+cu124",
+    "gpu": "NVIDIA GeForce GTX 1650",
+    "cuda": "12.4",
+    "seconds": 103.5,
+    "audio_seconds": 2.74,
+    "peak": 0.20183181762695312,
+    "gpu_allocated_mb": 2039.65087890625,
+    "dependencies": "read-only legacy path; references copied into trial workspace"
+  },
+  "portability": "legacy model and dependency directories are still required; no full reproducibility claim"
+}

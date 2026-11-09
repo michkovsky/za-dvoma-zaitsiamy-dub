@@ -1,0 +1,31 @@
+{
+  "source_start": 1589.467,
+  "source_end": 1699.0,
+  "duration": 109.5329999999999,
+  "runs": [
+    {
+      "stage": "pass-1",
+      "language": "uk",
+      "prompt": null,
+      "input_sha256": "eb93b5b70653d11d30c8f670069defd42b81f1bdc7820c2d8fa8f13b35f49737",
+      "output_sha256": "89610f247137c27a362ba1cc7d30a0d866028d693b1085f696e183f6b2b5d8b8",
+      "wall_seconds": 43.766
+    },
+    {
+      "stage": "reference-ru",
+      "language": "ru",
+      "prompt": null,
+      "input_sha256": "a16532cc2ec04559d6a469550d38339d146f184ef120323304de2748d066c920",
+      "output_sha256": "67c5daa31d281ac207c9b060d151335a2824fd2e65979427a22fb6d0e6633481",
+      "wall_seconds": 47.719
+    },
+    {
+      "stage": "pass-2",
+      "language": "uk",
+      "prompt": "Проня кличе Химку й батьків, готує їх до візиту кавалера. Служниця буквально заперечує докір і відповідає на наказ мовчати. Папуга передражнює. Дочка змінює вбрання домашніх; мати захищає звичаї, батько підтакує. Проня ображається, потім гордовито розповідає про кавалера і наказує приготувати напої. Українська та суржик.",
+      "input_sha256": "eb93b5b70653d11d30c8f670069defd42b81f1bdc7820c2d8fa8f13b35f49737",
+      "output_sha256": "c0c5dfdff3155c76be197b5e293b105f9ed6fdde380f0df102bd59e35bb5ba38",
+      "wall_seconds": 54.843
+    }
+  ]
+}
