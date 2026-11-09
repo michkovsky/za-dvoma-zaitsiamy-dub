@@ -1,0 +1,34 @@
+{
+  "duration": 109.533,
+  "cues": 64,
+  "new_generations": 35,
+  "max_tempo": 1.519949494949494,
+  "fast_cues": [],
+  "dialogue_peak": 0.8,
+  "decode_exit": 0,
+  "outputs": {
+    "P002-trial-v3.mp4": "9f29f633a228c59ae8fa91cdf2c76153c36022b4bea9659406ebf5c9a8c5f282",
+    "P002-trial-v3.wav": "eb9d941a75af9cc397ba2dcc710d5bbc760d7c6fc814160bfa3685fc98ae0b57",
+    "dialogue.wav": "0013fdce179654b86e9c453266d72590213d65a3f9ab5c2e51f3849d0c9b8b81",
+    "scene-background.wav": "fc95096d6f1a420a1d532b80c1c0611247962631b7ee0328359d4ef3c90127f1",
+    "P002-trial-v3.en.srt": "a3f96b328535faf2b17f2b7ac2527bcb09653d69625f1ba8007b7205b41a82c7",
+    "P002-trial-v3.en.ass": "8654f1975a67c01981da0778eee424f18e65c85f1df6ab887b51fb1b6b82e7ab",
+    "P002-review-round-1.mp4": "30f3d6d3c013b3fc54e18f273a1c9f63c1c00e57dae5379992c65333623b5d11",
+    "Ponchun-candidate.mp3": "5fe6c29e32e455bbd9be67a1771145e62ebbc30d0c73367368107dc13fdcd7a5"
+  },
+  "end_padding_samples_per_channel": 2955,
+  "captions": {
+    "mode": "burned into video pixels",
+    "groups": 57,
+    "chorus_duplicates_merged": 7,
+    "frame_checks": [
+      "caption-le-bragtale.png",
+      "caption-ragtail.png"
+    ]
+  },
+  "ponchun_pronunciation_acceptance": {
+    "artifact": "P002-A07",
+    "sha256": "5fe6c29e32e455bbd9be67a1771145e62ebbc30d0c73367368107dc13fdcd7a5",
+    "scope": "short pronunciation only; scene tempo and emotion not approved"
+  }
+}

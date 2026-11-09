@@ -21,7 +21,7 @@
         "mp3_sha256": "446d105c5e83d344fc04c92672ff835c0be0e0db8c04465e6a01df8b8a99755d"
       }
     },
-    "status": "awaiting user listening response",
+    "status": "partially answered UC-004: separate Sirko; first speaker/unison unresolved",
     "ru_role": "auxiliary; local sync approximate; does not confirm UK words"
   },
   {
@@ -46,7 +46,7 @@
         "mp3_sha256": "70c871cb7f940d7af5a48e9c88c6369379a680e68f7407b98fa76edcc782598b"
       }
     },
-    "status": "awaiting user listening response",
+    "status": "answered UC-005/006/007: words, speakers, action and character knowledge; English styling remains proposed",
     "ru_role": "auxiliary; local sync approximate; does not confirm UK words"
   },
   {
@@ -71,7 +71,7 @@
         "mp3_sha256": "2777a2133530be2d20b1d8ac017bbf5c7e2141273c0179fae841728f2910b680"
       }
     },
-    "status": "awaiting user listening response",
+    "status": "answered UC-005: Sirko sends Khymka to Kondurevych; premise naming Pronya corrected",
     "ru_role": "auxiliary; local sync approximate; does not confirm UK words"
   }
 ]
