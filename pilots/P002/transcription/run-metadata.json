@@ -1,0 +1,69 @@
+{
+  "pass-1": {
+    "stage": "pass-1",
+    "started_utc": "2026-11-09T10:32:43.683837+00:00",
+    "input_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "model_sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "prompt": null,
+    "exit_code": 0,
+    "wall_seconds": 29.265,
+    "finished_utc": "2026-11-09T10:33:13.881864+00:00",
+    "outputs": {
+      "raw.json": "f9afd5daef6567ffcf25b352f3b358e2af244d0a2c53a0a2f7a2abe00de82a27",
+      "raw.srt": "e5400168cfdd5da3cdebb1bf687638c8569d88a54ce8f7a9361e93f8accda418",
+      "raw.txt": "02eddefb0af0afc44057cba614fe512309e681f97b6aa869c3fdbb236cefb065"
+    }
+  },
+  "reference-ru": {
+    "stage": "reference-ru",
+    "started_utc": "2026-11-09T10:33:14.301156+00:00",
+    "input_sha256": "a4540b0990d3cf8a74595f289fc542f55173501ce4bafcd4781db6da3351b6ae",
+    "model_sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "prompt": null,
+    "exit_code": 0,
+    "wall_seconds": 33.593,
+    "finished_utc": "2026-11-09T10:33:48.838138+00:00",
+    "outputs": {
+      "raw.json": "ab358fe9416ec8df886ccfe2969234598a21220771b928f6787a85aa6401c9c7",
+      "raw.srt": "e99b93eb72ea2bdabe46a95291969af312b800c4955b78d0e0697a3ee6764f72",
+      "raw.txt": "49c00441bb53ff8dc86d4ef108e10d5ce3ad84b798ad2d874f1c4da5da997d13"
+    }
+  },
+  "pass-2": {
+    "stage": "pass-2",
+    "started_utc": "2026-11-09T10:36:42.897830+00:00",
+    "input_sha256": "ed21ef9a226c15014324e18831b7022c71a58a3decf8189001424c5ca876be68",
+    "model_sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb",
+    "binary_sha256": "ca92abf03591f6ad24fa3d0c911f331a787728cf7a1b7af8c0d88a344c7c8e52",
+    "prompt": "Сцена в домі родини: дочка готується до візиту кавалера, дає накази служниці та батькам. Домашні відповідають, іноді одночасно. Чути папугу. Розмовна українська та суржик.",
+    "exit_code": 0,
+    "wall_seconds": 34.688,
+    "finished_utc": "2026-11-09T10:37:18.663938+00:00",
+    "outputs": {
+      "raw.json": "a419e6a1f923100c8cb1ac3ddad6f42befd59ba5788982df2f8695588b23b974",
+      "raw.srt": "e9228cd791849670e09c4fe1a4f442477b59cc3089016a0fec20b64beaa944c6",
+      "raw.txt": "ca6f17edce4cf1832833cd1db9f49a1dbdd9856106654d5a7aad09c08541f255"
+    }
+  },
+  "scene_seal": {
+    "stage": "scene-and-prompt-before-pass-2",
+    "created_utc": "2026-11-09T10:36:42.374271+00:00",
+    "scene_sha256": "8713a94136c9bbfbc588c3781c47c965d02453281a1702adb65d812748b29939",
+    "prompt": "Сцена в домі родини: дочка готується до візиту кавалера, дає накази служниці та батькам. Домашні відповідають, іноді одночасно. Чути папугу. Розмовна українська та суржик.",
+    "prompt_sha256": "73404c2a547d9e5a5a3bf1cf446a4fc20e0276f9322258bbc3cbf5573dff3821"
+  },
+  "pass1_editorial_seal": {
+    "stage": "pass-1-with-ru-published-before-scene",
+    "created_utc": "2026-11-09T10:35:36.784825+00:00",
+    "files": {
+      "pilots\\P002\\transcription\\pass-1.uk.md": "2352a63274fae071d184a03fcf9002b904ae6e29bc23894c2a7bcdddab65abc9",
+      "pilots\\P002\\transcription\\reference.ru.md": "3b75cf4aad766986719cdfb1509b82855810838efcc3399822d6fe430bfdfde7"
+    }
+  },
+  "limitations": [
+    "Full token JSON may contain invalid UTF-8 byte fragments; raw files preserved; display uses explicit replacement characters.",
+    "No listening verification; no canonical speaker attribution."
+  ]
+}
