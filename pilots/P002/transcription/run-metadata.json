@@ -60,6 +60,11 @@
     "files": {
       "pilots\\P002\\transcription\\pass-1.uk.md": "2352a63274fae071d184a03fcf9002b904ae6e29bc23894c2a7bcdddab65abc9",
       "pilots\\P002\\transcription\\reference.ru.md": "3b75cf4aad766986719cdfb1509b82855810838efcc3399822d6fe430bfdfde7"
+    },
+    "hash_scope": "Original working-file bytes before Git newline normalization; raw ASR output hashes are independent of Markdown normalization.",
+    "normalized_utf8_lf_sha256": {
+      "pilots\\P002\\transcription\\pass-1.uk.md": "cb30690e7488dff0f019a35f429af8cdfee3325f92f4e5e5abb2e77f9ccd2204",
+      "pilots\\P002\\transcription\\reference.ru.md": "2c81bf2d17d49d4d6b2f74c2b151071a869e528f7a96137f13a3253fb70d4d94"
     }
   },
   "limitations": [
