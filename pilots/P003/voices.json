@@ -1001,7 +1001,53 @@
     "raw_comparison_file": "exports/P003/ru-song/v1/uk-then-ru-originals.wav",
     "raw_comparison_sha256": "a8ddfb004a97e941852e9aac1aafcee20e5ab6ef3aacbd717aff4c978c3225bb",
     "asr_diagnostic": "♪ Моя мама серце добре має ♪\n ♪ Ві папа шимають магазин ♪",
-    "quality_status": "listening pending; ASR correctly returns dobre and magazyn but cannot verify subtle palatalization or timbre",
+    "quality_status": "LC-031: user prefers second/RU version; preferred source for further calibration, not full sound-quality approval",
     "voice_references_changed": false
+  },
+  "current_alignment_trial": {
+    "file": "exports/P003/neural-tuning/ru-aligned-v1/aligned-035-then-020.wav",
+    "sha256": "6a786476a726edf91e948070567ed5ce01a3713cd25eecdf4fcb7f5983f65329",
+    "duration": 18.76,
+    "order": [
+      "RU source with temporal mel alignment, strength 0.35",
+      "1 second silence",
+      "same alignment and F0, strength 0.20"
+    ],
+    "alignment": {
+      "P003-R01": {
+        "method": "band-limited DTW on 18 energy-excluded cepstral coefficients",
+        "max_deviation_ms": 19.90867579908695,
+        "mean_deviation_ms": 10.26193441261926,
+        "band_ms": 200,
+        "source_frames": 220,
+        "generated_frames": 219,
+        "monotonic_verified": true,
+        "full_report_sha256": "589d72591234c6cfa752d9008dd8d41e6ef1c296e33ef6791dbbfa5f45ee1a46"
+      },
+      "P003-R02": {
+        "method": "band-limited DTW on 18 energy-excluded cepstral coefficients",
+        "max_deviation_ms": 0.0,
+        "mean_deviation_ms": 0.0,
+        "band_ms": 200,
+        "source_frames": 224,
+        "generated_frames": 224,
+        "monotonic_verified": true,
+        "full_report_sha256": "91bfa0d8e9da44aff5acbb37115d4a094a857a17671cd80098c2a63fa7a3e4af"
+      }
+    },
+    "qa": {
+      "all_finite": true,
+      "clipping": 0
+    },
+    "asr_diagnostics": {
+      "aligned-strength-035": "Моя мама серце добре має\n Ві папа шимають магазин",
+      "aligned-strength-020": "♪ Моя мама серце добре має ♪\n ♪ Ві папа шимають магазин ♪"
+    },
+    "status": "proposed; subtle palatalization and identity transfer require listening",
+    "limitations": [
+      "Lower conversion strength preserves more source timbre; same-voice Ukrainian reconstruction does not establish English identity transfer.",
+      "DTW is acoustic-shape alignment, not verified phoneme boundaries.",
+      "No claim that residual dyobre is fixed."
+    ]
   }
 }
