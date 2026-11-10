@@ -17,9 +17,9 @@
       "context_end_seconds": 18.0,
       "duration": 6.0,
       "gain": 2.5,
-      "status": "candidate solo; identity grouping provisional per user",
+      "status": "legacy broad excerpt; arch echo; use narrow canary cut only for identity comparison, not primary conditioning",
       "identity": "unassigned; no actor or character attribution",
-      "candidate_solo": true,
+      "candidate_solo": false,
       "voice_type": "not determined",
       "qa": {
         "clipping": 0,
@@ -90,9 +90,9 @@
       "context_end_seconds": 62.8,
       "duration": 2.8,
       "gain": 2.5,
-      "status": "excluded from single-speaker conditioning; multiple voices per user LC-012",
+      "status": "mother-line singer identity confirmed by user LC-018; former chorus exclusion was a numbering-mapping error",
       "identity": "unassigned; no actor or character attribution",
-      "candidate_solo": false,
+      "candidate_solo": true,
       "voice_type": "not determined",
       "qa": {
         "clipping": 0,
@@ -113,7 +113,8 @@
           "sha256": "4963388f9de331bdf9835e702e0fe8beca622c59a0ce0e3853c96bbd0f6553ff"
         }
       },
-      "listening_feedback": "LC-012: 2 і 3 багатоголосся."
+      "listening_feedback": "LC-018: same singer as canary opening. Supersedes mistaken V03 exclusion from LC-012 file-number mapping.",
+      "candidate_role": "P003-R01"
     },
     {
       "id": "P003-V04",
@@ -125,7 +126,7 @@
       "context_end_seconds": 67.6,
       "duration": 2.5999773242630386,
       "gain": 2.5,
-      "status": "candidate father/shop excerpt; role distinct per user; precise content and solo cleanliness pending",
+      "status": "father/shop singer distinct per user; new longer primary reference in solo-v2",
       "identity": "unassigned; no actor or character attribution",
       "candidate_solo": true,
       "voice_type": "not determined",
@@ -205,7 +206,25 @@
       "id": "P003-R01",
       "description": "Main voice, referred to by user as 1–4",
       "identity": "unnamed singer",
-      "status": "user-described role; exact excerpt grouping provisional"
+      "status": "Singer identity shared by canary opening and mother line, user LC-018",
+      "confirmed_source_phrases": [
+        "В небі канареєчка літає",
+        "Моя мама серце добре має"
+      ],
+      "primary_reference": {
+        "role": "P003-R01",
+        "label": "mother",
+        "source_start": 109.75,
+        "source_end": 113.45,
+        "duration": 3.7,
+        "use": "primary identity reference",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R01-mother.wav",
+        "sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      }
     },
     {
       "id": "P003-R02",
@@ -214,67 +233,142 @@
       "canonical_transcription": "І папаша мають магазин.",
       "english_text": "And my papa has himself a shop.",
       "status": "distinct contrasting role confirmed by user LC-013",
-      "overlap": "None. LC-015 supersedes prior overlap interpretation: low voice enters after the main phrase ends."
+      "overlap": "None. LC-015 supersedes prior overlap interpretation: low voice enters after the main phrase ends.",
+      "primary_reference": {
+        "role": "P003-R02",
+        "label": "papa",
+        "source_start": 114.15,
+        "source_end": 118.0,
+        "duration": 3.85,
+        "use": "primary identity reference",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
+        "sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      }
     }
   ],
   "role_mapping_note": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels.",
   "experimental_profiles": {
-    "status": "experimental only; not adopted for complete rendering pending coverage of all solo singers",
+    "status": "revised candidate profiles from user-confirmed individual singer lines; generated sound listening pending",
+    "references": [
+      {
+        "role": "P003-R01",
+        "label": "mother",
+        "source_start": 109.75,
+        "source_end": 113.45,
+        "duration": 3.7,
+        "use": "primary identity reference",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R01-mother.wav",
+        "sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      },
+      {
+        "role": "P003-R02",
+        "label": "papa",
+        "source_start": 114.15,
+        "source_end": 118.0,
+        "duration": 3.85,
+        "use": "primary identity reference",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
+        "sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      },
+      {
+        "role": "P003-R01",
+        "label": "canary-arch",
+        "source_start": 61.9,
+        "source_end": 64.8,
+        "duration": 2.9,
+        "use": "identity comparison only; arch echo must not define dry timbre",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R01-canary-arch.wav",
+        "sha256": "045d52c84425f61292fd71552c23915d079840ca4c8f77a493b69a3d471835c2",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      }
+    ],
     "encoder": {
-      "name": "Chatterbox VoiceEncoder",
+      "encoder": "Chatterbox VoiceEncoder",
       "model_sha256": "f0921cab452fa278bc25cd23ffd59d36f816d7dc5181dd1bef9751a7fb61f63c",
+      "script_sha256": "fc1ca206b06c9d8e0c6ee964231d72d6ae6fe598905456426e24f2ff6475710a",
+      "torch": "2.6.0+cu124",
+      "numpy": "1.26.4",
+      "device": "cpu",
       "profiles": [
         {
           "role": "P003-R01",
-          "source_file": "exports/P003/voice-profiles/v1/P003-V01-verse-1-vocal.wav",
-          "source_sha256": "615377eb5eadd2df0ad2484a2e4c1c85c76b0708c4aad26088d4559d6e636954",
-          "duration_seconds": 6.0,
-          "embedding_file": "exports/P003/voice-profiles/embeddings-v2/P003-R01.npy",
-          "embedding_sha256": "33553e4920d2855ad51dc5066711a5d1214debe96e4e9b3d3cc1872cf7ea13a6",
+          "source_file": "exports/P003/voice-profiles/solo-v2/P003-R01-mother.wav",
+          "source_sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+          "duration_seconds": 3.7,
+          "embedding_file": "exports/P003/voice-profiles/embeddings-v3/P003-R01.npy",
+          "embedding_sha256": "e098f197dc16e7c0dc0ffcd89346f9d0b62bfc6c5a808834f4c90eb6b90ee25e",
           "shape": [
             1,
             256
           ],
-          "l2_norm": 0.9999998807907104,
-          "wall_seconds": 3.952999999979511,
+          "l2_norm": 0.9999999403953552,
+          "wall_seconds": 3.359000000054948,
           "status": "candidate embedding, not approved conditioning"
         },
         {
           "role": "P003-R02",
-          "source_file": "exports/P003/voice-profiles/v1/P003-V04-papa-vocal.wav",
-          "source_sha256": "a3ccb53c5ebf14514dfa5274f748d1e6347b567d7df331afa6f866f07b25060b",
-          "duration_seconds": 2.5999773242630386,
-          "embedding_file": "exports/P003/voice-profiles/embeddings-v2/P003-R02.npy",
-          "embedding_sha256": "ca81d591e5b8fbdbbb4a84e3132a03a84c2bc01115405083d6906dae7c9b4059",
+          "source_file": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
+          "source_sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+          "duration_seconds": 3.85,
+          "embedding_file": "exports/P003/voice-profiles/embeddings-v3/P003-R02.npy",
+          "embedding_sha256": "3693634189b4ebcf57cbbfd14d5b4b620f40296f80e083414d3b6e0271e7b138",
           "shape": [
             1,
             256
           ],
           "l2_norm": 1.0,
-          "wall_seconds": 0.062000000034458935,
+          "wall_seconds": 0.0470000000204891,
           "status": "candidate embedding, not approved conditioning"
         }
+      ],
+      "cosine_similarity": 0.6868560314178467,
+      "limitations": [
+        "Solo singer identities grouped by lyrics per user LC-018.",
+        "Low-role source extended to 3.85 s; no repetition or silence used to pretend more source evidence.",
+        "Main-role reference now taken from mother line; arch excerpt excluded from primary conditioning.",
+        "Embeddings are not a verified singer count or voice-quality verdict.",
+        "No T3 prompt tokens or S3 decoder conditioning computed in this step."
       ]
     },
     "s3_conditioning": {
-      "model_sha256": "2b78103c654207393955e4900aac14a12de8ef25f4b09424f1ef91941f161d4e",
+      "source_english_sha256": "2290b751270feb1fc3b63623ff6b1e8615cc1576d9efe835cd6756f830f2efad",
+      "model_s3_sha256": "2b78103c654207393955e4900aac14a12de8ef25f4b09424f1ef91941f161d4e",
+      "script_sha256": "1262cda1fb383e113ff58747764194a4f0464c28366150a81f3abfb668f84e59",
+      "sample_rate": 24000,
+      "device": "cpu",
+      "seed": 23,
       "profiles": [
         {
           "role": "P003-R01",
-          "reference_sha256": "615377eb5eadd2df0ad2484a2e4c1c85c76b0708c4aad26088d4559d6e636954",
-          "conditioning_file": "exports/P003/voice-profiles/conditioning-v1/P003-R01-s3.pt",
-          "conditioning_sha256": "58233a8c1eba9c570038f66d51737a1ce6e6be509af0d1662bd6acdd7ee76790",
+          "reference_sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-s3.pt",
+          "conditioning_sha256": "960b0f814288eb08c706b7564510c3b8e129bff98117a65807304d6c9921a5fa",
           "conditioning_shapes": {
             "prompt_token": [
               1,
-              150
+              92
             ],
             "prompt_token_len": [
               1
             ],
             "prompt_feat": [
               1,
-              300,
+              185,
               80
             ],
             "prompt_feat_len": null,
@@ -283,30 +377,30 @@
               192
             ]
           },
-          "probe_file": "exports/P003/voice-profiles/conditioning-v1/P003-R01-probe.wav",
-          "probe_sha256": "32e204d33e3e06186b1c81fdf21437010027812b3cca89a40375eec83a902642",
-          "duration": 3.28,
-          "peak": 0.5752967000007629,
+          "probe_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-probe.wav",
+          "probe_sha256": "6513eb68cee9d80ae9c6f2ef67ed986f392536e4e85294b4fc5728950c3531da",
+          "duration": 3.26,
+          "peak": 0.2617705166339874,
           "clipping": 0,
           "gain": 1,
-          "wall_seconds": 43.03200000000652
+          "wall_seconds": 28.21799999999348
         },
         {
           "role": "P003-R02",
-          "reference_sha256": "a3ccb53c5ebf14514dfa5274f748d1e6347b567d7df331afa6f866f07b25060b",
-          "conditioning_file": "exports/P003/voice-profiles/conditioning-v1/P003-R02-s3.pt",
-          "conditioning_sha256": "07dec35ebc946011bfe89adcf2848138dbb790f32ae0a6f13712a8d4503addb3",
+          "reference_sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-s3.pt",
+          "conditioning_sha256": "b263f4e76ea1d2c13e027154b0e30cd618794cb4ed9a00d70b7e19aac5f0da24",
           "conditioning_shapes": {
             "prompt_token": [
               1,
-              65
+              96
             ],
             "prompt_token_len": [
               1
             ],
             "prompt_feat": [
               1,
-              130,
+              192,
               80
             ],
             "prompt_feat_len": null,
@@ -315,65 +409,126 @@
               192
             ]
           },
-          "probe_file": "exports/P003/voice-profiles/conditioning-v1/P003-R02-probe.wav",
-          "probe_sha256": "95cd1d4c7e22576d29cfe5b4066968f5b3028f0b2a3f4c40f9a68bfbc2697156",
+          "probe_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-probe.wav",
+          "probe_sha256": "36537ff4fe307f56c99aeae5e0592110b9411b69215609af9524cb9760adde98",
           "duration": 3.28,
-          "peak": 0.4002590775489807,
+          "peak": 0.27182212471961975,
           "clipping": 0,
           "gain": 1,
-          "wall_seconds": 21.68700000003446
+          "wall_seconds": 27.48499999998603
         }
+      ],
+      "status": "experimental voice conditioning and conversion; listening pending",
+      "limitations": [
+        "S3 voice conversion has no guarantee of preserving sung notes; not a final singing renderer.",
+        "Reference assignments and short low-voice sample remain provisional.",
+        "Approved neutral singing is preserved; converted probes do not replace it.",
+        "Not a complete T3 text-to-speech conditioning set."
       ]
     },
     "singing_probes": {
       "method": "Chatterbox S3 voice conversion followed by WORLD pitch restoration from shared Am/110 BPM score, octave -12",
+      "score_sha256": "51bbd6a590ca21377d8f0bb4b93fc8fe3bd97b2c8120ebeb44ae1f9a1e8ec108",
+      "source_probes": [
+        {
+          "role": "P003-R01",
+          "reference_sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-s3.pt",
+          "conditioning_sha256": "960b0f814288eb08c706b7564510c3b8e129bff98117a65807304d6c9921a5fa",
+          "conditioning_shapes": {
+            "prompt_token": [
+              1,
+              92
+            ],
+            "prompt_token_len": [
+              1
+            ],
+            "prompt_feat": [
+              1,
+              185,
+              80
+            ],
+            "prompt_feat_len": null,
+            "embedding": [
+              1,
+              192
+            ]
+          },
+          "probe_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-probe.wav",
+          "probe_sha256": "6513eb68cee9d80ae9c6f2ef67ed986f392536e4e85294b4fc5728950c3531da",
+          "duration": 3.26,
+          "peak": 0.2617705166339874,
+          "clipping": 0,
+          "gain": 1,
+          "wall_seconds": 28.21799999999348
+        },
+        {
+          "role": "P003-R02",
+          "reference_sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-s3.pt",
+          "conditioning_sha256": "b263f4e76ea1d2c13e027154b0e30cd618794cb4ed9a00d70b7e19aac5f0da24",
+          "conditioning_shapes": {
+            "prompt_token": [
+              1,
+              96
+            ],
+            "prompt_token_len": [
+              1
+            ],
+            "prompt_feat": [
+              1,
+              192,
+              80
+            ],
+            "prompt_feat_len": null,
+            "embedding": [
+              1,
+              192
+            ]
+          },
+          "probe_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-probe.wav",
+          "probe_sha256": "36537ff4fe307f56c99aeae5e0592110b9411b69215609af9524cb9760adde98",
+          "duration": 3.28,
+          "peak": 0.27182212471961975,
+          "clipping": 0,
+          "gain": 1,
+          "wall_seconds": 27.48499999998603
+        }
+      ],
       "probes": [
         {
           "role": "P003-R01",
-          "file": "exports/P003/voice-profiles/note-locked-v1/P003-R01-probe.wav",
-          "sha256": "fe57e1af7ee3aa491f6dfaff4169e4075aecaa78a4afa35509c6b7127f815603",
-          "duration": 3.28,
+          "file": "exports/P003/voice-profiles/note-locked-v2/P003-R01-probe.wav",
+          "sha256": "c8a81b9ed2116f0a9820f5fb2bf90e298e1abb9d6318059413363930b5fb25cc",
+          "duration": 3.26,
           "clipping": 0,
-          "target_frames": 567
+          "target_frames": 563
         },
         {
           "role": "P003-R02",
-          "file": "exports/P003/voice-profiles/note-locked-v1/P003-R02-probe.wav",
-          "sha256": "cf7af07adfd11c2b4cd17b406db588a8dcf34583234e487bf12d6d241e010311",
+          "file": "exports/P003/voice-profiles/note-locked-v2/P003-R02-probe.wav",
+          "sha256": "1067c8ea0c9344d5033704714ebad8209e2fdb62cf67af945f7bd6ed738ae06f",
           "duration": 3.28,
           "clipping": 0,
-          "target_frames": 479
+          "target_frames": 538
         }
       ],
-      "automatic_pitch_qa": [
-        {
-          "role": "P003-R01",
-          "median_absolute_pitch_error_cents_in_note_interiors": 3.2984715155926576,
-          "measured_frames": 437,
-          "all_finite": true,
-          "clipping": 0
-        },
-        {
-          "role": "P003-R02",
-          "median_absolute_pitch_error_cents_in_note_interiors": 2.0485989898277985,
-          "measured_frames": 360,
-          "all_finite": true,
-          "clipping": 0
-        }
+      "comparison_order": [
+        "P003-R01",
+        "P003-R02"
       ],
-      "comparison_file": "exports/P003/voice-profiles/note-locked-v1/comparison.wav",
-      "comparison_sha256": "ed8ad657abcf0f4421ccb891ea1c5f72a342a53d2551c42c5340b52de5c00e22"
+      "comparison_sha256": "08fef2ad05fd7ceae0f175d238ff598e349068daf6d812c4ea476c98022014cf",
+      "limitations": [
+        "Experimental two-stage conversion may change consonants or introduce vocoder artifacts.",
+        "No user voice-identity or singing-quality approval.",
+        "No overlapping duet assembled yet."
+      ]
     },
     "limitations": [
-      "Role source assignment remains provisional at excerpt level.",
-      "Low-role sample only 2.6 s; no padding/repetition used to pretend more source evidence.",
-      "Main-role reference contains room reverberation.",
-      "Embeddings are not a verified singer count or voice-quality verdict.",
-      "Experimental two-stage conversion may change consonants or introduce vocoder artifacts.",
-      "No user voice-identity or singing-quality approval.",
-      "S3 conditioning is not full Chatterbox T3 text-to-speech conditioning.",
-      "Legacy dependencies remain external and not fully migrated; portable reproducibility not claimed.",
-      "Singer transition must be sequential, with no overlap, per latest LC-015."
+      "Only two singer identities are confirmed by specific lyric lines; unresolved lines must not inherit R01 automatically.",
+      "No claim that arch acoustics were removed by dereverberation; arch recording excluded from primary conditioning.",
+      "Model probes remain proposed; not final voice quality or full rendering approval.",
+      "No singer overlap at mother/father transition per LC-015."
     ]
   },
   "latest_feedback": [
@@ -396,6 +551,16 @@
       "id": "LC-017",
       "text": "Я б хотів, аби ти отримав голосові профілі хоча б співаків, що мають власні партії",
       "decision": "First map all individual singer parts and prepare each profile. Do not substitute the current main profile for all unidentified singers."
+    },
+    {
+      "id": "LC-018",
+      "text": "Так, ці два рядки співає той самий виконавець",
+      "scope": "Canary opening and mother line are the same singer; group R01 by lyrics."
+    },
+    {
+      "id": "LC-019",
+      "text": "в небі канареєчка - іде з ехом бо персонажі виходять із арки",
+      "scope": "Arch echo is scene acoustics, excluded from primary identity conditioning."
     }
   ],
   "phrase_audit": {
@@ -408,8 +573,104 @@
     ],
     "status": "lexically named navigation clips; singer assignment pending; not conditioning"
   },
-  "pending_clarification": {
-    "question": "Do user references 1 and 4 mean the canary opening and mother line?",
-    "reason": "Prior reel file numbering did not match user-perceived musical phrases; role labels must be tied to lyrics."
-  }
+  "scene_acoustics": {
+    "arch_echo": {
+      "source_phrase": "В небі канареєчка літає",
+      "basis": "user LC-012 and LC-019: performers emerge from building arch",
+      "part_of_voice_identity": false,
+      "reference_use": "canary excerpt comparison only; primary R01 conditioning from mother line",
+      "rendering": "Apply separately during scene assembly; parameters not yet measured."
+    }
+  },
+  "superseded_profile_manifests": [
+    "exports/P003/voice-profiles/embeddings-v2/manifest.json",
+    "exports/P003/voice-profiles/conditioning-v1/manifest.json",
+    "exports/P003/voice-profiles/note-locked-v1/manifest.json"
+  ],
+  "phrase_role_map": [
+    {
+      "verse": 1,
+      "line": 1,
+      "text": "В небі канареєчка літає",
+      "role": "P003-R01",
+      "status": "user-confirmed singer grouping"
+    },
+    {
+      "verse": 1,
+      "line": 2,
+      "text": "І співає прямо — в горизонт",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 1,
+      "line": 3,
+      "text": "А ми підем, вип’єм, погуляєм",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 1,
+      "line": 4,
+      "text": "В цьому все життя і весь наш резон",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 2,
+      "line": 1,
+      "text": "Нас чекають баришні-коханки",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 2,
+      "line": 2,
+      "text": "Жизнь така, що просто мармелад",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 2,
+      "line": 3,
+      "text": "Так заграй, заграй же нам гітарка",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 2,
+      "line": 4,
+      "text": "На веселий дуже, на очень лад",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 3,
+      "line": 1,
+      "text": "Моя мама серце добре має",
+      "role": "P003-R01",
+      "status": "user-confirmed singer grouping"
+    },
+    {
+      "verse": 3,
+      "line": 2,
+      "text": "І папаша мають магазин",
+      "role": "P003-R02",
+      "status": "user-confirmed singer grouping"
+    },
+    {
+      "verse": 3,
+      "line": 3,
+      "text": "І вони меня не обіжають",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 3,
+      "line": 4,
+      "text": "Бо один у них я шикарний син",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    }
+  ]
 }
