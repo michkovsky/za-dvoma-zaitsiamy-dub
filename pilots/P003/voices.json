@@ -1,0 +1,193 @@
+{
+  "id": "P003-voice-reference-set-v1",
+  "status": "proposed",
+  "source_id": "audio",
+  "method": "Candidate excerpts from existing Kim_Vocal_2 vocal separation; original mixture retained for comparison.",
+  "source_context_offset_seconds": 50,
+  "source_vocals_sha256": "561106654016f2e22029ceb2ec0d4ab41ce2db4e508bad8df388bce230ed2734",
+  "source_mixture_sha256": "c8fde9180e5f058d86d77c48850916225a9978ee16a0cce3b4af133723cb2a99",
+  "profiles": [
+    {
+      "id": "P003-V01",
+      "label": "verse-1",
+      "source_id": "audio",
+      "source_start_seconds": 62.0,
+      "source_end_seconds": 68.0,
+      "context_start_seconds": 12.0,
+      "context_end_seconds": 18.0,
+      "duration": 6.0,
+      "gain": 2.5,
+      "status": "candidate; listening verification pending",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": true,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.5823627287853578,
+        "f0_hz_p10_median_p90": [
+          149.60901086618927,
+          178.10438202125806,
+          214.53358346035074
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-V01-verse-1-vocal.wav",
+          "sha256": "615377eb5eadd2df0ad2484a2e4c1c85c76b0708c4aad26088d4559d6e636954"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-V01-verse-1-original.wav",
+          "sha256": "440d11d5599d6d024f758bf95eba37f57e0af22af7cee70a2b8874bf005250b3"
+        }
+      }
+    },
+    {
+      "id": "P003-V02",
+      "label": "verse-2",
+      "source_id": "audio",
+      "source_start_seconds": 81.0,
+      "source_end_seconds": 87.5,
+      "context_start_seconds": 31.0,
+      "context_end_seconds": 37.5,
+      "duration": 6.5,
+      "gain": 2.5,
+      "status": "candidate; listening verification pending",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": true,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.4254992319508449,
+        "f0_hz_p10_median_p90": [
+          167.3191030087245,
+          186.93151432126606,
+          218.04567277211942
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-V02-verse-2-vocal.wav",
+          "sha256": "0b36b469f490def6be46c23b233a271061e1afd37916273a60555776a0c2beda"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-V02-verse-2-original.wav",
+          "sha256": "6fe0bf47e9c38d121497ef7b2fb38af86d77eba88ddae3d5d78aaab872001386"
+        }
+      }
+    },
+    {
+      "id": "P003-V03",
+      "label": "mother",
+      "source_id": "audio",
+      "source_start_seconds": 110.0,
+      "source_end_seconds": 112.8,
+      "context_start_seconds": 60.0,
+      "context_end_seconds": 62.8,
+      "duration": 2.8,
+      "gain": 2.5,
+      "status": "candidate; listening verification pending",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": true,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.8825622775800712,
+        "f0_hz_p10_median_p90": [
+          157.15485482230724,
+          181.03799723371628,
+          194.33653500761994
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-V03-mother-vocal.wav",
+          "sha256": "b3a4c9be72125f49c53444da7a4a296d165e31f9a105f270675f9d2b92256eb3"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-V03-mother-original.wav",
+          "sha256": "4963388f9de331bdf9835e702e0fe8beca622c59a0ce0e3853c96bbd0f6553ff"
+        }
+      }
+    },
+    {
+      "id": "P003-V04",
+      "label": "papa",
+      "source_id": "audio",
+      "source_start_seconds": 115.0,
+      "source_end_seconds": 117.6,
+      "context_start_seconds": 65.0,
+      "context_end_seconds": 67.6,
+      "duration": 2.5999773242630386,
+      "gain": 2.5,
+      "status": "candidate; listening verification pending",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": true,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.7777777777777778,
+        "f0_hz_p10_median_p90": [
+          184.14410141347335,
+          214.73953694794147,
+          227.34135582703277
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-V04-papa-vocal.wav",
+          "sha256": "a3ccb53c5ebf14514dfa5274f748d1e6347b567d7df331afa6f866f07b25060b"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-V04-papa-original.wav",
+          "sha256": "0fcaba1317933ddbbad239e121b662fa74b5e71456728be7fd331084be74b3b0"
+        }
+      }
+    },
+    {
+      "id": "P003-X01",
+      "label": "entrance-overlap",
+      "source_id": "audio",
+      "source_start_seconds": 112.0,
+      "source_end_seconds": 115.5,
+      "context_start_seconds": 62.0,
+      "context_end_seconds": 65.5,
+      "duration": 3.5,
+      "gain": 2.5,
+      "status": "candidate; listening verification pending",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": false,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.6210826210826211,
+        "f0_hz_p10_median_p90": [
+          152.29447111220352,
+          181.2414512036268,
+          212.74214378495927
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-X01-entrance-overlap-vocal.wav",
+          "sha256": "4bcacf9e22dfff6e11c808c5e3383c26506dde88e5ab316015d4fb1fe0f00127"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-X01-entrance-overlap-original.wav",
+          "sha256": "a92052514ecb9ee3479f2f9b019a0482125d5e6a4da68815a2fe5b3253b931ce"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Windows chosen conservatively from existing ASR phrase timing, not listening-confirmed syllable boundaries.",
+    "Candidate solo windows may retain other voices and separation artifacts.",
+    "Four sampled regions do not establish four singer identities.",
+    "F0 describes sung pitches, not tenor/baritone identity.",
+    "Short mother/papa excerpts require identity and cleanliness review before conditioning.",
+    "No speaker embedding or cloned singing model produced."
+  ],
+  "reel": {
+    "file": "exports/P003/voice-profiles/v1/reference-reel.wav",
+    "sha256": "a7dc607a03c647f8a7eecef020125b1cbadab04a2a7a7287406bf936c384b6e2"
+  }
+}
