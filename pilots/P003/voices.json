@@ -943,6 +943,65 @@
     },
     "bench_manifest": "exports/P003/neural-tuning/v1/manifest.json",
     "bench_manifest_sha256": "16045aaeeb6e537eb2f1e754adcdc949e423266c8afe30e84ad4f263884b8f5b",
-    "adopted_for_english": false
+    "adopted_for_english": false,
+    "feedback_LC030": "Second/35% variant slightly better, both still weakly sound like dyobre instead of dobre; no full acceptance."
+  },
+  "alternate_ru_source_trial": {
+    "source_id": "50A7fZbjrz8 original audio 251-2",
+    "source_sha256": "1f552e4f62aa34ecd3732b12a33be840faf7f861c87ba2f3128adac9b2cc7beb",
+    "local_mapping": {
+      "formula": "t_RU = slope * t_UK + intercept",
+      "slope": 1.0024460888921012,
+      "intercept": -5.018677311216932,
+      "anchor_range_UK": [
+        62.0,
+        115.0
+      ],
+      "residuals_ms": [
+        -0.04270009334561564,
+        0.2855220646296175,
+        -0.5174669141894128,
+        0.8770886252875698
+      ],
+      "qualification": "Local waveform fit, not global film sync. Short target end extrapolates past final anchor."
+    },
+    "uk_source_range": [
+      109.4,
+      118.28
+    ],
+    "ru_source_range": [
+      104.64892481357894,
+      113.5506460829408
+    ],
+    "separation_manifest": "exports/P003/ru-song/v1/separated/separation.json",
+    "neural_comparison": {
+      "comparison_file": "exports/P003/ru-song/v1/uk-then-ru-neural035.wav",
+      "sha256": "c6452e6a46031fd045ec0715a525d9c28a0e91a3389d844a4b36f08dca7e41b9",
+      "order": [
+        "UK recording, neural strength 0.35",
+        "1 second silence",
+        "RU recording, same neural settings and reference profiles"
+      ],
+      "duration": 18.76,
+      "fixed_parameters": [
+        "same original UK conditioning-v2 profiles",
+        "same pretrained weights",
+        "seed 23",
+        "0.35 converted log-mel + 0.65 source log-mel",
+        "measured F0 fed into neural harmonic source",
+        "no subsequent WORLD/Rubber Band synthesis"
+      ],
+      "changed_input": "Alternate RU source locally time-aligned to UK and RMS-matched per singer before conversion",
+      "status": "proposed; cleaner source and corrected dobre not claimed",
+      "qa": {
+        "finite": true,
+        "clipping": 0
+      }
+    },
+    "raw_comparison_file": "exports/P003/ru-song/v1/uk-then-ru-originals.wav",
+    "raw_comparison_sha256": "a8ddfb004a97e941852e9aac1aafcee20e5ab6ef3aacbd717aff4c978c3225bb",
+    "asr_diagnostic": "♪ Моя мама серце добре має ♪\n ♪ Ві папа шимають магазин ♪",
+    "quality_status": "listening pending; ASR correctly returns dobre and magazyn but cannot verify subtle palatalization or timbre",
+    "voice_references_changed": false
   }
 }
