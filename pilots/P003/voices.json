@@ -17,7 +17,7 @@
       "context_end_seconds": 18.0,
       "duration": 6.0,
       "gain": 2.5,
-      "status": "candidate; listening verification pending",
+      "status": "candidate solo; identity grouping provisional per user",
       "identity": "unassigned; no actor or character attribution",
       "candidate_solo": true,
       "voice_type": "not determined",
@@ -39,7 +39,11 @@
           "file": "exports/P003/voice-profiles/v1/P003-V01-verse-1-original.wav",
           "sha256": "440d11d5599d6d024f758bf95eba37f57e0af22af7cee70a2b8874bf005250b3"
         }
-      }
+      },
+      "identity_hypothesis": "same singer, provisional per user LC-012",
+      "provisional_group": "P003-G01",
+      "listening_feedback": "LC-012: 1 і 4 скоріш за все один і той самий голос.",
+      "acoustic_context": "User LC-012 attributes reverberation to emerging from a building arch; do not encode room reverb as singer identity."
     },
     {
       "id": "P003-V02",
@@ -51,9 +55,9 @@
       "context_end_seconds": 37.5,
       "duration": 6.5,
       "gain": 2.5,
-      "status": "candidate; listening verification pending",
+      "status": "excluded from single-speaker conditioning; multiple voices per user LC-012",
       "identity": "unassigned; no actor or character attribution",
-      "candidate_solo": true,
+      "candidate_solo": false,
       "voice_type": "not determined",
       "qa": {
         "clipping": 0,
@@ -73,7 +77,8 @@
           "file": "exports/P003/voice-profiles/v1/P003-V02-verse-2-original.wav",
           "sha256": "6fe0bf47e9c38d121497ef7b2fb38af86d77eba88ddae3d5d78aaab872001386"
         }
-      }
+      },
+      "listening_feedback": "LC-012: 2 і 3 багатоголосся."
     },
     {
       "id": "P003-V03",
@@ -85,9 +90,9 @@
       "context_end_seconds": 62.8,
       "duration": 2.8,
       "gain": 2.5,
-      "status": "candidate; listening verification pending",
+      "status": "excluded from single-speaker conditioning; multiple voices per user LC-012",
       "identity": "unassigned; no actor or character attribution",
-      "candidate_solo": true,
+      "candidate_solo": false,
       "voice_type": "not determined",
       "qa": {
         "clipping": 0,
@@ -107,7 +112,8 @@
           "file": "exports/P003/voice-profiles/v1/P003-V03-mother-original.wav",
           "sha256": "4963388f9de331bdf9835e702e0fe8beca622c59a0ce0e3853c96bbd0f6553ff"
         }
-      }
+      },
+      "listening_feedback": "LC-012: 2 і 3 багатоголосся."
     },
     {
       "id": "P003-V04",
@@ -119,7 +125,7 @@
       "context_end_seconds": 67.6,
       "duration": 2.5999773242630386,
       "gain": 2.5,
-      "status": "candidate; listening verification pending",
+      "status": "candidate solo; identity grouping provisional per user",
       "identity": "unassigned; no actor or character attribution",
       "candidate_solo": true,
       "voice_type": "not determined",
@@ -141,7 +147,10 @@
           "file": "exports/P003/voice-profiles/v1/P003-V04-papa-original.wav",
           "sha256": "0fcaba1317933ddbbad239e121b662fa74b5e71456728be7fd331084be74b3b0"
         }
-      }
+      },
+      "identity_hypothesis": "same singer, provisional per user LC-012",
+      "provisional_group": "P003-G01",
+      "listening_feedback": "LC-012: 1 і 4 скоріш за все один і той самий голос."
     },
     {
       "id": "P003-X01",
@@ -189,5 +198,13 @@
   "reel": {
     "file": "exports/P003/voice-profiles/v1/reference-reel.wav",
     "sha256": "a7dc607a03c647f8a7eecef020125b1cbadab04a2a7a7287406bf936c384b6e2"
-  }
+  },
+  "unresolved_feedback": [
+    {
+      "id": "LC-012-number-5",
+      "text": "5 - низький голос",
+      "reason": "Published reel contains four excerpts. Need mapping before attributing to X01 or another interval.",
+      "status": "clarification requested"
+    }
+  ]
 }
