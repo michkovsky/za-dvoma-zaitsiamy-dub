@@ -878,6 +878,42 @@
       "ASR has errors even on original singing. CER is diagnostic, not a speech-quality acceptance score.",
       "Two-pass +/-4 semitone roundtrip is a stress test, not identical to a single-pass English correction.",
       "S3 references overlap these same Ukrainian lyric lines, so this is not independent generalization evidence."
-    ]
+    ],
+    "listening_feedback": {
+      "id": "LC-026",
+      "original": "good",
+      "direct_modulation": "good",
+      "full_neural_chain": "trembling in both voices; not accepted"
+    }
+  },
+  "tremor_diagnostic": {
+    "feedback": "LC-026: blocks 1 and 2 still good; block 3 introduces trembling in both voices.",
+    "accepted_file": "exports/P003/uk-calibration/smooth-v1/accepted-direct-modulation.wav",
+    "accepted_sha256": "bf584ded61ca1f7b1b87f20b29cffbd692c30daa88c2830f70cdad5f02451250",
+    "accepted_extraction": {
+      "source": "exports/P003/uk-calibration/v1/original-modulation-neural.wav",
+      "start_sample": 237120,
+      "sample_count": 213120,
+      "sample_exact": true
+    },
+    "trial_file": "exports/P003/uk-calibration/smooth-v1/neural-raw-then-smooth.wav",
+    "trial_sha256": "09c0cbfa7828aaef2061f7c68e57e7af1d454d6ddec60329f0d924c6e0af8fc7",
+    "trial_order": [
+      "raw neural conversion pair, no pitch correction",
+      "1 second silence",
+      "same voices with smoother pitch correction"
+    ],
+    "parameters": {
+      "old_gaussian_sigma_ms": 15,
+      "new_gaussian_sigma_ms": 75,
+      "old_command_interval_ms": 10,
+      "new_command_interval_ms": 40
+    },
+    "status": "new trial proposed, trembling removal not listening-verified",
+    "qa": {
+      "all_finite": true,
+      "clipping": 0
+    },
+    "qualification": "Smoothing the controller does not prove that waveform tremor is removed; raw neural block may already contain the fault."
   }
 }
