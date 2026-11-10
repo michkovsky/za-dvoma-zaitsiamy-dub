@@ -1048,6 +1048,70 @@
       "Lower conversion strength preserves more source timbre; same-voice Ukrainian reconstruction does not establish English identity transfer.",
       "DTW is acoustic-shape alignment, not verified phoneme boundaries.",
       "No claim that residual dyobre is fixed."
-    ]
+    ],
+    "listening_feedback": {
+      "ids": [
+        "LC-033",
+        "LC-034"
+      ],
+      "text": "дьбре більше не зустрічається; так у відповідь на уточнення про обидва варіанти",
+      "scope": "Absence of named Ukrainian distortion in heard 0.35/0.20 controls only. Not full English or actor-identity approval."
+    }
+  },
+  "accepted_uk_calibration": [
+    {
+      "strength": 0.35,
+      "file": "exports/P003/neural-tuning/ru-aligned-v1/aligned-strength-035-pair.wav",
+      "sha256": "16bdc9df3342b636d2bb95530bdef1eb723b18e4c62849ee29a92e8a6fd3b974",
+      "accepted_scope": "LC-033/034: no dyobre in both heard Ukrainian blocks only; not full English approval."
+    },
+    {
+      "strength": 0.2,
+      "file": "exports/P003/neural-tuning/ru-aligned-v1/aligned-strength-020-pair.wav",
+      "sha256": "a2f78129ef6e707cbbcc4eee5244fdff57c199c95968e7935ed5aedcc5936518",
+      "accepted_scope": "LC-033/034: no dyobre in both heard Ukrainian blocks only; not full English approval."
+    }
+  ],
+  "latest_english_transfer": {
+    "assembly": {
+      "text": [
+        "My dear mother has a heart warm and kind.",
+        "And my papa has himself a shop."
+      ],
+      "roles": [
+        "P003-R01",
+        "P003-R02"
+      ],
+      "source_guide_manifest": "exports/P003/neural-tuning/english-guides-v1/manifest.json",
+      "source_guide_manifest_sha256": "d45ea50e228ca75ec5c6187866482a1fb7b42a647baa479d0d6727971a87934c",
+      "strength": 0.35,
+      "dtw": "Recomputed from English input, not copied from Ukrainian.",
+      "pitch": "Measured English neutral-guide F0 inside neural harmonic source.",
+      "singer_overlap_samples": 0,
+      "duration": 8.977333333333334,
+      "clipping": 0,
+      "mix_gain": 1.0,
+      "status": "English transfer trial, proposed",
+      "outputs": {
+        "vocal.wav": "14ad783480a7683d4af352937c450bfaddd1ed722ac86bd5b3b95e08bf02a0d5",
+        "guitar.wav": "31a79516a879ad4da14cd96d1c908ac288b5715d8959ff9c7319fa1d0c7b1126",
+        "mix.wav": "a412134ec9a0f4992bbda857af90858da9189717db1bdf2afdfca358d510eec8"
+      },
+      "limitations": [
+        "Successful Ukrainian word control does not establish English articulation or actor identity.",
+        "Source neutral guide is WORLD-derived; no final WORLD/Rubber Band resynthesis added here.",
+        "Only these two confirmed singer parts are rendered."
+      ]
+    },
+    "asr_diagnostic": "My dear mother has a heart-warming kind, and my papa has himself a shop.",
+    "intelligibility_note": "ASR recognizes both lines including papa/shop; warm and kind becomes heart-warming kind. Listening is required.",
+    "source_parameters": {
+      "strength": 0.35,
+      "why": "Stronger of two distortion-free Ukrainian controls, implementation choice after user confirmation.",
+      "dtw": "recomputed for English",
+      "profiles": "conditioning-v2 unchanged",
+      "seed": 23
+    },
+    "status": "proposed; English listening pending"
   }
 }
