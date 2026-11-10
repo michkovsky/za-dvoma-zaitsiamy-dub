@@ -1112,6 +1112,112 @@
       "profiles": "conditioning-v2 unchanged",
       "seed": 23
     },
-    "status": "proposed; English listening pending"
+    "status": "not accepted per LC-035/036: electronic trembling on has and shop",
+    "listening_feedback": {
+      "has": "first/mother voice trembles",
+      "shop": "second/father voice trembles",
+      "quality": "electronic flavour, not ordinary expressive vibrato"
+    }
+  },
+  "local_envelope_repair": {
+    "status": "proposed; audible fix not yet confirmed",
+    "file": "exports/P003/neural-tuning/english-envelope-v3/mix.wav",
+    "sha256": "3da9779cef4624cf3b8490806f7dcb18c4b499357c33b5ed40e7bcd074c4790d",
+    "comparison_file": "exports/P003/neural-tuning/english-envelope-v3/before-then-envelope.wav",
+    "comparison_sha256": "27fe3f5755457d103ccd8b645536536a8e14fa61600587231befa3daa3aef87b",
+    "method": "Within has/shop only, neural converted log-mel contributes smooth cepstral envelope; source fine structure retained; HiFT generates waveform with unchanged measured source F0.",
+    "rows": [
+      {
+        "role": "P003-R01",
+        "word": "has",
+        "word_window_seconds": [
+          1.09,
+          1.91
+        ],
+        "source_pair_start_sample": 0,
+        "source_guide_sha256": "3fc7e734268619cf7b883cd0906e7d456ddca21ed1aeeca6b1fbe84b6df95fa5",
+        "feature_cache_sha256": "c56bb046e73760f1bb21a9ef714d383bf906c17ba88fc9601242160be73c568c",
+        "retained_cepstral_coefficients": 12,
+        "envelope_delta_temporal_sigma_ms": 50,
+        "strength": 0.35,
+        "f0_changed": false,
+        "gain_on_patch": 1.054542180007945,
+        "outside_patch_sample_exact": true,
+        "clipping": 0
+      },
+      {
+        "role": "P003-R02",
+        "word": "shop",
+        "word_window_seconds": [
+          3.27,
+          4.34
+        ],
+        "source_pair_start_sample": 104728,
+        "source_guide_sha256": "35b90b4bc908bc49b474fb8d304ea74c293a88c831eae8238b3c75122ec4f7a9",
+        "feature_cache_sha256": "3491307fe1d5125208179e6ac7f0d1b5d7baff9003c62889b86c4cc489ce3bc9",
+        "retained_cepstral_coefficients": 12,
+        "envelope_delta_temporal_sigma_ms": 50,
+        "strength": 0.35,
+        "f0_changed": false,
+        "gain_on_patch": 0.861571934595306,
+        "outside_patch_sample_exact": true,
+        "clipping": 0
+      }
+    ],
+    "qa": {
+      "outside_word_windows_pcm_equal": true,
+      "duration": 8.977333333333334,
+      "clipping": 0,
+      "output_pitch_diagnostic": [
+        {
+          "word": "has",
+          "output_f0_diagnostic": {
+            "before": {
+              "voiced_frames": 100,
+              "f0_p10_median_p90": [
+                147.8834789872262,
+                149.36657624040674,
+                151.5577158620737
+              ]
+            },
+            "repair": {
+              "voiced_frames": 100,
+              "f0_p10_median_p90": [
+                149.42715234776756,
+                149.8144144020511,
+                150.1591365590383
+              ]
+            }
+          }
+        },
+        {
+          "word": "shop",
+          "output_f0_diagnostic": {
+            "before": {
+              "voiced_frames": 120,
+              "f0_p10_median_p90": [
+                163.02600396817195,
+                164.7423277405842,
+                166.2701806975122
+              ]
+            },
+            "repair": {
+              "voiced_frames": 120,
+              "f0_p10_median_p90": [
+                162.40159650695912,
+                164.18286330373934,
+                167.02811893967788
+              ]
+            }
+          }
+        }
+      ],
+      "listening_status": "electronic flutter and naturalness not yet user-verified"
+    },
+    "limitations": [
+      "Electronic flutter cause remains a hypothesis; removing audible defect requires listening.",
+      "Local repair reduces fine-structure transfer inside the named words.",
+      "Guide still inherits upstream neutral WORLD synthesis; no final WORLD/Rubber Band added."
+    ]
   }
 }
