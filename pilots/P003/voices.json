@@ -820,12 +820,64 @@
     "sha256": "3bb094d63966c13e79d49a04328b0129a1a41f854fe9ab96c13bd0622f590f54",
     "manifest": "exports/P003/solo-pair/v1/manifest.json",
     "manifest_sha256": "b0bdcb728484b3ff78d8724e6d709ade49c6d3a7b6fa7762227b0484cb1bf34b",
-    "status": "proposed",
+    "status": "rejected for poor intelligibility per LC-023",
     "duration": 8.97725,
     "singer_overlap_samples": 0,
     "intelligibility_diagnostic": {
       "asr_text": "♪ Like your mother has a heart-warming kind ♪\n ♪ If my father has himself a jaw ♪",
       "interpretation": "ASR confuses several words. This is not a listening verdict, but intelligibility is an open concern."
-    }
+    },
+    "accepted_scope": "Distance between voice pitches is acceptable; preserve register relationship while repairing articulation."
+  },
+  "calibration_direction": {
+    "basis": "LC-024/025: Ukrainian same-voice mother + father pair, compare to original, then transfer suitable processing parameters to English.",
+    "english_generation": "Deferred pending Ukrainian control evaluation.",
+    "reference_pitch": "Actual original vocal F0, not an assumed key or score approximation.",
+    "transfer_limit": "Transfer processing settings, not Ukrainian phoneme durations or a literal source pitch trajectory to unrelated English syllables."
+  },
+  "uk_calibration": {
+    "source_text": "Моя мама серце добре має І папаша мають магазин",
+    "comparisons": [
+      {
+        "label": "original separated vocal",
+        "file": "exports/P003/uk-calibration/v1/original-vocal.wav",
+        "sha256": "f9a5d34c8d69549088fe4356156672cbf3ba53b3200fec38910996888a8399c7",
+        "duration": 8.88,
+        "comparison_gain": 1.2508864531303547,
+        "clipping": 0,
+        "asr": "Моя мама серти добре має\n І папа шамають магадит!",
+        "diagnostic_cer_letters_only": 0.10256410256410256
+      },
+      {
+        "label": "Rubber Band +4 then -4 semitones, no S3",
+        "file": "exports/P003/uk-calibration/v1/rubberband-roundtrip.wav",
+        "sha256": "9418bccabe19a288b9707cd80e7b9de3bb1e9e3550dd410b8434a065a8f71f02",
+        "duration": 8.88,
+        "comparison_gain": 2.1425385619685,
+        "clipping": 0,
+        "asr": "Моя мама серпи добре має\n Віпа пошимають махати",
+        "diagnostic_cer_letters_only": 0.20512820512820512
+      },
+      {
+        "label": "S3 same-role conversion then Rubber Band matched to original F0",
+        "file": "exports/P003/uk-calibration/v1/processed-vocal.wav",
+        "sha256": "fed5cce678520b3808bc9c319316181ceccb791f70e87b08797813a65a568868",
+        "duration": 8.88,
+        "comparison_gain": 1.2508869910119043,
+        "clipping": 0,
+        "asr": "Моя мама серти, тьо, пребмає.\n Ні, гвапа, шимаю, малахати.",
+        "diagnostic_cer_letters_only": 0.41025641025641024
+      }
+    ],
+    "comparison_file": "exports/P003/uk-calibration/v1/original-modulation-neural.wav",
+    "comparison_sha256": "4a834637a1ddca438a633fdc3bb72d8d0320549eb2fb3e2e1211435baccb461b",
+    "comparison_duration": 28.64,
+    "gap_seconds": 1,
+    "status": "proposed; user listening needed before English parameter transfer",
+    "qualification": [
+      "ASR has errors even on original singing. CER is diagnostic, not a speech-quality acceptance score.",
+      "Two-pass +/-4 semitone roundtrip is a stress test, not identical to a single-pass English correction.",
+      "S3 references overlap these same Ukrainian lyric lines, so this is not independent generalization evidence."
+    ]
   }
 }
