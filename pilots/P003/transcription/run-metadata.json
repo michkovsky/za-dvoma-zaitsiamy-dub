@@ -1,0 +1,152 @@
+{
+  "limitations": [
+    "No listening verification.",
+    "RU small ASR degenerated; no words adopted.",
+    "Source start=50 seconds; not verified song bounds."
+  ],
+  "pass-2": {
+    "finished_utc": "2026-11-10T09:39:32.3598888Z",
+    "pass1_editorial_sha256": "FD7039CB4884851D5508777F4320163969EEC4B3C42C11DC3911842535A30AE6",
+    "outputs": {
+      "raw.srt": "CD7668F1751D48C2FE8A5A015E6763DC414961ADC43489B059627A58C0D51CDA",
+      "raw.txt": "8BB517415E8CC15934CB47B1AC783A18C1DD281195F58016F619A7DB08D3EF48",
+      "raw.json": "3AE2C7AD5723DA68B773D670354C185B88EEABACF67B5ED7B799F33ECDE51893"
+    },
+    "parameters": [
+      "-l",
+      "uk",
+      "-t",
+      "4",
+      "-bs",
+      "1",
+      "-bo",
+      "1",
+      "-nf",
+      "-otxt",
+      "-osrt",
+      "-oj"
+    ],
+    "started_utc": "2026-11-10T09:39:21.8852747Z",
+    "exit_code": 0,
+    "stage": "pass-2",
+    "model_sha256": "AE85E4A935D7A567BD102FE55AFC16BB595BDB618E11B2FC7591BC08120411BB",
+    "scene_sha256": "4F9D3F02A202252C352634E713D1BA16636D323EBC0D19B0A8BE38105CAEF31C",
+    "binary_sha256": "CA92ABF03591F6AD24FA3D0C911F331A787728CF7A1B7AF8C0D88A344C7C8E52",
+    "input_sha256": "55571675B43CAD2D40F3E14782EE24F1CB6A55ACAD45AC290F199587BD12E50B",
+    "prompt": "Початок фільму: титри переходять у вуличний музичний епізод. Компанія чоловіків у капелюхах, один із гітарою, зустрічає жінок. Контекст містить вступну розповідь та спів українською і суржиком; можливий хор. Записувати лише почуті слова."
+  },
+  "pass-1": {
+    "finished_utc": "2026-11-10T09:37:21.2846974Z",
+    "outputs": {
+      "raw.json": "8A14291DDDBC87489A42F0DA8993F19D1ACAE9711DF1527EFEFCA2A20853A1AF",
+      "raw.txt": "D67A041F4DAA664E378AC3C914AF921422E3DA829DD8786A3C354BA27D172B52",
+      "raw.srt": "91BA8B0A677216FA4685D4059EA6D8ED61E8C04639C9F7A44666D5CF374DDC93"
+    },
+    "input_sha256": "55571675B43CAD2D40F3E14782EE24F1CB6A55ACAD45AC290F199587BD12E50B",
+    "model_sha256": "AE85E4A935D7A567BD102FE55AFC16BB595BDB618E11B2FC7591BC08120411BB",
+    "started_utc": "2026-11-10T09:37:10.4796314Z",
+    "prompt": null,
+    "exit_code": 0,
+    "stage": "pass-1",
+    "parameters": [
+      "-l",
+      "uk",
+      "-t",
+      "4",
+      "-bs",
+      "1",
+      "-bo",
+      "1",
+      "-nf",
+      "-otxt",
+      "-osrt",
+      "-oj"
+    ],
+    "binary_sha256": "CA92ABF03591F6AD24FA3D0C911F331A787728CF7A1B7AF8C0D88A344C7C8E52"
+  },
+  "probe": {
+    "no_fallback": true,
+    "timing_note": "Exact run start was not recorded for this supplementary operation; file timestamps are not asserted as execution timestamps.",
+    "language": "uk",
+    "beam": 1,
+    "model_sha256": "AE85E4A935D7A567BD102FE55AFC16BB595BDB618E11B2FC7591BC08120411BB",
+    "threads": 4,
+    "exit_code": 0,
+    "binary_sha256": "CA92ABF03591F6AD24FA3D0C911F331A787728CF7A1B7AF8C0D88A344C7C8E52",
+    "input_sha256": "7DAFEF7C7944FA015C9F948A09D65FB83BF6D3DD2804CC6AAE0C21CDB7463D7B",
+    "prompt": null,
+    "outputs": {
+      "raw.json": "58310E16E6BDBC291798B42A1F0EA2D642081F7E67BE5943CE68B4F66C170F78",
+      "raw.txt": "C7C3C26736EAB9722CB51A135196B00764AF1C6046A2D40E07434426AAE51205"
+    },
+    "best_of": 1
+  },
+  "reference-ru": {
+    "no_fallback": true,
+    "timing_note": "Exact run start was not recorded for this supplementary operation; file timestamps are not asserted as execution timestamps.",
+    "language": "ru",
+    "beam": 1,
+    "model_sha256": "AE85E4A935D7A567BD102FE55AFC16BB595BDB618E11B2FC7591BC08120411BB",
+    "threads": 4,
+    "exit_code": 0,
+    "binary_sha256": "CA92ABF03591F6AD24FA3D0C911F331A787728CF7A1B7AF8C0D88A344C7C8E52",
+    "input_sha256": "B47492317BBC90425B6EC8E09F5826A2CB80425CCDA3B18D0D7EDE4D511AC8E9",
+    "prompt": null,
+    "outputs": {
+      "raw.srt": "BA770585C81AD23353DD85229F6CBAA60B538CB9D14F613116AF3C9347AB6709",
+      "raw.txt": "4E071D2D99230DC06BBBCB945C928FA364FFEA63E69C0C3F2B1A918CE7824C41",
+      "raw.json": "6C7E8C487A74AF1AB8AB5E00D5F852DC283E21DEE6A549D9D235D8316D53FFD4"
+    },
+    "best_of": 1
+  },
+  "medium-probe": {
+    "no_fallback": false,
+    "timing_note": "Exact run start was not recorded for this supplementary operation; file timestamps are not asserted as execution timestamps.",
+    "language": "uk",
+    "beam": 5,
+    "model_sha256": "19FEA4B380C3A618EC4723C3EEF2EB785FFBA0D0538CF43F8F235E7B3B34220F",
+    "threads": 4,
+    "exit_code": 0,
+    "binary_sha256": "CA92ABF03591F6AD24FA3D0C911F331A787728CF7A1B7AF8C0D88A344C7C8E52",
+    "input_sha256": "7DAFEF7C7944FA015C9F948A09D65FB83BF6D3DD2804CC6AAE0C21CDB7463D7B",
+    "prompt": null,
+    "outputs": {
+      "raw.json": "197621DB4F9496A897B7D0B53CFB01FEA6A78827E5E17EB4DF4CEF92E11C934F",
+      "raw.txt": "C059AD4EFEB6191248DB687AFC9E1FE96DD6C657D5196C75ABAFD2B0D4663B7D"
+    },
+    "best_of": 5
+  },
+  "medium-followup": {
+    "no_fallback": false,
+    "timing_note": "Exact run start was not recorded for this supplementary operation; file timestamps are not asserted as execution timestamps.",
+    "language": "uk",
+    "beam": 5,
+    "model_sha256": "19FEA4B380C3A618EC4723C3EEF2EB785FFBA0D0538CF43F8F235E7B3B34220F",
+    "threads": 4,
+    "exit_code": 0,
+    "binary_sha256": "CA92ABF03591F6AD24FA3D0C911F331A787728CF7A1B7AF8C0D88A344C7C8E52",
+    "input_sha256": "55571675B43CAD2D40F3E14782EE24F1CB6A55ACAD45AC290F199587BD12E50B",
+    "prompt": null,
+    "outputs": {
+      "raw.srt": "76B649C3FE7E5CD348311A2A1DA26453EF1ADFDC0C8F8CAE044B5EA04C5788AC",
+      "raw.txt": "AC0636ACB7E3CCB425CB13CCABA76D3EF1254AF2CBB27154E1122A54EA4A56A0",
+      "raw.json": "ABFEC6407475A4FF4771E5D302B52B8AA2B82478B013EAF100F69182A31A440D"
+    },
+    "best_of": 5
+  },
+  "media_sha256": {
+    "context-uk.wav": "A882867FE1DB4B27A2B4A9EC864B608290C5BA12E897148986A58CB952D172DD",
+    "listening-guitar.wav": "028C3BDF3DF50E4BD06A82CD477A0622564C86C7B9BF2C8899B8BA79A64538A5",
+    "listening-parents.wav": "0F4FD9A39AFB003A2B9A5F2437B4D9E49791673DB994C2F628B06B22215AEC7B",
+    "listening-first-verse.wav": "71741455FCFF317C493EDDA20A4AF92A6A82C04F9AB0E558EC5CDDFF0D8D092E",
+    "probe.wav": "7DAFEF7C7944FA015C9F948A09D65FB83BF6D3DD2804CC6AAE0C21CDB7463D7B",
+    "context-uk-asr.wav": "55571675B43CAD2D40F3E14782EE24F1CB6A55ACAD45AC290F199587BD12E50B",
+    "context-ru-candidate-asr.wav": "B47492317BBC90425B6EC8E09F5826A2CB80425CCDA3B18D0D7EDE4D511AC8E9"
+  },
+  "seal_hash_scope": "scene_sha256 and pass1_editorial_sha256 in pass-2 refer to original working bytes sealed before pass-2, before Git newline normalization. Normalized publication hashes are separate. Raw ASR output hashes refer to untouched external files.",
+  "normalized_publication_sha256": {
+    "pilots/P003/scene.md": "4f9d3f02a202252c352634e713d1ba16636d323ebc0d19b0a8be38105caef31c",
+    "pilots/P003/transcription/reference.ru.md": "a19fe10d187714da517f07736cb6f2c0d9e0977d5833461206af95eb3058c473",
+    "pilots/P003/transcription/pass-1.uk.md": "d16921f50b0cba71240c4518694d1e28f98d5ab3b27f5bec784ba0f0866cfa35"
+  }
+}
