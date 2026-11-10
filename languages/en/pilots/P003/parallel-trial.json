@@ -76,5 +76,17 @@
     "full_mix_decode": "passed",
     "listening_approval": false,
     "asr_diagnostic": "Earlier v2/v3 low takes recognized lines 1/2 broadly, but paint the town red and phrase boundary before Thats were misrecognized. This does not verify pronunciation. v4 retains original unvoiced consonants; not ASR-retested."
+  },
+  "listening_feedback": {
+    "id": "LC-001",
+    "date": "2026-11-10",
+    "file": "mix-low.wav",
+    "sha256": "a116ebb92b794d335e2499ffc0c2488c27287d943d1986ab4e67934d495b297c",
+    "markers": [
+      "parallel/well",
+      "paint the town red"
+    ],
+    "result": "User reports both markers sufficiently intelligible; supersedes earlier ASR doubts for these markers.",
+    "scope": "Marker intelligibility only; no full text/performance approval."
   }
 }
