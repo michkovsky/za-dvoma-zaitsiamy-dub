@@ -40,10 +40,10 @@
           "sha256": "440d11d5599d6d024f758bf95eba37f57e0af22af7cee70a2b8874bf005250b3"
         }
       },
-      "identity_hypothesis": "same singer, provisional per user LC-012",
-      "provisional_group": "P003-G01",
       "listening_feedback": "LC-012: 1 і 4 скоріш за все один і той самий голос.",
-      "acoustic_context": "User LC-012 attributes reverberation to emerging from a building arch; do not encode room reverb as singer identity."
+      "acoustic_context": "User LC-012 attributes reverberation to emerging from a building arch; do not encode room reverb as singer identity.",
+      "numeric_grouping_note": "LC-012 numeric 1/4 grouping cannot safely be mapped to V01/V04: LC-013 identifies father/shop as a distinct low role. Use sung phrase, not reel numbering, for identity.",
+      "candidate_role": "P003-R01"
     },
     {
       "id": "P003-V02",
@@ -125,7 +125,7 @@
       "context_end_seconds": 67.6,
       "duration": 2.5999773242630386,
       "gain": 2.5,
-      "status": "candidate solo; identity grouping provisional per user",
+      "status": "candidate father/shop excerpt; role distinct per user; precise content and solo cleanliness pending",
       "identity": "unassigned; no actor or character attribution",
       "candidate_solo": true,
       "voice_type": "not determined",
@@ -148,9 +148,9 @@
           "sha256": "0fcaba1317933ddbbad239e121b662fa74b5e71456728be7fd331084be74b3b0"
         }
       },
-      "identity_hypothesis": "same singer, provisional per user LC-012",
-      "provisional_group": "P003-G01",
-      "listening_feedback": "LC-012: 1 і 4 скоріш за все один і той самий голос."
+      "listening_feedback": "LC-012: 1 і 4 скоріш за все один і той самий голос.",
+      "numeric_grouping_note": "LC-012 numeric 1/4 grouping cannot safely be mapped to V01/V04: LC-013 identifies father/shop as a distinct low role. Use sung phrase, not reel numbering, for identity.",
+      "candidate_role": "P003-R02"
     },
     {
       "id": "P003-X01",
@@ -199,12 +199,23 @@
     "file": "exports/P003/voice-profiles/v1/reference-reel.wav",
     "sha256": "a7dc607a03c647f8a7eecef020125b1cbadab04a2a7a7287406bf936c384b6e2"
   },
-  "unresolved_feedback": [
+  "unresolved_feedback": [],
+  "performer_roles": [
     {
-      "id": "LC-012-number-5",
-      "text": "5 - низький голос",
-      "reason": "Published reel contains four excerpts. Need mapping before attributing to X01 or another interval.",
-      "status": "clarification requested"
+      "id": "P003-R01",
+      "description": "Main voice, referred to by user as 1–4",
+      "identity": "unnamed singer",
+      "status": "user-described role; exact excerpt grouping provisional"
+    },
+    {
+      "id": "P003-R02",
+      "description": "Separate low voice on the father/shop line",
+      "source_text": "А папаша мають магазин",
+      "canonical_transcription": "І папаша мають магазин.",
+      "english_text": "And my papa has himself a shop.",
+      "status": "distinct contrasting role confirmed by user LC-013",
+      "overlap": "Starts while R01 still sustains the mother-line ending; exact timing pending"
     }
-  ]
+  ],
+  "role_mapping_note": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."
 }
