@@ -214,12 +214,12 @@
       "canonical_transcription": "І папаша мають магазин.",
       "english_text": "And my papa has himself a shop.",
       "status": "distinct contrasting role confirmed by user LC-013",
-      "overlap": "Starts while R01 still sustains the mother-line ending; exact timing pending"
+      "overlap": "None. LC-015 supersedes prior overlap interpretation: low voice enters after the main phrase ends."
     }
   ],
   "role_mapping_note": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels.",
   "experimental_profiles": {
-    "status": "proposed; identity and quality listening pending",
+    "status": "experimental only; not adopted for complete rendering pending coverage of all solo singers",
     "encoder": {
       "name": "Chatterbox VoiceEncoder",
       "model_sha256": "f0921cab452fa278bc25cd23ffd59d36f816d7dc5181dd1bef9751a7fb61f63c",
@@ -371,9 +371,45 @@
       "Embeddings are not a verified singer count or voice-quality verdict.",
       "Experimental two-stage conversion may change consonants or introduce vocoder artifacts.",
       "No user voice-identity or singing-quality approval.",
-      "No overlapping duet assembled yet.",
       "S3 conditioning is not full Chatterbox T3 text-to-speech conditioning.",
-      "Legacy dependencies remain external and not fully migrated; portable reproducibility not claimed."
+      "Legacy dependencies remain external and not fully migrated; portable reproducibility not claimed.",
+      "Singer transition must be sequential, with no overlap, per latest LC-015."
     ]
+  },
+  "latest_feedback": [
+    {
+      "id": "LC-014",
+      "text": "Наче схоже",
+      "scope": "tentative similarity of short two-profile comparison, not full-render approval"
+    },
+    {
+      "id": "LC-015",
+      "text": "Нетреба, я переслухав - там нема перетину",
+      "decision": "No singer overlap at mother/father transition; supersedes LC-011/013 overlap interpretation."
+    },
+    {
+      "id": "LC-016",
+      "text": "давай просуватися до фінального рендерінгу",
+      "decision": "Prepare complete review render with current lyrics and candidate voice profiles."
+    },
+    {
+      "id": "LC-017",
+      "text": "Я б хотів, аби ти отримав голосові профілі хоча б співаків, що мають власні партії",
+      "decision": "First map all individual singer parts and prepare each profile. Do not substitute the current main profile for all unidentified singers."
+    }
+  ],
+  "phrase_audit": {
+    "file": "exports/P003/voice-profiles/phrase-audit-v1/manifest.json",
+    "sha256": "4a322467e7f3c2e05c05f26ab5d22693bdd64e5332b76c38b6b3659f48455617",
+    "count": 12,
+    "versions": [
+      "original",
+      "vocal"
+    ],
+    "status": "lexically named navigation clips; singer assignment pending; not conditioning"
+  },
+  "pending_clarification": {
+    "question": "Do user references 1 and 4 mean the canary opening and mother line?",
+    "reason": "Prior reel file numbering did not match user-perceived musical phrases; role labels must be tied to lyrics."
   }
 }
