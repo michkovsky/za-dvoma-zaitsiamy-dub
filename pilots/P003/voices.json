@@ -672,5 +672,142 @@
       "role": null,
       "status": "unassigned; do not infer a single singer from a mixed excerpt"
     }
-  ]
+  ],
+  "pitch_processing_trials": {
+    "feedback": "LC-020: user finds unnatural harmonics/vocoder quality; LC-021 authorizes continuing investigation.",
+    "trial": {
+      "method": "Raw neural S3 waveform -> FFmpeg Rubber Band dynamic pitch, formants preserved; WORLD used only for F0 analysis, never synthesis.",
+      "script_sha256": "b15810ed00a0e5ffbb7b71acb2c2d867706fabcda0863136f6b27e0e1f57fd10",
+      "preserved_pitch_deviation_cents": 20,
+      "pitch_command_interval_ms": 10,
+      "profiles": [
+        {
+          "role": "P003-R01",
+          "source_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-probe.wav",
+          "source_sha256": "6513eb68cee9d80ae9c6f2ef67ed986f392536e4e85294b4fc5728950c3531da",
+          "output_file": "exports/P003/natural-pitch/v1/P003-R01-rubberband.wav",
+          "sha256": "817492ec822851c222894520121949ed3daed8d3956dedfed37c5ef56ff9bdf0",
+          "commands_sha256": "9b52b7f889b8318040be00a009063e6aa27ac158a9edf0fd4695ea931460defd",
+          "duration": 3.26,
+          "clipping": 0,
+          "peak": 0.20635986328125,
+          "ratio_min_median_max": [
+            0.6787929340257154,
+            0.8565521582177106,
+            1.2009454098523673
+          ],
+          "output_samples": 78240,
+          "source_samples": 78240
+        },
+        {
+          "role": "P003-R02",
+          "source_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-probe.wav",
+          "source_sha256": "36537ff4fe307f56c99aeae5e0592110b9411b69215609af9524cb9760adde98",
+          "output_file": "exports/P003/natural-pitch/v1/P003-R02-rubberband.wav",
+          "sha256": "6e516787cb7f29b9303477471944d7dff4fa7b0db2bc694e0a10b77b1b078c27",
+          "commands_sha256": "369e2e593faaf5681372458f103f7ad87e30c3353777fc3dbe3950ea5f22d35e",
+          "duration": 3.28,
+          "clipping": 0,
+          "peak": 0.180816650390625,
+          "ratio_min_median_max": [
+            0.5818717351025342,
+            0.7895210992319044,
+            0.8658102755872699
+          ],
+          "output_samples": 78720,
+          "source_samples": 78720
+        }
+      ],
+      "status": "experimental alternative, listening pending",
+      "limitations": [
+        "Rubber Band is phase-vocoder waveform processing, not an unmodified natural recording or a new neural singing engine.",
+        "Upstream neutral guide itself was produced with WORLD; this experiment only removes the final WORLD resynthesis.",
+        "S3 may already alter articulation and sung pitch."
+      ]
+    },
+    "qa": {
+      "pitch_qa": [
+        {
+          "role": "P003-R01",
+          "method": "WORLD",
+          "median_absolute_pitch_error_cents": 2.036129398620671,
+          "measured_frames": 438,
+          "duration": 3.26,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R01",
+          "method": "RubberBand",
+          "median_absolute_pitch_error_cents": 21.41379646524734,
+          "measured_frames": 439,
+          "duration": 3.26,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R01",
+          "method": "Raw S3",
+          "median_absolute_pitch_error_cents": 287.4572260404433,
+          "measured_frames": 438,
+          "duration": 3.26,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R02",
+          "method": "WORLD",
+          "median_absolute_pitch_error_cents": 3.103884753236462,
+          "measured_frames": 421,
+          "duration": 3.28,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R02",
+          "method": "RubberBand",
+          "median_absolute_pitch_error_cents": 25.111939181562715,
+          "measured_frames": 430,
+          "duration": 3.28,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R02",
+          "method": "Raw S3",
+          "median_absolute_pitch_error_cents": 426.56616448833984,
+          "measured_frames": 425,
+          "duration": 3.28,
+          "finite": true,
+          "clipping": 0
+        }
+      ],
+      "comparisons": [
+        {
+          "role": "P003-R01",
+          "file": "exports/P003/natural-pitch/v1/P003-R01-WORLD-then-RubberBand.wav",
+          "sha256": "886c2ae23938e276d7938ed40935c13823958ee72a26ffad7e2355fb6d56cbf1",
+          "order": [
+            "WORLD",
+            "RubberBand"
+          ],
+          "gap_seconds": 0.65,
+          "normalization": "Both excerpts RMS 0.08 unless peak cap 0.93 is reached."
+        },
+        {
+          "role": "P003-R02",
+          "file": "exports/P003/natural-pitch/v1/P003-R02-WORLD-then-RubberBand.wav",
+          "sha256": "89d9c2b4854b1ac4057eb678bafd06bb58dc59dfec0efbe684cf03b6f1ed8b25",
+          "order": [
+            "WORLD",
+            "RubberBand"
+          ],
+          "gap_seconds": 0.65,
+          "normalization": "Both excerpts RMS 0.08 unless peak cap 0.93 is reached."
+        }
+      ],
+      "qualification": "Automatic F0 comparison is not listening approval; waveform naturalness and intelligibility unassessed by QA."
+    },
+    "adopted_for_final_render": false
+  }
 }
