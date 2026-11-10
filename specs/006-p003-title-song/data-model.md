@@ -7,3 +7,5 @@
 - Performance: source phrase ID, vocal/background inputs, voice/model identity, generation parameters, mix windows, SHA, technical QA, окреме користувацьке погодження.
 
 Спочатку вільна Markdown-розшифровка ASR без canonical-ID. Не вигадувати мовця для заповнення таблиці. Час HH:MM:SS.mmm, інтервали [start,end). P003 не реєструється як S-сцена.
+
+ScoreTemplate (FR-011): один сталий id нотної редакції, SHA користувацького зображення, вихідні висоти/раціональні тривалості в чвертях, ліги, номер такту джерела й рядка, три набори складових слотів. Пропоновані тональність/метр/темп відділені від підтверджених властивостей фонограми. GuitarArrangement: верхня акордна схема та окремо редакторська фактура. Export: key, trial BPM, число повторень, score/script SHA, вихідні MIDI/XML/WAV SHA й структурний QA. Медіа зовні; статус усіх нових музичних рішень proposed до слухового приймання.

@@ -1,0 +1,142 @@
+{
+  "status": "proposed",
+  "qa": {
+    "lyrics_match_UC002": true,
+    "xml_guitar_sounding_pitches_match_midi": true,
+    "transpose_plus_4_matches_source_key": true,
+    "invalid_duration_and_broken_tie_rejected": true,
+    "existing_output_untouched": true,
+    "checkout_output_rejected": true,
+    "checks": [
+      {
+        "version": "source-score-v3",
+        "melody_attacks": 39,
+        "bars": 8,
+        "midi_xml_wav_and_guitar_range": "passed"
+      },
+      {
+        "version": "source-score-v3-three-verses",
+        "melody_attacks": 117,
+        "bars": 24,
+        "midi_xml_wav_and_guitar_range": "passed"
+      },
+      {
+        "version": "source-score-v3-csharp",
+        "melody_attacks": 39,
+        "bars": 8,
+        "midi_xml_wav_and_guitar_range": "passed"
+      }
+    ],
+    "scope": "Structural/numeric checks. No listening approval or film synchronization."
+  },
+  "exports": {
+    "source-score-v3": {
+      "score_id": "P003-music-v1",
+      "score_sha256": "51bbd6a590ca21377d8f0bb4b93fc8fe3bd97b2c8120ebeb44ae1f9a1e8ec108",
+      "script_sha256": "cf0b9130758c07511fb3d7df5036a3cbfdec2479d38dfc3e70c308fdefd2649e",
+      "key": "Am",
+      "transpose_semitones": -4,
+      "trial_quarter_bpm": 110.0,
+      "bpm_status": "editorial, not film tempo",
+      "meter": "4/4 editorial grouping from bar durations",
+      "verses": 1,
+      "bars_per_verse": 8,
+      "quarters_per_verse": 32,
+      "syllable_attacks_per_line": [
+        10,
+        9,
+        10,
+        10
+      ],
+      "melodic_attacks_per_verse": 39,
+      "repeated_melody_identical": true,
+      "musical_seconds": 17.454545454545453,
+      "wav_seconds": 17.704580498866214,
+      "output_gain": 0.9154157247055105,
+      "max_absolute_sample": 0.85,
+      "clipping_samples": 0,
+      "melody_status": "manual reading of user image, proposed",
+      "guitar_status": "editorial bass/chord arrangement, not extracted film guitar",
+      "lyric_alignment_status": "Запропоноване укладання за складовими атаками нотного аркуша; текст підтверджено UC-002, точне вокальне укладання ще не перевірене за фільмом.",
+      "outputs": {
+        "guitar.wav": "26b0503b64da5f03643b9bffcc1ceb5ec0b55a2f71e9ca25a1af9d1cc1d26f53",
+        "melody.wav": "845500fb43da4d3b4fdcc189c0c9881d7acdf44c5ae69368d04bb961a7b95c4c",
+        "mix.wav": "640c5fa7c3e7726537200fe2fedbd66b6f49011151d8d9d52ee3970a680ad96f",
+        "score.mid": "9c08b2d7b5718cf77cb29a432f6097965067155c121cd76aa0cae548ae495b2b",
+        "score.musicxml": "e0101de6f60d84b47d52fe3922eb2338e36a1fdc05925c07ef19aff5d2bb3084"
+      }
+    },
+    "source-score-v3-three-verses": {
+      "score_id": "P003-music-v1",
+      "score_sha256": "51bbd6a590ca21377d8f0bb4b93fc8fe3bd97b2c8120ebeb44ae1f9a1e8ec108",
+      "script_sha256": "cf0b9130758c07511fb3d7df5036a3cbfdec2479d38dfc3e70c308fdefd2649e",
+      "key": "Am",
+      "transpose_semitones": -4,
+      "trial_quarter_bpm": 110.0,
+      "bpm_status": "editorial, not film tempo",
+      "meter": "4/4 editorial grouping from bar durations",
+      "verses": 3,
+      "bars_per_verse": 8,
+      "quarters_per_verse": 32,
+      "syllable_attacks_per_line": [
+        10,
+        9,
+        10,
+        10
+      ],
+      "melodic_attacks_per_verse": 39,
+      "repeated_melody_identical": true,
+      "musical_seconds": 52.36363636363637,
+      "wav_seconds": 52.61365079365079,
+      "output_gain": 0.9154157247055105,
+      "max_absolute_sample": 0.85,
+      "clipping_samples": 0,
+      "melody_status": "manual reading of user image, proposed",
+      "guitar_status": "editorial bass/chord arrangement, not extracted film guitar",
+      "lyric_alignment_status": "Запропоноване укладання за складовими атаками нотного аркуша; текст підтверджено UC-002, точне вокальне укладання ще не перевірене за фільмом.",
+      "outputs": {
+        "guitar.wav": "a0c2787f7026dc79b1e8d72dc72a0f67cb8e70bc6962e7ddd935ce1fb9673adc",
+        "melody.wav": "7f15adc6aa274b02509b1ef51f41b39f7d57f802fe0dba2b9cf78db507746864",
+        "mix.wav": "f14dbfe9d3ace895bb9038eab857987dc0c90ca931e8a969a37569ecdd181fcb",
+        "score.mid": "c13c6e979600fa14210fe101f2293197b65d9b4edf20b8eb1f93a822a5157b65",
+        "score.musicxml": "e0101de6f60d84b47d52fe3922eb2338e36a1fdc05925c07ef19aff5d2bb3084"
+      }
+    },
+    "source-score-v3-csharp": {
+      "score_id": "P003-music-v1",
+      "score_sha256": "51bbd6a590ca21377d8f0bb4b93fc8fe3bd97b2c8120ebeb44ae1f9a1e8ec108",
+      "script_sha256": "cf0b9130758c07511fb3d7df5036a3cbfdec2479d38dfc3e70c308fdefd2649e",
+      "key": "C#m",
+      "transpose_semitones": 0,
+      "trial_quarter_bpm": 110.0,
+      "bpm_status": "editorial, not film tempo",
+      "meter": "4/4 editorial grouping from bar durations",
+      "verses": 1,
+      "bars_per_verse": 8,
+      "quarters_per_verse": 32,
+      "syllable_attacks_per_line": [
+        10,
+        9,
+        10,
+        10
+      ],
+      "melodic_attacks_per_verse": 39,
+      "repeated_melody_identical": true,
+      "musical_seconds": 17.454545454545453,
+      "wav_seconds": 17.704580498866214,
+      "output_gain": 0.9189977852879632,
+      "max_absolute_sample": 0.85,
+      "clipping_samples": 0,
+      "melody_status": "manual reading of user image, proposed",
+      "guitar_status": "editorial bass/chord arrangement, not extracted film guitar",
+      "lyric_alignment_status": "Запропоноване укладання за складовими атаками нотного аркуша; текст підтверджено UC-002, точне вокальне укладання ще не перевірене за фільмом.",
+      "outputs": {
+        "guitar.wav": "8d35eccd4aa71026315b2984c9ac1bc27ffeb5235c509085cb5d49603281a2cb",
+        "melody.wav": "dbcd539afd1757c596f2787da88f8ac663156f7f191f6b94d58dd17da68b36f5",
+        "mix.wav": "ac791fedc0e0ff4085e29dfa32553f4834b3548e3e0df6c4fcbcfa8581b9332f",
+        "score.mid": "12fb29a17fc88ff6dd9781409b2bb00bd516e7047f2e0b0d2ae2089f5bee746f",
+        "score.musicxml": "ad8446675476b91f4b4644879a091403557fef9c751566d2a1202b4a5933892a"
+      }
+    }
+  }
+}
