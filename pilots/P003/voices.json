@@ -247,6 +247,11 @@
         "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
         "gain": 2.5,
         "clipping": 0
+      },
+      "voice_direction": {
+        "label": "Ordinary baritone, possibly slightly low",
+        "basis": "LC-022 user clarification: this is the intended voice, not approval of a previous sample.",
+        "avoid": "Exaggerated heavy bass coloration; do not alter melodic notes to force a voice category."
       }
     }
   ],
@@ -809,5 +814,18 @@
       "qualification": "Automatic F0 comparison is not listening approval; waveform naturalness and intelligibility unassessed by QA."
     },
     "adopted_for_final_render": false
+  },
+  "latest_solo_pair": {
+    "file": "exports/P003/solo-pair/v1/mix.wav",
+    "sha256": "3bb094d63966c13e79d49a04328b0129a1a41f854fe9ab96c13bd0622f590f54",
+    "manifest": "exports/P003/solo-pair/v1/manifest.json",
+    "manifest_sha256": "b0bdcb728484b3ff78d8724e6d709ade49c6d3a7b6fa7762227b0484cb1bf34b",
+    "status": "proposed",
+    "duration": 8.97725,
+    "singer_overlap_samples": 0,
+    "intelligibility_diagnostic": {
+      "asr_text": "♪ Like your mother has a heart-warming kind ♪\n ♪ If my father has himself a jaw ♪",
+      "interpretation": "ASR confuses several words. This is not a listening verdict, but intelligibility is an open concern."
+    }
   }
 }
