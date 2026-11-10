@@ -192,8 +192,8 @@
     "Candidate solo windows may retain other voices and separation artifacts.",
     "Four sampled regions do not establish four singer identities.",
     "F0 describes sung pitches, not tenor/baritone identity.",
-    "Short mother/papa excerpts require identity and cleanliness review before conditioning.",
-    "No speaker embedding or cloned singing model produced."
+    "Short mother/papa excerpts require identity and cleanliness review before adopting experimental conditioning for final rendering.",
+    "Candidate embeddings and S3 conditioning now exist, but reference identity/cleanliness and generated voice quality remain unapproved."
   ],
   "reel": {
     "file": "exports/P003/voice-profiles/v1/reference-reel.wav",
@@ -217,5 +217,163 @@
       "overlap": "Starts while R01 still sustains the mother-line ending; exact timing pending"
     }
   ],
-  "role_mapping_note": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."
+  "role_mapping_note": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels.",
+  "experimental_profiles": {
+    "status": "proposed; identity and quality listening pending",
+    "encoder": {
+      "name": "Chatterbox VoiceEncoder",
+      "model_sha256": "f0921cab452fa278bc25cd23ffd59d36f816d7dc5181dd1bef9751a7fb61f63c",
+      "profiles": [
+        {
+          "role": "P003-R01",
+          "source_file": "exports/P003/voice-profiles/v1/P003-V01-verse-1-vocal.wav",
+          "source_sha256": "615377eb5eadd2df0ad2484a2e4c1c85c76b0708c4aad26088d4559d6e636954",
+          "duration_seconds": 6.0,
+          "embedding_file": "exports/P003/voice-profiles/embeddings-v2/P003-R01.npy",
+          "embedding_sha256": "33553e4920d2855ad51dc5066711a5d1214debe96e4e9b3d3cc1872cf7ea13a6",
+          "shape": [
+            1,
+            256
+          ],
+          "l2_norm": 0.9999998807907104,
+          "wall_seconds": 3.952999999979511,
+          "status": "candidate embedding, not approved conditioning"
+        },
+        {
+          "role": "P003-R02",
+          "source_file": "exports/P003/voice-profiles/v1/P003-V04-papa-vocal.wav",
+          "source_sha256": "a3ccb53c5ebf14514dfa5274f748d1e6347b567d7df331afa6f866f07b25060b",
+          "duration_seconds": 2.5999773242630386,
+          "embedding_file": "exports/P003/voice-profiles/embeddings-v2/P003-R02.npy",
+          "embedding_sha256": "ca81d591e5b8fbdbbb4a84e3132a03a84c2bc01115405083d6906dae7c9b4059",
+          "shape": [
+            1,
+            256
+          ],
+          "l2_norm": 1.0,
+          "wall_seconds": 0.062000000034458935,
+          "status": "candidate embedding, not approved conditioning"
+        }
+      ]
+    },
+    "s3_conditioning": {
+      "model_sha256": "2b78103c654207393955e4900aac14a12de8ef25f4b09424f1ef91941f161d4e",
+      "profiles": [
+        {
+          "role": "P003-R01",
+          "reference_sha256": "615377eb5eadd2df0ad2484a2e4c1c85c76b0708c4aad26088d4559d6e636954",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v1/P003-R01-s3.pt",
+          "conditioning_sha256": "58233a8c1eba9c570038f66d51737a1ce6e6be509af0d1662bd6acdd7ee76790",
+          "conditioning_shapes": {
+            "prompt_token": [
+              1,
+              150
+            ],
+            "prompt_token_len": [
+              1
+            ],
+            "prompt_feat": [
+              1,
+              300,
+              80
+            ],
+            "prompt_feat_len": null,
+            "embedding": [
+              1,
+              192
+            ]
+          },
+          "probe_file": "exports/P003/voice-profiles/conditioning-v1/P003-R01-probe.wav",
+          "probe_sha256": "32e204d33e3e06186b1c81fdf21437010027812b3cca89a40375eec83a902642",
+          "duration": 3.28,
+          "peak": 0.5752967000007629,
+          "clipping": 0,
+          "gain": 1,
+          "wall_seconds": 43.03200000000652
+        },
+        {
+          "role": "P003-R02",
+          "reference_sha256": "a3ccb53c5ebf14514dfa5274f748d1e6347b567d7df331afa6f866f07b25060b",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v1/P003-R02-s3.pt",
+          "conditioning_sha256": "07dec35ebc946011bfe89adcf2848138dbb790f32ae0a6f13712a8d4503addb3",
+          "conditioning_shapes": {
+            "prompt_token": [
+              1,
+              65
+            ],
+            "prompt_token_len": [
+              1
+            ],
+            "prompt_feat": [
+              1,
+              130,
+              80
+            ],
+            "prompt_feat_len": null,
+            "embedding": [
+              1,
+              192
+            ]
+          },
+          "probe_file": "exports/P003/voice-profiles/conditioning-v1/P003-R02-probe.wav",
+          "probe_sha256": "95cd1d4c7e22576d29cfe5b4066968f5b3028f0b2a3f4c40f9a68bfbc2697156",
+          "duration": 3.28,
+          "peak": 0.4002590775489807,
+          "clipping": 0,
+          "gain": 1,
+          "wall_seconds": 21.68700000003446
+        }
+      ]
+    },
+    "singing_probes": {
+      "method": "Chatterbox S3 voice conversion followed by WORLD pitch restoration from shared Am/110 BPM score, octave -12",
+      "probes": [
+        {
+          "role": "P003-R01",
+          "file": "exports/P003/voice-profiles/note-locked-v1/P003-R01-probe.wav",
+          "sha256": "fe57e1af7ee3aa491f6dfaff4169e4075aecaa78a4afa35509c6b7127f815603",
+          "duration": 3.28,
+          "clipping": 0,
+          "target_frames": 567
+        },
+        {
+          "role": "P003-R02",
+          "file": "exports/P003/voice-profiles/note-locked-v1/P003-R02-probe.wav",
+          "sha256": "cf7af07adfd11c2b4cd17b406db588a8dcf34583234e487bf12d6d241e010311",
+          "duration": 3.28,
+          "clipping": 0,
+          "target_frames": 479
+        }
+      ],
+      "automatic_pitch_qa": [
+        {
+          "role": "P003-R01",
+          "median_absolute_pitch_error_cents_in_note_interiors": 3.2984715155926576,
+          "measured_frames": 437,
+          "all_finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R02",
+          "median_absolute_pitch_error_cents_in_note_interiors": 2.0485989898277985,
+          "measured_frames": 360,
+          "all_finite": true,
+          "clipping": 0
+        }
+      ],
+      "comparison_file": "exports/P003/voice-profiles/note-locked-v1/comparison.wav",
+      "comparison_sha256": "ed8ad657abcf0f4421ccb891ea1c5f72a342a53d2551c42c5340b52de5c00e22"
+    },
+    "limitations": [
+      "Role source assignment remains provisional at excerpt level.",
+      "Low-role sample only 2.6 s; no padding/repetition used to pretend more source evidence.",
+      "Main-role reference contains room reverberation.",
+      "Embeddings are not a verified singer count or voice-quality verdict.",
+      "Experimental two-stage conversion may change consonants or introduce vocoder artifacts.",
+      "No user voice-identity or singing-quality approval.",
+      "No overlapping duet assembled yet.",
+      "S3 conditioning is not full Chatterbox T3 text-to-speech conditioning.",
+      "Legacy dependencies remain external and not fully migrated; portable reproducibility not claimed."
+    ]
+  }
 }
