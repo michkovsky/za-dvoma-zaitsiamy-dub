@@ -909,11 +909,40 @@
       "old_command_interval_ms": 10,
       "new_command_interval_ms": 40
     },
-    "status": "new trial proposed, trembling removal not listening-verified",
+    "status": "rejected per LC-027: dobre distorted in both blocks, shop additional distortion in second",
     "qa": {
       "all_finite": true,
       "clipping": 0
     },
     "qualification": "Smoothing the controller does not prove that waveform tremor is removed; raw neural block may already contain the fault."
+  },
+  "neural_tuning_direction": {
+    "user_instruction": "LC-028: continue improving neural modulation, do not replace it with direct text-to-speech",
+    "direct_tts_started": false,
+    "latest_comparison": {
+      "comparison_file": "exports/P003/neural-tuning/v1/full-then-035.wav",
+      "sha256": "c6d0d3993b587c4497c387b039effb21282ced91f0f311366e1ae8b19ee3dbf5",
+      "duration": 18.76,
+      "order": [
+        "100 percent converted log-mel, measured source F0",
+        "1 second silence",
+        "35 percent converted + 65 percent original log-mel, same measured source F0"
+      ],
+      "qa": {
+        "finite": true,
+        "clipping": 0
+      },
+      "asr_diagnostics": {
+        "vocoder-predicted-f0": "♪ Моя мама серти добре має ♪\n ♪ Ті папа шамають мады ♪",
+        "vocoder-source-f0": "♪ Моя мама серти добре має ♪\n ♪ Ті папа шамають мады ♪",
+        "conversion-source-f0": "♪ Моя мама серти тьобре має ♪\n ♪ Нігла пошимаю махати ♪",
+        "conversion-strength-035": "♪ Моя мама серти добре має ♪\n ♪ Німа пошимають махати ♪"
+      },
+      "conclusion": "ASR still corrupts dobre after source-F0 injection at full conversion; weaker log-mel conversion recovers that word in the diagnostic, but shop-line remains uncertain. Human listening required.",
+      "qualification": "Reduced conversion strength also retains more source timbre; this is not proof of full identity transfer to English."
+    },
+    "bench_manifest": "exports/P003/neural-tuning/v1/manifest.json",
+    "bench_manifest_sha256": "16045aaeeb6e537eb2f1e754adcdc949e423266c8afe30e84ad4f263884b8f5b",
+    "adopted_for_english": false
   }
 }
