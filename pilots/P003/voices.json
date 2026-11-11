@@ -1219,5 +1219,42 @@
       "Local repair reduces fine-structure transfer inside the named words.",
       "Guide still inherits upstream neutral WORLD synthesis; no final WORLD/Rubber Band added."
     ]
+  },
+  "seed_vc_trial": {
+    "status": "proposed; no listening approval",
+    "backend": "Seed-VC v1, F0-conditioned 44.1 kHz",
+    "code_revision": "51383efd921027683c89e5348211d93ff12ac2a8",
+    "model_revision": "257283f9f41585055e8f858fba4fd044e5caed6e",
+    "model_sha256": "42aef93ffe65857c840d270252fa040f7ba04514945ec460f3ac1ac2a96de684",
+    "reference_manifest": "exports/P003/voice-profiles/seed-vc-v1/manifest.json",
+    "reference_manifest_sha256": "4259bc9db2b6e832529d0fe0198611f242f8caa486d566fca0b12d45060d91e5",
+    "profiles": [
+      {
+        "role": "P003-R01",
+        "reference": "exports/P003/voice-profiles/solo-v2/P003-R01-mother.wav",
+        "reference_sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+        "embedding": "P003-R01-campplus.npy",
+        "embedding_sha256": "e77ddb165ba32b6c9b22a285967a7684f91faed585bac075478d8c1b7bfd75fa",
+        "dimension": 192,
+        "device": "cpu",
+        "status": "candidate; no listening approval; style embedding alone is not full SVC conditioning"
+      },
+      {
+        "role": "P003-R02",
+        "reference": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
+        "reference_sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+        "embedding": "P003-R02-campplus.npy",
+        "embedding_sha256": "29af8f3889501dec1c8dd9279daee7e8a2557f4f35e5e2593d3a4528c10ee547",
+        "dimension": 192,
+        "device": "cpu",
+        "status": "candidate; no listening approval; style embedding alone is not full SVC conditioning"
+      }
+    ],
+    "notes": [
+      "CAMPPlus embeddings are candidate style features, not complete SVC conditioning; full inference also uses reference audio mel and semantic/F0 features.",
+      "R01 mother reference; arch echo excluded. R02 papa reference; ordinary slightly low baritone target.",
+      "No overlap; no automatic F0 adjustment or post-synthesis pitch correction.",
+      "Accepted neutral guides remain unchanged. Other phrase speaker assignments remain unresolved."
+    ]
   }
 }
