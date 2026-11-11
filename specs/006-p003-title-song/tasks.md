@@ -171,3 +171,8 @@ T001→T002→T003→T004→T005→T006→T007→T008→T010→T011→T012→T01
 - [x] T091 [US3] За LC-046 відхилити A54 за реверберацією всіх голосних; за LC-047 перейти до одного actor profile Борисова, зберігши R01/R02 як сталі performance lanes, papa modulation — лише гіпотеза, хор не домішувати.
 - [x] T092 [US3] Відібрати оригінальні RU/UK самопредставлення Голохвостого за ASR/контекстом і кадром, окремі R01 singing refs; зберегти provenance, таймкоди, SHA, original reel A56 і profile A57/borisov-profile.json.
 - [x] T093 [US3] На CUDA витягти native Seed-VC conditioning і CAMPPlus features, перевірити .pt reload/finite/hash; ASR реально виконати через Vulkan. Low-delivery refs comparison-only, без нового незалежного актора чи усереднення різних акустик.
+
+- [x] T094 [US3] За LC-048 зафіксувати прийняття оригінальної основи профілю Борисова A56/A57; не поширювати на новий синтез або гіпотезу low papa.
+- [x] T095 [US3] За прямим дорученням виконати English mother→papa з одним прийнятим профілем P003-VOICE-BORISOV/B01 для обох рядків; ті самі guide, FP32/100/CFG 0/seed 23 per phrase, без модуляції регістру чи зміни нот. Окремі ролі/сухий вокал/редакторський мікс, SHA/QA і короткий ASR diagnostic, подати новий результат.
+
+- [ ] T096 [US3] Прослухати A58 за дикцією, вібраціями/реверберацією й схожістю Борисова. ASR дає I do mother heads are warning time / And my Papa heads himself is shocked; це діагностика ймовірних втрат, не canonical text. Модуляцію низької подачі перевіряти окремо після базового голосу.

@@ -1386,9 +1386,30 @@
     "actor": "Олег Борисов",
     "character_id": "golokhvostyi",
     "basis": "LC-047 user correction and published performer metadata; character credit CR001",
-    "status": "original-reference profile prepared; generated performance unapproved",
+    "status": "LC-048: original-reference foundation accepted; new English performance pending",
     "role_semantics": "R01/R02 remain stable performance-lane IDs, not two confirmed actors",
-    "papa_identity": "same-actor modulation possible per user, not verified; excluded from base identity conditioning"
+    "papa_identity": "same-actor modulation possible per user, not verified; excluded from base identity conditioning",
+    "source_preference": {
+      "primary_track": "ru",
+      "basis": "LC-049 user: historically cleaner Russian track; Borisov voiced both original versions",
+      "same_actor_for_uk_ru_speech": true
+    },
+    "english_trial": {
+      "status": "proposed; A58/A59",
+      "manifest": "exports/P003/neural-tuning/seed-english-borisov-v1/assembly.json",
+      "manifest_sha256": "9357beea575ccd9e40b80da25f2def5bf61f1998d5d4e071dc122ef25deb05a9",
+      "primary_reference_id": "P003-B01",
+      "same_reference_for_both_lanes": true,
+      "low_modulation_applied": false,
+      "ASR": "exports/P003/neural-tuning/seed-english-borisov-v1/asr.txt",
+      "ASR_sha256": "f8d13d73337ba59ee51b353ca23dde78bb78fca1303ea1970e1d3d605da79b5f",
+      "ASR_scope": "possible intelligibility losses; no listening approval"
+    },
+    "track_specific_articulation": {
+      "basis": "LC-050 user: UK version may have distinctive Щ and other sounds",
+      "handling": "Same actor identity; retain UK-specific articulation as a separate track/delivery feature, not a universal actor-timbre property",
+      "english_policy": "Primary RU speech reference; English guide/text define target articulation; cross-language accent transfer remains a listening check"
+    }
   },
   "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."
 }
