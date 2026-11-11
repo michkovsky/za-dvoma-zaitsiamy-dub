@@ -205,13 +205,20 @@
     {
       "id": "P003-R01",
       "description": "Main voice, referred to by user as 1–4",
-      "identity": "unnamed singer",
-      "status": "Singer identity shared by canary opening and mother line, user LC-018",
+      "identity": "Олег Борисов",
+      "status": "LC-047 user identifies song performer as Borisov; canary/mother grouping retained",
       "confirmed_source_phrases": [
         "В небі канареєчка літає",
         "Моя мама серце добре має"
       ],
       "primary_reference": {
+        "profile_id": "P003-VOICE-BORISOV",
+        "reference_id": "P003-B01",
+        "file": "exports/P003/voice-profiles/borisov-v1/references/ru-speech.wav",
+        "sha256": "b7222b2cf875aacf30330d46b230c82f9e708418362febf91a16e402e8d665c2",
+        "use": "shared Borisov actor identity; native primary RU speech reference, not a final English voice approval"
+      },
+      "legacy_primary_reference": {
         "role": "P003-R01",
         "label": "mother",
         "source_start": 109.75,
@@ -224,17 +231,30 @@
         "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
         "gain": 2.5,
         "clipping": 0
-      }
+      },
+      "actor_profile_id": "P003-VOICE-BORISOV"
     },
     {
       "id": "P003-R02",
-      "description": "Separate low voice on the father/shop line",
+      "description": "Contrasting low delivery on papa/shop; performance lane, not independently established actor",
       "source_text": "А папаша мають магазин",
       "canonical_transcription": "І папаша мають магазин.",
       "english_text": "And my papa has himself a shop.",
-      "status": "distinct contrasting role confirmed by user LC-013",
+      "status": "LC-047 supersedes earlier assumption of a separate actor; no overlap; no claim of verified historical modulation",
       "overlap": "None. LC-015 supersedes prior overlap interpretation: low voice enters after the main phrase ends.",
       "primary_reference": {
+        "profile_id": "P003-VOICE-BORISOV",
+        "reference_id": "P003-B01",
+        "file": "exports/P003/voice-profiles/borisov-v1/references/ru-speech.wav",
+        "sha256": "b7222b2cf875aacf30330d46b230c82f9e708418362febf91a16e402e8d665c2",
+        "use": "shared Borisov actor identity; native primary RU speech reference, not a final English voice approval"
+      },
+      "voice_direction": {
+        "label": "Ordinary baritone, possibly slightly low",
+        "basis": "LC-022 user clarification: this is the intended voice, not approval of a previous sample.",
+        "avoid": "Exaggerated heavy bass coloration; do not alter melodic notes to force a voice category."
+      },
+      "legacy_primary_reference": {
         "role": "P003-R02",
         "label": "papa",
         "source_start": 114.15,
@@ -248,14 +268,11 @@
         "gain": 2.5,
         "clipping": 0
       },
-      "voice_direction": {
-        "label": "Ordinary baritone, possibly slightly low",
-        "basis": "LC-022 user clarification: this is the intended voice, not approval of a previous sample.",
-        "avoid": "Exaggerated heavy bass coloration; do not alter melodic notes to force a voice category."
-      }
+      "actor_profile_id": "P003-VOICE-BORISOV",
+      "identity": "same Borisov profile for working treatment; actual low-part attribution remains a hypothesis"
     }
   ],
-  "role_mapping_note": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels.",
+  "role_mapping_note": "LC-047: R01/R02 are performance lanes. One Borisov actor profile; papa same-actor modulation remains possible, not proven. Other polyphonic assignments remain unresolved. Historical experiments below retain original metadata.",
   "experimental_profiles": {
     "status": "revised candidate profiles from user-confirmed individual singer lines; generated sound listening pending",
     "references": [
@@ -1330,7 +1347,7 @@
       "profile_replacement": false
     },
     "english_ru_reference_trial": {
-      "status": "proposed; A54/A55",
+      "status": "LC-046: A54 rejected for reverberant quality on all vowels",
       "manifest": "exports/P003/neural-tuning/seed-english-ru-reference-v1/assembly.json",
       "manifest_sha256": "ef63de9b9ae13a25b0713cd86ab479cfebb8ead80eccbccf9e2c0ed76cfad0ec",
       "reference_manifest": "exports/P003/voice-profiles/ru-solo-v1/manifest.json",
@@ -1360,5 +1377,18 @@
       "same_English_guides_as": "P003-A48",
       "old_profiles_preserved": true
     }
-  }
+  },
+  "actor_identity_model": {
+    "id": "P003-VOICE-BORISOV",
+    "profile": "pilots/P003/borisov-profile.json",
+    "external_profile": "exports/P003/voice-profiles/borisov-v1/profile.json",
+    "external_profile_sha256": "2e34691fea20794e34c2d6c9c9cb23c7ed9358e6496a1e429ff753bc651294bd",
+    "actor": "Олег Борисов",
+    "character_id": "golokhvostyi",
+    "basis": "LC-047 user correction and published performer metadata; character credit CR001",
+    "status": "original-reference profile prepared; generated performance unapproved",
+    "role_semantics": "R01/R02 remain stable performance-lane IDs, not two confirmed actors",
+    "papa_identity": "same-actor modulation possible per user, not verified; excluded from base identity conditioning"
+  },
+  "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."
 }

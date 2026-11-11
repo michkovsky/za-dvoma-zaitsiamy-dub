@@ -167,3 +167,7 @@ T001→T002→T003→T004→T005→T006→T007→T008→T010→T011→T012→T01
 - [x] T089 [US3] За дорученням створити окремий кандидатний ru-solo-v1 reference set R01/R02 з перевірених власних українських партій обраної RU-доріжки та виконати English пару на FP32/100/CFG 0/seed 23 per phrase. Зберегти ті самі English guide, зокрема R02 released-p з A48; змінити тільки референси, не старі погоджені файли.
 
 - [ ] T090 [US3] Прослухати A54: чи переноситься майже усунене дрижчання з українського self-reference на English, чи збереглися mother/has і /p/ shop, відмінність R01/R02. Не оголошувати нові профілі прийнятими до слухового результату.
+
+- [x] T091 [US3] За LC-046 відхилити A54 за реверберацією всіх голосних; за LC-047 перейти до одного actor profile Борисова, зберігши R01/R02 як сталі performance lanes, papa modulation — лише гіпотеза, хор не домішувати.
+- [x] T092 [US3] Відібрати оригінальні RU/UK самопредставлення Голохвостого за ASR/контекстом і кадром, окремі R01 singing refs; зберегти provenance, таймкоди, SHA, original reel A56 і profile A57/borisov-profile.json.
+- [x] T093 [US3] На CUDA витягти native Seed-VC conditioning і CAMPPlus features, перевірити .pt reload/finite/hash; ASR реально виконати через Vulkan. Low-delivery refs comparison-only, без нового незалежного актора чи усереднення різних акустик.
