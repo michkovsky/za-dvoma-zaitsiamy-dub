@@ -1261,13 +1261,23 @@
     "cfg_control": {
       "manifest": "exports/P003/neural-tuning/seed-cfg-control-v1/assembly.json",
       "manifest_sha256": "7091036b0a556e7473dd3a0c42add95fb57eb2d1b1af26a718e8fd689b40d896",
-      "status": "proposed; A40/A41",
+      "status": "LC-040: A41 approved only for absence of pronounced electronic flutter; residual slight trembling possible; relative preference uncertain",
       "conditions": [
         0.7,
         0.0
       ],
       "seed_reset_per_phrase": 23,
       "same_references": true
+    },
+    "english_cfg0_trial": {
+      "status": "proposed; A42/A43",
+      "manifest": "exports/P003/neural-tuning/seed-english-cfg0-v1/assembly.json",
+      "manifest_sha256": "2b64341ff44c721864eac5d89370d694b0d83e3b0d9103bc0509a60bd79462ce",
+      "cfg": 0.0,
+      "steps": 30,
+      "seed_per_phrase": 23,
+      "same_guides_and_references": true,
+      "overlap_seconds": 0
     }
   }
 }
