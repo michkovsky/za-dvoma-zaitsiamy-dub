@@ -1322,12 +1322,43 @@
       "same_solo_references": true
     },
     "uk_exact_self_reference_trial": {
-      "status": "proposed; diagnostic A52/A53",
+      "status": "LC-045: A53 approved only for nearly eliminated trembling including sertse; exact self-reference, not English acceptance",
       "manifest": "exports/P003/neural-tuning/seed-uk-self-reference-v1/assembly.json",
       "manifest_sha256": "69cf1cd4d889ebb955f0181adfcec40399e74461192dd4cb0170a94465f7c13d",
       "role": "P003-R01",
       "source_equals_reference_sha256": true,
       "profile_replacement": false
+    },
+    "english_ru_reference_trial": {
+      "status": "proposed; A54/A55",
+      "manifest": "exports/P003/neural-tuning/seed-english-ru-reference-v1/assembly.json",
+      "manifest_sha256": "ef63de9b9ae13a25b0713cd86ab479cfebb8ead80eccbccf9e2c0ed76cfad0ec",
+      "reference_manifest": "exports/P003/voice-profiles/ru-solo-v1/manifest.json",
+      "reference_manifest_sha256": "67bb86146a0b68943da266bfc25ca6d6c1e2a9f2b4f1feee02dd82474911d85c",
+      "profiles": [
+        {
+          "role": "P003-R01",
+          "source": "exports/P003/ru-song/v1/P003-R01-vocal.wav",
+          "source_sha256": "dfb1cbfcdedbbc5aca7f9cbd96c137924cc5c6b4fd7e475f73bb998322821a78",
+          "file": "P003-R01-reference.wav",
+          "sha256": "dfb1cbfcdedbbc5aca7f9cbd96c137924cc5c6b4fd7e475f73bb998322821a78",
+          "status": "candidate solo audio reference; same original singer; no English identity acceptance"
+        },
+        {
+          "role": "P003-R02",
+          "source": "exports/P003/ru-song/v1/P003-R02-vocal.wav",
+          "source_sha256": "181b130063585726313166dc2f83d7c8a220cb483697a0858556b21262988b36",
+          "file": "P003-R02-reference.wav",
+          "sha256": "181b130063585726313166dc2f83d7c8a220cb483697a0858556b21262988b36",
+          "status": "candidate solo audio reference; same original singer; no English identity acceptance"
+        }
+      ],
+      "steps": 100,
+      "cfg": 0,
+      "diffusion_precision": "float32",
+      "seed_per_phrase": 23,
+      "same_English_guides_as": "P003-A48",
+      "old_profiles_preserved": true
     }
   }
 }
