@@ -1302,13 +1302,24 @@
       "same_inputs_as_fp32_30": true
     },
     "shop_release_trial": {
-      "status": "proposed; A48/A49",
+      "status": "LC-043: tentative due fatigue; vowel trembling in guide and conversion, possibly wider after conversion; no final approval",
       "manifest": "exports/P003/neural-tuning/seed-shop-release-v1/assembly.json",
       "manifest_sha256": "819ded2e18b6398f91f9cce5f3c11bc26c1485f6a4c429b13c95fe6acfa2b179",
       "R01_PCM_source": "P003-A46",
       "R01_frames_copied_exactly": 192436,
       "R02_source": "new /p/ closure/release transition from same Piper phonetic context; readable text unchanged",
       "remaining_vibrations": "unresolved; requested affected words/timestamps"
+    },
+    "uk_fp32_100_trial": {
+      "status": "proposed; A50/A51",
+      "manifest": "exports/P003/neural-tuning/seed-uk-fp32-100-v1/assembly.json",
+      "manifest_sha256": "0ec140d7f81aadc2d5c2b707c1dd187cb156633daf880fcc2041f2c4a2a16f73",
+      "method": "same-speaker neural reconstruction of original Ukrainian performance; not new text synthesis",
+      "diffusion_precision": "float32",
+      "steps": 100,
+      "cfg": 0,
+      "seed_per_phrase": 23,
+      "same_solo_references": true
     }
   }
 }
