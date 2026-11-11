@@ -1430,7 +1430,7 @@
     },
     "current_scope": "Borisov R01 only",
     "borisov_vowel_repair": {
-      "status": "proposed; A63/A64/A65",
+      "status": "LC-054: h works; open/semi-open A flutter remains; A64 whole recording rejected",
       "active_scope": "Borisov R01 only",
       "manifest": "exports/P003/neural-tuning/seed-borisov-h-boundary-v1/assembly.json",
       "manifest_sha256": "93f3d893901c7b7548ae19151177bfaaa39fba55f3afdee68bfd503d8c9f9b76",
@@ -1447,6 +1447,16 @@
       },
       "ASR_scope": "still inaccurate; no listening approval",
       "low_singer_rendered": false
+    },
+    "vowel_am_control": {
+      "status": "proposed; A66/A67",
+      "manifest": "exports/P003/neural-tuning/borisov-vowel-envelope-v1/manifest.json",
+      "manifest_sha256": "c82193bc2c1ae62d9e6724dccddf188693de7973ddd409a96c113505aa9b0c2e",
+      "method": "local amplitude-only causal diagnostic; no new neural generation",
+      "h_and_outside_PCM_exact": true,
+      "pitch_corrected": false,
+      "active_scope": "Borisov R01 only",
+      "interpretation": "AM reduced numerically; no claim that F0/formant flutter or perceived trembling is removed"
     }
   },
   "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."
