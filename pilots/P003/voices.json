@@ -1292,7 +1292,7 @@
       "same_speaker_references": true
     },
     "english_fp32_100_trial": {
-      "status": "proposed; A46/A47",
+      "status": "LC-042: mother corrected; whole A46 rejected for shop shAaagh and remaining vibrations",
       "manifest": "exports/P003/neural-tuning/seed-english-fp32-100-v1/assembly.json",
       "manifest_sha256": "8dc01e142f8aaeb0c3b89d56013035cde8d117be09667e8128c1cfa815566189",
       "diffusion_precision": "float32",
@@ -1300,6 +1300,15 @@
       "steps": 100,
       "seed_per_phrase": 23,
       "same_inputs_as_fp32_30": true
+    },
+    "shop_release_trial": {
+      "status": "proposed; A48/A49",
+      "manifest": "exports/P003/neural-tuning/seed-shop-release-v1/assembly.json",
+      "manifest_sha256": "819ded2e18b6398f91f9cce5f3c11bc26c1485f6a4c429b13c95fe6acfa2b179",
+      "R01_PCM_source": "P003-A46",
+      "R01_frames_copied_exactly": 192436,
+      "R02_source": "new /p/ closure/release transition from same Piper phonetic context; readable text unchanged",
+      "remaining_vibrations": "unresolved; requested affected words/timestamps"
     }
   }
 }
