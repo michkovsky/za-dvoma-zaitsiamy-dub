@@ -16,3 +16,19 @@ python -B pipeline/render_p003_score.py --output-dir "$env:DUB_WORK_DIR/exports/
 ```
 
 Вихідний каталог має бути новим і зовнішнім. Очікуються MIDI, MusicXML та окремі WAV мелодії/гітари/міксу з manifest.json. Перевірити 8 тактів, 32 чверті, 39 атак і 17.455 с музики при 110 BPM. `--verses 3` дає 117 атак і 52.364 с музики; мелодія повторів тотожна, MusicXML показує один шаблон із трьома текстами. `--key 'C#m'` відновлює вихідне прочитання на 4 півтони вище Am. Це слухова проба нотної редакції, не синхронізована фонограма.
+
+## Офлайн-аудит A68/A69
+
+Запускати з кореня репозиторію. Потрібні зовнішній пакет P003 та сумісні NumPy, SciPy, librosa, SoundFile і PyWORLD. У збереженій сесії P003 шлях до перевіреного Python і вже наявних бібліотек указано в локальному додатку до передачі дослідження.
+
+```powershell
+$p003 = (Get-Content -Raw local/p003-session.json | ConvertFrom-Json).work_dir
+$runtime = Get-Content -Raw (Join-Path $p003 'reports/P003/research-handoff-local.json') | ConvertFrom-Json
+$env:PYTHONPATH = $runtime.site_paths -join ';'
+$env:OPENBLAS_CORETYPE = $runtime.env_guards.OPENBLAS_CORETYPE
+$env:OPENBLAS_NUM_THREADS = '1'
+$env:NUMBA_DISABLE_JIT = '1'
+& $runtime.python_executable -B pipeline/audit_p003_conditioning.py --work-dir $p003
+```
+
+Скрипт читає `exports/P003/neural-tuning/borisov-verse3-full-v1`, карту й чотири WAV із `exports/P003/verse-3-trial/v5`, мітки з `reports/P003/verse-3-trial/phones-v5.json`. За замовчуванням створює новий `reports/P003/audit-A68-A69.json` у вибраному work_dir. Для повторного запуску передайте `--output` із новим зовнішнім шляхом. У `vowels` наведено порівняння до й після вокодера та вимірювання AM. У `slots` знайдіть слово й номер рядка. `source_s` у мітках відраховано від відповідного spoken WAV, `target_s` у слоті — від початку куплету. `mapped_ms` показує, скільки часу слота отримала мітка, `mapped_core_ms` — скільки з нього припало на утримуване ядро. Найбільші локальні зміни спектра й можливі релізи /p/ наведено в тій самій джерельній шкалі.
