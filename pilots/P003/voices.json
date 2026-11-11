@@ -244,9 +244,8 @@
       "overlap": "None. LC-015 supersedes prior overlap interpretation: low voice enters after the main phrase ends.",
       "primary_reference": null,
       "voice_direction": {
-        "label": "Ordinary baritone, possibly slightly low",
-        "basis": "LC-022 user clarification: this is the intended voice, not approval of a previous sample.",
-        "avoid": "Exaggerated heavy bass coloration; do not alter melodic notes to force a voice category."
+        "label": "Bass per user identification of Grudinin, LC-052",
+        "scope": "deferred; older ordinary-baritone label is historical"
       },
       "legacy_primary_reference": {
         "role": "P003-R02",
@@ -271,10 +270,15 @@
         "sha256": "b7222b2cf875aacf30330d46b230c82f9e708418362febf91a16e402e8d665c2",
         "use": "shared Borisov actor identity; native primary RU speech reference, not a final English voice approval"
       },
-      "actor_name_as_supplied": "Грудинин Валентин Гурьевич"
+      "actor_name_as_supplied": "Грудинин Валентин Гурьевич",
+      "superseded_voice_direction_before_actor_identification": {
+        "label": "Ordinary baritone, possibly slightly low",
+        "basis": "LC-022 user clarification: this is the intended voice, not approval of a previous sample.",
+        "avoid": "Exaggerated heavy bass coloration; do not alter melodic notes to force a voice category."
+      }
     }
   ],
-  "role_mapping_note": "LC-047: R01/R02 are performance lanes. One Borisov actor profile; papa same-actor modulation remains possible, not proven. Other polyphonic assignments remain unresolved. Historical experiments below retain original metadata.",
+  "role_mapping_note": "LC-052/053: R01 Borisov active; R02 Grudinin/bass per user, profile deferred. Stable lane IDs are not file numbers. Earlier same-Borisov modulation hypothesis superseded; polyphonic assignments remain unresolved.",
   "experimental_profiles": {
     "status": "revised candidate profiles from user-confirmed individual singer lines; generated sound listening pending",
     "references": [
@@ -1460,7 +1464,7 @@
       "latest_feedback": "LC-055: has clear, heart flutter remains, warm and kind unintelligible; A/B block unspecified"
     },
     "full_verse3_trial": {
-      "status": "proposed; A68/A69",
+      "status": "LC-057: A69 rejected for intelligibility and remaining trembling; A68 dry not independently reviewed",
       "manifest": "exports/P003/neural-tuning/borisov-verse3-full-v1/assembly.json",
       "manifest_sha256": "7539a631727b254199aee949762ba39c7204571b8f96dd560c7190dbcd5759bd",
       "scope": "single Borisov diagnostic performance of all four lines; not final casting",
@@ -1475,5 +1479,12 @@
       "Grudinin_voice_synthesized": false
     }
   },
-  "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."
+  "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels.",
+  "research_handoff": {
+    "file": "pilots/P003/research-handoff.md",
+    "status": "context prepared at explicit user request; no new researcher or background generation started",
+    "failed_trials_included": true,
+    "current_scope": "Borisov only; Grudinin deferred"
+  },
+  "superseded_role_mapping_note_LC047": "LC-047: R01/R02 are performance lanes. One Borisov actor profile; papa same-actor modulation remains possible, not proven. Other polyphonic assignments remain unresolved. Historical experiments below retain original metadata."
 }
