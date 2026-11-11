@@ -1311,7 +1311,7 @@
       "remaining_vibrations": "unresolved; requested affected words/timestamps"
     },
     "uk_fp32_100_trial": {
-      "status": "proposed; A50/A51",
+      "status": "LC-044: neural rendition rejected for repeated vowel decay/vibrations in sertse/dobre",
       "manifest": "exports/P003/neural-tuning/seed-uk-fp32-100-v1/assembly.json",
       "manifest_sha256": "0ec140d7f81aadc2d5c2b707c1dd187cb156633daf880fcc2041f2c4a2a16f73",
       "method": "same-speaker neural reconstruction of original Ukrainian performance; not new text synthesis",
@@ -1320,6 +1320,14 @@
       "cfg": 0,
       "seed_per_phrase": 23,
       "same_solo_references": true
+    },
+    "uk_exact_self_reference_trial": {
+      "status": "proposed; diagnostic A52/A53",
+      "manifest": "exports/P003/neural-tuning/seed-uk-self-reference-v1/assembly.json",
+      "manifest_sha256": "69cf1cd4d889ebb955f0181adfcec40399e74461192dd4cb0170a94465f7c13d",
+      "role": "P003-R01",
+      "source_equals_reference_sha256": true,
+      "profile_replacement": false
     }
   }
 }
