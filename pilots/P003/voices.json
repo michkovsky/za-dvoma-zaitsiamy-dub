@@ -1395,7 +1395,7 @@
       "same_actor_for_uk_ru_speech": true
     },
     "english_trial": {
-      "status": "proposed; A58/A59",
+      "status": "LC-051: A58 rejected for buzzing and unintelligible shop",
       "manifest": "exports/P003/neural-tuning/seed-english-borisov-v1/assembly.json",
       "manifest_sha256": "9357beea575ccd9e40b80da25f2def5bf61f1998d5d4e071dc122ef25deb05a9",
       "primary_reference_id": "P003-B01",
@@ -1409,6 +1409,22 @@
       "basis": "LC-050 user: UK version may have distinctive Щ and other sounds",
       "handling": "Same actor identity; retain UK-specific articulation as a separate track/delivery feature, not a universal actor-timbre property",
       "english_policy": "Primary RU speech reference; English guide/text define target articulation; cross-language accent transfer remains a listening check"
+    },
+    "direct_score_trial": {
+      "status": "proposed; A61/A62",
+      "manifest": "exports/P003/neural-tuning/seed-direct-score-v1/assembly.json",
+      "manifest_sha256": "4fe4180082c86640d319a44661c0609e410d0f1d51718bae1cfa8d24e14924da",
+      "method": "natural spoken semantic features warped to score durations; direct score F0; no WORLD waveform",
+      "reference_id": "P003-B01",
+      "reference_cache_unchanged": true,
+      "ASR": "exports/P003/neural-tuning/seed-direct-score-v1/asr.txt",
+      "ASR_sha256": "6369f7f206ae608a0165ce03f0de3ba35c1b8332118bacccc1fc86bf612b6cb3",
+      "limitations": [
+        "Approximate Piper phone windows and editorial closure masks",
+        "ASR reads shop but confuses warm and kind",
+        "Buzz/timbre/word accuracy not listening-approved",
+        "Some R02 output-F0 estimates octave-ambiguous"
+      ]
     }
   },
   "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."

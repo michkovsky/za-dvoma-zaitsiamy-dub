@@ -176,3 +176,9 @@ T001→T002→T003→T004→T005→T006→T007→T008→T010→T011→T012→T01
 - [x] T095 [US3] За прямим дорученням виконати English mother→papa з одним прийнятим профілем P003-VOICE-BORISOV/B01 для обох рядків; ті самі guide, FP32/100/CFG 0/seed 23 per phrase, без модуляції регістру чи зміни нот. Окремі ролі/сухий вокал/редакторський мікс, SHA/QA і короткий ASR diagnostic, подати новий результат.
 
 - [ ] T096 [US3] Прослухати A58 за дикцією, вібраціями/реверберацією й схожістю Борисова. ASR дає I do mother heads are warning time / And my Papa heads himself is shocked; це діагностика ймовірних втрат, не canonical text. Модуляцію низької подачі перевіряти окремо після базового голосу.
+
+- [x] T097 [US3] За LC-051 відхилити A58 за дзижчанням і shop; залишити прийнятий оригінальний профіль Борисова окремо від неприйнятого singing pipeline.
+- [x] T098 [US3] Виконати той самий R02 через B01 зі звичайного Piper spoken-line-2, без WORLD чи розтягування. Vulkan ASR дає And my papa has himself a shot: більша частина рядка збережена, shop/shot усе ще плутається. Це діагностика, не слухове приймання.
+- [x] T099 [US3] Перевірити native score conditioning: semantic features із нерозтягнутих spoken-line-1/2, монотонний duration mapping за наявними syllable/vowel windows, F0 безпосередньо з нот; той самий cached B01 native reference. Без WORLD waveform, післякорекції або зміни тексту; QA нот/слотів/тривалості/finite/SHA та ASR.
+
+- [ ] T100 [US3] Прослухати A61 за дзижчанням, артикуляцією shop та warm and kind, мелодією/тембром. ASR правильно читає весь другий рядок, але перший дає heart-warming mind; не прирівнювати це до слухового виправлення. Pitch QA R02 має частину октавно неоднозначних DIO оцінок; до перевірки не застосовувати автоматичну pitch correction.
