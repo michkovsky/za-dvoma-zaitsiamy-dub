@@ -1256,6 +1256,18 @@
       "No overlap; no automatic F0 adjustment or post-synthesis pitch correction.",
       "Accepted neutral guides remain unchanged. Other phrase speaker assignments remain unresolved."
     ],
-    "listening_feedback": "LC-038: electronic trembling in English and the second (converted) Ukrainian block. This feedback does not identify a stage in old A32."
+    "listening_feedback": "LC-038: electronic trembling in English and the second (converted) Ukrainian block. This feedback does not identify a stage in old A32.",
+    "vocoder_control_feedback": "LC-039: trembling only in block 3 of A37; exact block 2 saved as A39 approved solely for absence of trembling. Specific conversion submodule cause remains unresolved.",
+    "cfg_control": {
+      "manifest": "exports/P003/neural-tuning/seed-cfg-control-v1/assembly.json",
+      "manifest_sha256": "7091036b0a556e7473dd3a0c42add95fb57eb2d1b1af26a718e8fd689b40d896",
+      "status": "proposed; A40/A41",
+      "conditions": [
+        0.7,
+        0.0
+      ],
+      "seed_reset_per_phrase": 23,
+      "same_references": true
+    }
   }
 }
