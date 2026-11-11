@@ -118,7 +118,7 @@
       "source_id": "50A7fZbjrz8 original audio 251-2",
       "derived_from": "exports/P003/ru-song/v1/P003-R02-vocal.wav",
       "content": "Papa/shop low line",
-      "identity_status": "Same-actor modulation is user-proposed hypothesis, not confirmed; excluded from base identity"
+      "identity_status": "LC-052 user attribution: Grudinin, bass; historical comparison only; excluded from Borisov identity"
     },
     {
       "id": "P003-B06",
@@ -141,7 +141,7 @@
       "source_end": "00:01:58.000",
       "derived_from": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
       "content": "Papa/shop low line",
-      "identity_status": "Same-actor modulation is user-proposed hypothesis, not confirmed; excluded from base identity"
+      "identity_status": "LC-052 user attribution: Grudinin, bass; historical comparison only; excluded from Borisov identity"
     }
   ],
   "primary_identity_embedding": "P003-B01 native CAMPPlus; no averaging across tracks or modes",
@@ -161,11 +161,11 @@
     "Original film ambience retained; no generated reverb or dereverb applied.",
     "UK/RU track labels do not imply every utterance is purely in that language.",
     "Versions may share underlying recordings; do not count as independent performances.",
-    "Low papa delivery is a same-actor working hypothesis, not verified historical modulation. Excluded from base identity conditioning.",
     "Arch opening and polyphonic excerpts excluded.",
     "Native reference variants retained separately; do not concatenate tracks or average style vectors without a controlled trial.",
     "Cached features depend on pinned model weights; they are not trained new actor weights.",
-    "No new English render or formant modulation is accepted by creation of this profile."
+    "No new English render or formant modulation is accepted by creation of this profile.",
+    "Low papa examples B05/B06 attributed by user to Grudinin; excluded from this actor profile, processing deferred."
   ],
   "identity_evidence": {
     "user": "LC-047: song sung by Borisov; request one profile from both original versions",
@@ -200,5 +200,14 @@
       }
     ],
     "scope": "Original voices only, gain-matched; no generated singing"
+  },
+  "source_attribution_update": {
+    "basis": "LC-052 user names low singer Valentin Grudinin, bass; LC-053 defers this singer",
+    "excluded_from_Borisov_identity": [
+      "P003-B05",
+      "P003-B06"
+    ],
+    "accepted_Borisov_base_references_unchanged": true,
+    "external_profile_v1": "historical prepared snapshot; cached Borisov B01 identity unchanged"
   }
 }

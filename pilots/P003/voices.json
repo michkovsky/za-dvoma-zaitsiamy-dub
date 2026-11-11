@@ -240,15 +240,9 @@
       "source_text": "А папаша мають магазин",
       "canonical_transcription": "І папаша мають магазин.",
       "english_text": "And my papa has himself a shop.",
-      "status": "LC-047 supersedes earlier assumption of a separate actor; no overlap; no claim of verified historical modulation",
+      "status": "LC-052 user identifies low singer as Grudinin, bass; LC-053 processing deferred; do not use Borisov profile for this lane",
       "overlap": "None. LC-015 supersedes prior overlap interpretation: low voice enters after the main phrase ends.",
-      "primary_reference": {
-        "profile_id": "P003-VOICE-BORISOV",
-        "reference_id": "P003-B01",
-        "file": "exports/P003/voice-profiles/borisov-v1/references/ru-speech.wav",
-        "sha256": "b7222b2cf875aacf30330d46b230c82f9e708418362febf91a16e402e8d665c2",
-        "use": "shared Borisov actor identity; native primary RU speech reference, not a final English voice approval"
-      },
+      "primary_reference": null,
       "voice_direction": {
         "label": "Ordinary baritone, possibly slightly low",
         "basis": "LC-022 user clarification: this is the intended voice, not approval of a previous sample.",
@@ -268,8 +262,16 @@
         "gain": 2.5,
         "clipping": 0
       },
-      "actor_profile_id": "P003-VOICE-BORISOV",
-      "identity": "same Borisov profile for working treatment; actual low-part attribution remains a hypothesis"
+      "actor_profile_id": null,
+      "identity": "Валентин Грудинін",
+      "superseded_borisov_primary_reference": {
+        "profile_id": "P003-VOICE-BORISOV",
+        "reference_id": "P003-B01",
+        "file": "exports/P003/voice-profiles/borisov-v1/references/ru-speech.wav",
+        "sha256": "b7222b2cf875aacf30330d46b230c82f9e708418362febf91a16e402e8d665c2",
+        "use": "shared Borisov actor identity; native primary RU speech reference, not a final English voice approval"
+      },
+      "actor_name_as_supplied": "Грудинин Валентин Гурьевич"
     }
   ],
   "role_mapping_note": "LC-047: R01/R02 are performance lanes. One Borisov actor profile; papa same-actor modulation remains possible, not proven. Other polyphonic assignments remain unresolved. Historical experiments below retain original metadata.",
@@ -1387,8 +1389,8 @@
     "character_id": "golokhvostyi",
     "basis": "LC-047 user correction and published performer metadata; character credit CR001",
     "status": "LC-048: original-reference foundation accepted; new English performance pending",
-    "role_semantics": "R01/R02 remain stable performance-lane IDs, not two confirmed actors",
-    "papa_identity": "same-actor modulation possible per user, not verified; excluded from base identity conditioning",
+    "role_semantics": "R01 Borisov active; R02 Grudinin per user attribution, separate actor profile deferred",
+    "papa_identity": "LC-052 supersedes Borisov modulation hypothesis: Valentin Grudinin, bass, per user. LC-053: not currently processed",
     "source_preference": {
       "primary_track": "ru",
       "basis": "LC-049 user: historically cleaner Russian track; Borisov voiced both original versions",
@@ -1411,7 +1413,7 @@
       "english_policy": "Primary RU speech reference; English guide/text define target articulation; cross-language accent transfer remains a listening check"
     },
     "direct_score_trial": {
-      "status": "proposed; A61/A62",
+      "status": "LC-052 rejected for khhh at has/heart and trembling open A; R02 not in current scope",
       "manifest": "exports/P003/neural-tuning/seed-direct-score-v1/assembly.json",
       "manifest_sha256": "4fe4180082c86640d319a44661c0609e410d0f1d51718bae1cfa8d24e14924da",
       "method": "natural spoken semantic features warped to score durations; direct score F0; no WORLD waveform",
@@ -1425,6 +1427,26 @@
         "Buzz/timbre/word accuracy not listening-approved",
         "Some R02 output-F0 estimates octave-ambiguous"
       ]
+    },
+    "current_scope": "Borisov R01 only",
+    "borisov_vowel_repair": {
+      "status": "proposed; A63/A64/A65",
+      "active_scope": "Borisov R01 only",
+      "manifest": "exports/P003/neural-tuning/seed-borisov-h-boundary-v1/assembly.json",
+      "manifest_sha256": "93f3d893901c7b7548ae19151177bfaaa39fba55f3afdee68bfd503d8c9f9b76",
+      "control_qa": "exports/P003/neural-tuning/seed-borisov-vowel-fix-v1/assembly.json",
+      "reference_id": "P003-B01",
+      "mask_bug_fixed": true,
+      "old_unvoiced_vowel_nucleus_frames": {
+        "has": 39,
+        "heart": 4
+      },
+      "new_unvoiced_vowel_nucleus_frames": {
+        "has": 0,
+        "heart": 0
+      },
+      "ASR_scope": "still inaccurate; no listening approval",
+      "low_singer_rendered": false
     }
   },
   "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."
