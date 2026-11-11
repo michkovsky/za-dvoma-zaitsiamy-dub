@@ -1428,7 +1428,7 @@
         "Some R02 output-F0 estimates octave-ambiguous"
       ]
     },
-    "current_scope": "Borisov R01 only",
+    "current_scope": "Borisov-only diagnostics, including full-third-verse single-actor audition; Grudinin profile deferred",
     "borisov_vowel_repair": {
       "status": "LC-054: h works; open/semi-open A flutter remains; A64 whole recording rejected",
       "active_scope": "Borisov R01 only",
@@ -1456,7 +1456,23 @@
       "h_and_outside_PCM_exact": true,
       "pitch_corrected": false,
       "active_scope": "Borisov R01 only",
-      "interpretation": "AM reduced numerically; no claim that F0/formant flutter or perceived trembling is removed"
+      "interpretation": "AM reduced numerically; no claim that F0/formant flutter or perceived trembling is removed",
+      "latest_feedback": "LC-055: has clear, heart flutter remains, warm and kind unintelligible; A/B block unspecified"
+    },
+    "full_verse3_trial": {
+      "status": "proposed; A68/A69",
+      "manifest": "exports/P003/neural-tuning/borisov-verse3-full-v1/assembly.json",
+      "manifest_sha256": "7539a631727b254199aee949762ba39c7204571b8f96dd560c7190dbcd5759bd",
+      "scope": "single Borisov diagnostic performance of all four lines; not final casting",
+      "reference_id": "P003-B01",
+      "one_contiguous_neural_context": true,
+      "GPU_strategy": "Whisper/RMVPE then CFM then BigVGAN on CUDA; inactive modules parked on CPU",
+      "GPU_peak_allocated_MB": 2102.28369140625,
+      "generation_seconds_excluding_input_preparation": 56.21709418296814,
+      "ASR": "exports/P003/neural-tuning/borisov-verse3-full-v1/asr.txt",
+      "ASR_sha256": "4bd38706c3e2136d878fef6361cc3e97908e8024cbd32e80151bedabd32932e4",
+      "listening_approval": false,
+      "Grudinin_voice_synthesized": false
     }
   },
   "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels."
