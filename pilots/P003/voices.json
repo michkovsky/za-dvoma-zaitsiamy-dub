@@ -1270,7 +1270,7 @@
       "same_references": true
     },
     "english_cfg0_trial": {
-      "status": "proposed; A42/A43",
+      "status": "LC-041: A42 rejected for mother flutter and unclear shop ending; has clear",
       "manifest": "exports/P003/neural-tuning/seed-english-cfg0-v1/assembly.json",
       "manifest_sha256": "2b64341ff44c721864eac5d89370d694b0d83e3b0d9103bc0509a60bd79462ce",
       "cfg": 0.0,
@@ -1278,6 +1278,28 @@
       "seed_per_phrase": 23,
       "same_guides_and_references": true,
       "overlap_seconds": 0
+    },
+    "english_fp32_trial": {
+      "status": "proposed; A44/A45",
+      "manifest": "exports/P003/neural-tuning/seed-english-fp32-v1/assembly.json",
+      "manifest_sha256": "a3ac2851bd30f6d83fe9ba3966ae07fc28eae486380ac83719c57ec4124eef25",
+      "diffusion_precision": "float32",
+      "cfg": 0,
+      "steps": 30,
+      "seed_per_phrase": 23,
+      "R01_guide": "unchanged",
+      "R02_guide": "full natural Piper /p/ replacement at 4.24s plus 150ms silent context; original retained",
+      "same_speaker_references": true
+    },
+    "english_fp32_100_trial": {
+      "status": "proposed; A46/A47",
+      "manifest": "exports/P003/neural-tuning/seed-english-fp32-100-v1/assembly.json",
+      "manifest_sha256": "8dc01e142f8aaeb0c3b89d56013035cde8d117be09667e8128c1cfa815566189",
+      "diffusion_precision": "float32",
+      "cfg": 0,
+      "steps": 100,
+      "seed_per_phrase": 23,
+      "same_inputs_as_fp32_30": true
     }
   }
 }
