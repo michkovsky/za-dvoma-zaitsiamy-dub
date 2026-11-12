@@ -1,0 +1,52 @@
+{
+  "id": "P003-VOICE-BORISOV-RVC-PILOT-V1",
+  "actor": "Олег Борисов",
+  "character_id": "golokhvostyi",
+  "status": "proposed; technical pilot, diction failed ASR, voice not listening-approved",
+  "backend": "RVC v2 F0 32k",
+  "code_revision": "81eed5e8f68b6bed1789f682fe78cdd324495afc",
+  "file": "exports/P003/voice-profiles/borisov-rvc-pilot-v1/borisov-pilot.pth",
+  "sha256": "62796cb0ec92352d617022ddc6f87725acc1056c109f24d314bb672a924c5df8",
+  "sample_rate": 32000,
+  "training": {
+    "source_refs": [
+      "P003-B01",
+      "P003-B02",
+      "P003-B03",
+      "P003-B04",
+      "P003-B08"
+    ],
+    "excluded_other_actor": [
+      "P003-B05",
+      "P003-B06"
+    ],
+    "selected_source_seconds": 42.5,
+    "usable_chunks": 17,
+    "usable_chunk_seconds_including_overlap": 36.58,
+    "rejected_chunks": [
+      "P003-B02-0: no RMVPE voiced pitch"
+    ],
+    "compatibility_probe_epochs": 1,
+    "continuation_epoch_labels": [
+      1,
+      20
+    ],
+    "optimizer_updates": 357,
+    "batch_size": 1,
+    "precision": "FP32",
+    "checkpoint_storage": "Standard RVC small weights FP16; converted to FP32 for inference",
+    "cuda_peak_mb": 3195.2099609375,
+    "dataset_manifest": "exports/P003/voice-profiles/borisov-rvc-pilot-v1/dataset.json",
+    "dataset_sha256": "f2ded2c2f494aa8120dbcf83d24efb0ba9ea3df153ce0331fc8285b30346f18d",
+    "holdout": "Last3s B08 excluded; not evaluated as holdout"
+  },
+  "retrieval_index": false,
+  "limits": [
+    "Far below recommended10min training data",
+    "Initial bounded pilot, not a reliable actor model",
+    "Source first two stanzas excluded from training",
+    "Diction on new Ukrainian stanzas failed ASR",
+    "Voice identity/flutter/manner require listening",
+    "Full portable build not verified"
+  ]
+}
