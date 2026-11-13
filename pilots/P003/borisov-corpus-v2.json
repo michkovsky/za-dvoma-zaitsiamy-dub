@@ -1,0 +1,717 @@
+{
+  "id": "P003-BORISOV-CORPUS-V2",
+  "actor": "Олег Борисов",
+  "speaker": "golokhvostyi",
+  "status": "proposed; author context review; not listening-approved",
+  "sample_rate": 32000,
+  "unique_source_seconds": 443,
+  "train_seconds": 426.45,
+  "holdout_seconds": 16.55,
+  "counts": {
+    "train": 46,
+    "holdout": 2
+  },
+  "full_manifest": "exports/P003/voice-profiles/borisov-rvc-expanded-v2/corpus-v2.json",
+  "full_manifest_sha256": "e018e925669470f63d2e8b6b953e0ebca252163c61075e20d5a9b67c19eafe44",
+  "segments": [
+    {
+      "id": "RU-R001",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 724.8,
+      "source_end": 748.0,
+      "seconds": 23.200000000000045,
+      "file": "reviewed-v1/RU-R001.wav",
+      "sha256": "66ddf8dc3bed4e541793a17dfbc3d46198edc233e5e6bcb43259630b122fab81",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C002"
+      ]
+    },
+    {
+      "id": "RU-R002",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 750.25,
+      "source_end": 762.1,
+      "seconds": 11.850000000000023,
+      "file": "reviewed-v1/RU-R002.wav",
+      "sha256": "4b4bb979db18b68d71744915f3558ec7aa117ceaf455be41194f4d843b85ee08",
+      "split": "holdout",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C003"
+      ]
+    },
+    {
+      "id": "RU-R003",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 843.85,
+      "source_end": 848.95,
+      "seconds": 5.100000000000023,
+      "file": "reviewed-v1/RU-R003.wav",
+      "sha256": "34fef7a3d0cf535a07fb7a1a0a9f4dcdd84d659842b1f12feafd8715faf60b9e",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C006"
+      ]
+    },
+    {
+      "id": "RU-R004",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 887.05,
+      "source_end": 891.65,
+      "seconds": 4.600000000000023,
+      "file": "reviewed-v1/RU-R004.wav",
+      "sha256": "4c139c89e175cb8ef900b2d49fb6bccd0a004ea0404781294669200156b26fbf",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C009"
+      ]
+    },
+    {
+      "id": "RU-R005",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 899.05,
+      "source_end": 903.2,
+      "seconds": 4.150000000000091,
+      "file": "reviewed-v1/RU-R005.wav",
+      "sha256": "a9dadd7729380857a94862181f90150279c6e02ebbb68fad29af36bf44265384",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C010"
+      ]
+    },
+    {
+      "id": "RU-R006",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 936.1,
+      "source_end": 940.15,
+      "seconds": 4.0499999999999545,
+      "file": "reviewed-v1/RU-R006.wav",
+      "sha256": "35cfdce388705d84b342ee06ffe816138ef41c4c4adafd77142048f43a49fce9",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C011"
+      ]
+    },
+    {
+      "id": "RU-R007",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 942.5,
+      "source_end": 951.0,
+      "seconds": 8.5,
+      "file": "reviewed-v1/RU-R007.wav",
+      "sha256": "016f528bef51e3661927ae4f8efc1fa7f4322b3ca3a4d3962aa39190c586331d",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C012"
+      ]
+    },
+    {
+      "id": "RU-R008",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 961.45,
+      "source_end": 971.35,
+      "seconds": 9.899999999999977,
+      "file": "reviewed-v1/RU-R008.wav",
+      "sha256": "2b03dfe2767805f8ccd3894e39fa0b9f3084a1b23326391e776534edfee67d67",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C013"
+      ]
+    },
+    {
+      "id": "RU-R009",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 1265,
+      "source_end": 1271.35,
+      "seconds": 6.349999999999909,
+      "file": "reviewed-v1/RU-R009.wav",
+      "sha256": "4314e19fc71d3d050da17dbf880576b1656485c126b7f299b7b14e4326b287da",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C014"
+      ]
+    },
+    {
+      "id": "RU-R010",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 1377,
+      "source_end": 1388.45,
+      "seconds": 11.450000000000045,
+      "file": "reviewed-v1/RU-R010.wav",
+      "sha256": "c066bd5232a1d333509b8f75565de16aaeddfe6814dbf1169b07f4c4990e456e",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C016"
+      ]
+    },
+    {
+      "id": "RU-R011",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 1509.2,
+      "source_end": 1513.4,
+      "seconds": 4.2000000000000455,
+      "file": "reviewed-v1/RU-R011.wav",
+      "sha256": "abe68671039b9d783ffe30cfaf61945e245a8112f6745c3ea84f5be404b85531",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C019"
+      ]
+    },
+    {
+      "id": "RU-R012",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2111.05,
+      "source_end": 2116.15,
+      "seconds": 5.099999999999909,
+      "file": "reviewed-v1/RU-R012.wav",
+      "sha256": "0dc84b8ae1ee47292673f0251aa5ff1cc56802dbb0047f9a4545943731bd3ca6",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C022"
+      ]
+    },
+    {
+      "id": "RU-R013",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2132.65,
+      "source_end": 2140.15,
+      "seconds": 7.5,
+      "file": "reviewed-v1/RU-R013.wav",
+      "sha256": "7caecb2ce2b72fb08a8dc11007974726deeedb49c833c65458ac18a4a9047c1b",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C023"
+      ]
+    },
+    {
+      "id": "RU-R014",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2166.25,
+      "source_end": 2173.75,
+      "seconds": 7.5,
+      "file": "reviewed-v1/RU-R014.wav",
+      "sha256": "c2ec417fb0d817c9a8f5e9d282cadfcbc8b2c9b61c74e7a4fb80d992a2ff822a",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C024"
+      ]
+    },
+    {
+      "id": "RU-R015",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2178.25,
+      "source_end": 2183.35,
+      "seconds": 5.099999999999909,
+      "file": "reviewed-v1/RU-R015.wav",
+      "sha256": "07215e683d1110961e1af6adb86e4e3e0665d9684e42a3cc02285c5816e3b40e",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C025"
+      ]
+    },
+    {
+      "id": "RU-R016",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2247.85,
+      "source_end": 2253.5,
+      "seconds": 5.650000000000091,
+      "file": "reviewed-v1/RU-R016.wav",
+      "sha256": "62456b5fb50cb519f43f2ab49ccd0f289b2b1fa8c34ff63b6d9c0240a0eea71c",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C026"
+      ]
+    },
+    {
+      "id": "RU-R017",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2276.9,
+      "source_end": 2288.2,
+      "seconds": 11.299999999999727,
+      "file": "reviewed-v1/RU-R017.wav",
+      "sha256": "a145b1779132dee9b8d6edb6ba8e6c3eda38520ccd5e03609f5b19fdb32752db",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C027"
+      ]
+    },
+    {
+      "id": "RU-R018",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2302,
+      "source_end": 2313.8,
+      "seconds": 11.800000000000182,
+      "file": "reviewed-v1/RU-R018.wav",
+      "sha256": "a3b2831d966263d76b25473f19bf8b29fd417bdcb4590e40abcf538037d6820e",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C028"
+      ]
+    },
+    {
+      "id": "RU-R019",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2325.2,
+      "source_end": 2343.7,
+      "seconds": 18.5,
+      "file": "reviewed-v1/RU-R019.wav",
+      "sha256": "1f3787739cb437ec6e4042953bd0ccc6fd76fc97f9b60113eb915157809bf4f0",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C029"
+      ]
+    },
+    {
+      "id": "RU-R020",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2346.5,
+      "source_end": 2350.7,
+      "seconds": 4.199999999999818,
+      "file": "reviewed-v1/RU-R020.wav",
+      "sha256": "23a7d523dae36bb5730a6d74074396e5693c1487636fe51ce91169e944792851",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C030"
+      ]
+    },
+    {
+      "id": "RU-R021",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2354.5,
+      "source_end": 2385.2,
+      "seconds": 30.699999999999818,
+      "file": "reviewed-v1/RU-R021.wav",
+      "sha256": "f30c5279bc23ed74f7144990b0c0225a33185f9304d073c8100f4b5a764fb13b",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "MONO01",
+        "RU-C031",
+        "RU-C032"
+      ]
+    },
+    {
+      "id": "RU-R022",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2497.3,
+      "source_end": 2552.5,
+      "seconds": 55.19999999999982,
+      "file": "reviewed-v1/RU-R022.wav",
+      "sha256": "00dfb863a963054de398756cd499cc8000bc00ac227af39c249813e3d19e4da3",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "MONO02",
+        "RU-C034"
+      ]
+    },
+    {
+      "id": "RU-R023",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2579.05,
+      "source_end": 2584.15,
+      "seconds": 5.099999999999909,
+      "file": "reviewed-v1/RU-R023.wav",
+      "sha256": "40ea4f924aa714fcf9ba441f4119a689cd3844bcd31e73654badbae68427461a",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C036"
+      ]
+    },
+    {
+      "id": "RU-R024",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2684.65,
+      "source_end": 2692.15,
+      "seconds": 7.5,
+      "file": "reviewed-v1/RU-R024.wav",
+      "sha256": "702d217dee091d7885c5031fac4662fa7305f1600bbbb984a89aa0857ea02c89",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C037"
+      ]
+    },
+    {
+      "id": "RU-R025",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2694.25,
+      "source_end": 2701.75,
+      "seconds": 7.5,
+      "file": "reviewed-v1/RU-R025.wav",
+      "sha256": "58d478ca103638d8e42d9e69453c81d10f305dcf8a49cb809569e5151e93abc6",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C038"
+      ]
+    },
+    {
+      "id": "RU-R026",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2711.05,
+      "source_end": 2725.75,
+      "seconds": 14.699999999999818,
+      "file": "reviewed-v1/RU-R026.wav",
+      "sha256": "98831b3ce65dd07e4e9ffda6d7b3a1ea1909c47b689ae8224f4c6e4e7f89f8a1",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C039"
+      ]
+    },
+    {
+      "id": "RU-R027",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2797.45,
+      "source_end": 2811.5,
+      "seconds": 14.050000000000182,
+      "file": "reviewed-v1/RU-R027.wav",
+      "sha256": "f9dd16460af219adce98cdda07d38b51bca5bba6da9b8076fdc921942af9c4de",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C041"
+      ]
+    },
+    {
+      "id": "RU-R028",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2847.85,
+      "source_end": 2855.35,
+      "seconds": 7.5,
+      "file": "reviewed-v1/RU-R028.wav",
+      "sha256": "14ac8aab441a61d8a802654fe2f48b3f151e88483ce273e25f77e2ca8fb66985",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C043"
+      ]
+    },
+    {
+      "id": "RU-R029",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 2933,
+      "source_end": 2936.95,
+      "seconds": 3.949999999999818,
+      "file": "reviewed-v1/RU-R029.wav",
+      "sha256": "98836d96120229ae0a6a0f50f66bd08e6546e354fb34d7d55288867d0148ed5d",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C044"
+      ]
+    },
+    {
+      "id": "RU-R030",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 3051.85,
+      "source_end": 3057.7,
+      "seconds": 5.849999999999909,
+      "file": "reviewed-v1/RU-R030.wav",
+      "sha256": "ed440aa7c9422461795cf90c633f1168a1237c51fb3938db36ffc6a780af0388",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C045"
+      ]
+    },
+    {
+      "id": "RU-R031",
+      "source_track": "ru",
+      "language": "ru",
+      "source_start": 3102.25,
+      "source_end": 3105.5,
+      "seconds": 3.25,
+      "file": "reviewed-v1/RU-R031.wav",
+      "sha256": "01e8caa1ec1e9222ccc54a91d86d4cacc1469260e2a8b8c9c0ea46042852a63e",
+      "split": "train",
+      "status": "author-context-reviewed; not user-listening-approved",
+      "evidence_ids": [
+        "RU-C049"
+      ]
+    },
+    {
+      "id": "UK-R001",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 730.5999999999999,
+      "source_end": 752.2,
+      "seconds": 21.6,
+      "file": "uk-paired-candidates/UK-R001.wav",
+      "sha256": "67f7b534c8b747fbdf4d6783d2ea0da33e87be289c7f70ad0bab249cc1f4352f",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R003",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 849.15,
+      "source_end": 852.6500000000001,
+      "seconds": 3.5,
+      "file": "uk-paired-candidates/UK-R003.wav",
+      "sha256": "0e81b348c7dc7a51897f3f12e759375b3778181c78f1c27b3c28de7f2050dde6",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R008",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 966.75,
+      "source_end": 975.0500000000001,
+      "seconds": 8.3,
+      "file": "uk-paired-candidates/UK-R008.wav",
+      "sha256": "65356f0ce07ab412e13eb1798d16595c37cbc457d31726b5fe7ea98e5c521bf9",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R009",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 1270.8,
+      "source_end": 1275.55,
+      "seconds": 4.75,
+      "file": "uk-paired-candidates/UK-R009.wav",
+      "sha256": "d3d316e78b41f707a4b67d0d03c8dc9d86dedecff069dcb8112cbc14147e8ac8",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R010",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 1382.3,
+      "source_end": 1392.15,
+      "seconds": 9.85,
+      "file": "uk-paired-candidates/UK-R010.wav",
+      "sha256": "b78c8c73b4fa288e6ac431a1139ee332ed6117dfa51ebe698173893a16193b20",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R013",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 2137.4500000000003,
+      "source_end": 2143.35,
+      "seconds": 5.9,
+      "file": "uk-paired-candidates/UK-R013.wav",
+      "sha256": "0ccdd769ed448d87419a37df5b6e4a18c4a239103b4eec125e14aeae718b7b9d",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R015",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 2183.05,
+      "source_end": 2186.5499999999997,
+      "seconds": 3.5,
+      "file": "uk-paired-candidates/UK-R015.wav",
+      "sha256": "968f1899fa010d5b78905afec7d81bb2fbc6046b1dfa37ea1cf44fb48de8de6a",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R020",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 2351.3,
+      "source_end": 2353.8999999999996,
+      "seconds": 2.6,
+      "file": "uk-paired-candidates/UK-R020.wav",
+      "sha256": "bb3993ee11dc6bccdbfaf8935493d3fb17c139bcdfbfaf87099e92196e83ba06",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R024",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 2689.4500000000003,
+      "source_end": 2695.35,
+      "seconds": 5.9,
+      "file": "uk-paired-candidates/UK-R024.wav",
+      "sha256": "fd743d154037ed16d0f8249a5f89ff086de965eb8699c659ac34767f75be7663",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R026",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 2715.8500000000004,
+      "source_end": 2728.95,
+      "seconds": 13.1,
+      "file": "uk-paired-candidates/UK-R026.wav",
+      "sha256": "cd4cc337ef7b07c4c70675c6182be0ecdc269793af06ff49a4126e2e5f75c6ee",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R028",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 2852.65,
+      "source_end": 2858.5499999999997,
+      "seconds": 5.9,
+      "file": "uk-paired-candidates/UK-R028.wav",
+      "sha256": "8a7368d69874c559624a873ea64feafef0e989e4c6b756babde58a12daff88d0",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "UK-R030",
+      "source_track": "uk",
+      "language": "uk",
+      "source_start": 3058.65,
+      "source_end": 3062.8999999999996,
+      "seconds": 4.25,
+      "file": "uk-paired-candidates/UK-R030.wav",
+      "sha256": "ad098790032d1bd3bf962b0bb289b74e35abfc7a54b938576f560d38dc97108f",
+      "split": "train",
+      "status": "paired author-reviewed visual context; acoustic consistency passed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "RU-X001",
+      "source_track": "ru",
+      "language": null,
+      "source_start": 1141.65,
+      "source_end": 1151.1499999999999,
+      "seconds": 9.5,
+      "file": "extra-candidates/RU-X001.wav",
+      "sha256": "c6cd122fcfa72a458a2f66a86b8b70a3cc7f007dcdd78dcac85fdb1b440a0a8a",
+      "split": "train",
+      "status": "author-context-reviewed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "RU-X003",
+      "source_track": "ru",
+      "language": null,
+      "source_start": 1578.45,
+      "source_end": 1583.1499999999999,
+      "seconds": 4.7,
+      "file": "extra-candidates/RU-X003.wav",
+      "sha256": "88fcdcdf7b7594b58d02dab0f387ae882a01a1eab81b552a2be1539bae2e627c",
+      "split": "holdout",
+      "status": "author-context-reviewed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "RU-X004",
+      "source_track": "ru",
+      "language": null,
+      "source_start": 3133.6499999999996,
+      "source_end": 3136.2,
+      "seconds": 2.550000000000182,
+      "file": "curated/RU-X004-trim.wav",
+      "sha256": "f85262d813083f0d8e18c5d7378d9afcc9598f5a57f248cd9a2443da94e9a210",
+      "split": "train",
+      "status": "author-context-reviewed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "RU-X005",
+      "source_track": "ru",
+      "language": null,
+      "source_start": 4180.05,
+      "source_end": 4184.75,
+      "seconds": 4.7,
+      "file": "extra-candidates/RU-X005.wav",
+      "sha256": "449dfe1edb5fd1252815b4c2c8edd7de3a4f09c222eea32d305adf909107eb33",
+      "split": "train",
+      "status": "author-context-reviewed; not listening-approved",
+      "evidence_ids": null
+    },
+    {
+      "id": "RU-X006",
+      "source_track": "ru",
+      "language": null,
+      "source_start": 4199.25,
+      "source_end": 4206.35,
+      "seconds": 7.1,
+      "file": "extra-candidates/RU-X006.wav",
+      "sha256": "fd6dfb4933fd7c995bf5244b8538e4067d49397c59113a26010f18d960b4a799",
+      "split": "train",
+      "status": "author-context-reviewed; not listening-approved",
+      "evidence_ids": null
+    }
+  ],
+  "limits": [
+    "Context/visual/acoustic author review, not independent or user audio approval",
+    "Original recording/room noise remains; not studio clean",
+    "CAMPPlus/ASR are support, not speaker proof on their own",
+    "Old B08 last3s holdout retired because full monologue is now training",
+    "Original B03/B04 mother clips additionally held out",
+    "First two test stanzas absent from train",
+    "No same-track overlap or repeated audio counted as new",
+    "Cross-track correlation checked; no UK duplicate take with NCC>.90 accepted"
+  ]
+}
