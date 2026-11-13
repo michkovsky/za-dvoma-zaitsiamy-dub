@@ -1,0 +1,32 @@
+{
+  "id": "P003-B07",
+  "actor": "Олег Борисов",
+  "character_id": "golokhvostyi",
+  "status": "proposed",
+  "track": "uk",
+  "mode": "speech-monologue",
+  "source_id": "audio",
+  "source_start": "00:42:02.000",
+  "source_end": "00:42:27.000",
+  "file": "exports/P003/voice-profiles/borisov-monologue-v1/wide-reference-25s.wav",
+  "sha256": "04f5de8f94f9b383b7a0509497f1fc4d2f5c92539e14e594f309ba552bf330be",
+  "duration": 25.0,
+  "context_file": "exports/P003/voice-profiles/borisov-monologue-v1/monologue-context.wav",
+  "context_start": "00:41:40.000",
+  "context_end": "00:42:45.000",
+  "context_sha256": "ae6e0802dd0c0d164634d7503e9d190533d919a4e68bb24b20b76325f8d26e6a",
+  "conditioning": "exports/P003/voice-profiles/borisov-monologue-v1/monologue-conditioning.pt",
+  "conditioning_sha256": "babd39f2a1df56e3ba785bf59c866132e1586d0409033ca7211fa0cdd38b52dd",
+  "embedding": "exports/P003/voice-profiles/borisov-monologue-v1/monologue-campplus.npy",
+  "embedding_sha256": "0d407eb68b1d31ba7f40da6e71bacf1e443cbf792281cb6f8349b6bf27606047",
+  "device": "cuda",
+  "selection_basis": "User requested monologue about rats; local UK ASR and frame at 42:12 show Borisov speaking",
+  "delivery_state": "Emphatic comic monologue about education and rats",
+  "clipped_samples": 0,
+  "limits": [
+    "Original room acoustics retained",
+    "65 second context saved, 25 continuous solo seconds used for conditioning",
+    "Approximate user timestamp 37:56 belongs to a different timing reference; local source was located independently",
+    "Experimental reference variant requires listening"
+  ]
+}

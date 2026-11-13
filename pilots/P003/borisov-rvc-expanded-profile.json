@@ -1,0 +1,41 @@
+{
+  "id": "P003-VOICE-BORISOV-RVC-EXPANDED-V2",
+  "actor": "Олег Борисов",
+  "character_id": "golokhvostyi",
+  "status": "proposed; not listening-approved",
+  "backend": "RVC v2 F0 32k",
+  "code_revision": "81eed5e8f68b6bed1789f682fe78cdd324495afc",
+  "file": "exports/P003/voice-profiles/borisov-rvc-expanded-v2/borisov-expanded-v2.pth",
+  "sha256": "62943c1e8922adf0480d7d1689118d2bdbd9898b207963bb1a3364f2d61c3893",
+  "sample_rate": 32000,
+  "corpus": "pilots/P003/borisov-corpus-v2.json",
+  "training": {
+    "selected_unique_seconds": 426.45,
+    "prepared_chunks": 173,
+    "prepared_seconds_including_overlap": 401.83,
+    "loader_batches_per_epoch": 166,
+    "epochs": 3,
+    "optimizer_updates": 498,
+    "batch_size": 1,
+    "precision": "FP32",
+    "seed": 1234,
+    "cuda_peak_mb": 3197.8837890625,
+    "epoch_seconds": [
+      172.2970000000205,
+      154.64100000000326,
+      153.43700000000536
+    ],
+    "fresh_pretrained": "Official v2 f0G32k/f0D32k, same as pilot",
+    "holdout": "RU-R002 and RU-X003; B03/B04 additionally excluded; old B08 holdout retired"
+  },
+  "retrieval_index": false,
+  "limits": [
+    "Author context/visual/acoustic corpus review; no independent or user audio approval",
+    "Below ten minutes; original room/background remains",
+    "Data and update count both changed; not a one-variable causal experiment",
+    "First two test stanzas excluded from training",
+    "Audio-to-audio conversion; not text-only singing",
+    "Full portable build not verified"
+  ],
+  "diagnostics": "pilots/P003/rvc-diagnostics-v1.json"
+}

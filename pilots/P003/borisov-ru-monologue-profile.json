@@ -1,0 +1,28 @@
+{
+  "id": "P003-B08",
+  "actor": "Олег Борисов",
+  "character_id": "golokhvostyi",
+  "status": "proposed",
+  "track": "ru",
+  "mode": "speech-monologue",
+  "source_id": "50A7fZbjrz8 original audio 251-2",
+  "source_start": "00:41:59.000",
+  "source_end": "00:42:24.000",
+  "file": "exports/P003/voice-profiles/borisov-ru-monologue-v1/ru-reference-25s.wav",
+  "sha256": "7f48739adc6b954608ae5ccf6e5743c43b6bd823facf6815f1c71a82fb13c8ce",
+  "duration": 25.0,
+  "conditioning": "exports/P003/voice-profiles/borisov-ru-monologue-v1/monologue-conditioning.pt",
+  "conditioning_sha256": "1a724fa2ae1a922ed2f605628fed3cc10bc9f379512e30ea971aa53d6ea07c0d",
+  "embedding": "exports/P003/voice-profiles/borisov-ru-monologue-v1/monologue-campplus.npy",
+  "embedding_sha256": "97ee04e61a4c842668e4658f6622050f38e6ffcdc5a90564b435913ee2d23fc0",
+  "embedding_dimension": 192,
+  "device": "cuda",
+  "clipped_samples": 0,
+  "selection_basis": "User requested RU monologue after hearing Pronya in broad UK context; excerpt selected inside continuous Borisov monologue; independent RU ASR saved",
+  "delivery_state": "Comic emphatic monologue about learned people and rats",
+  "limits": [
+    "Original recording acoustics retained",
+    "Speech transcript alone cannot establish signal quality",
+    "Reference and synthesized output require listening"
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "id": "P003-RVC-DIAGNOSTICS-V1",
+  "status": "proposed; technical controls, not listening-approved",
+  "model_sha256": "62943c1e8922adf0480d7d1689118d2bdbd9898b207963bb1a3364f2d61c3893",
+  "method": "Fixed checkpoint/FP32/seed23/no index; independent speech, cached training reconstruction, context padding and singing-line controls",
+  "export_root": "exports/P003/neural-tuning/rvc-diagnostics-v1",
+  "speech": {
+    "manifest": {
+      "model_sha256": "62943c1e8922adf0480d7d1689118d2bdbd9898b207963bb1a3364f2d61c3893",
+      "pipeline_sha256": "020038b9348d41133c8db82f5b972be2bef8a4e37c1a99e05b37826cff947cff",
+      "seed": 23,
+      "precision": "FP32",
+      "normalization_required": false,
+      "optional_imports_omitted": [
+        "faiss (index disabled)",
+        "parselmouth (PM disabled)"
+      ],
+      "cases": [
+        {
+          "source": "RU-R002",
+          "case": "baseline",
+          "file": "RU-R002-baseline.wav",
+          "normalize": true,
+          "interpolate_f0": false,
+          "original_unvoiced_fraction": 0.3658008658008658,
+          "seconds": 11.84,
+          "render_seconds": 1.3910000000032596,
+          "gain": 1,
+          "sha256": "a588ae9ab85bb06d08326cd6db8579cf715b978f24b227ba871c1964d8abde98"
+        },
+        {
+          "source": "RU-R002",
+          "case": "f0-only",
+          "file": "RU-R002-f0-only.wav",
+          "normalize": true,
+          "interpolate_f0": true,
+          "original_unvoiced_fraction": 0.3658008658008658,
+          "seconds": 11.84,
+          "render_seconds": 0.7809999999881256,
+          "gain": 1,
+          "sha256": "18878afac73170c602cda86e68c18e1468b24fb5a208667b3dc3f00c0469a5e6"
+        },
+        {
+          "source": "RU-R002",
+          "case": "normalization-only",
+          "file": "RU-R002-normalization-only.wav",
+          "normalize": false,
+          "interpolate_f0": false,
+          "original_unvoiced_fraction": 0.3658008658008658,
+          "seconds": 11.84,
+          "render_seconds": 0.7809999999881256,
+          "gain": 1,
+          "sha256": "a588ae9ab85bb06d08326cd6db8579cf715b978f24b227ba871c1964d8abde98"
+        },
+        {
+          "source": "RU-R002",
+          "case": "both",
+          "file": "RU-R002-both.wav",
+          "normalize": false,
+          "interpolate_f0": true,
+          "original_unvoiced_fraction": 0.3658008658008658,
+          "seconds": 11.84,
+          "render_seconds": 0.7810000000172295,
+          "gain": 1,
+          "sha256": "18878afac73170c602cda86e68c18e1468b24fb5a208667b3dc3f00c0469a5e6"
+        },
+        {
+          "source": "RU-R002",
+          "case": "official",
+          "file": "RU-R002-official.wav",
+          "seconds": 11.84,
+          "sha256": "df30487603ea6e305816fb12b51661a44ecd0a7140a100f0d6be0ae708644089"
+        },
+        {
+          "source": "RU-X003",
+          "case": "baseline",
+          "file": "RU-X003-baseline.wav",
+          "normalize": true,
+          "interpolate_f0": false,
+          "original_unvoiced_fraction": 0.5484351713859911,
+          "seconds": 4.68,
+          "render_seconds": 0.42199999999138527,
+          "gain": 1,
+          "sha256": "90af68c055100e8436b72051eb4a155bbb638c447079a78ddf2ad6a189f155eb"
+        },
+        {
+          "source": "RU-X003",
+          "case": "f0-only",
+          "file": "RU-X003-f0-only.wav",
+          "normalize": true,
+          "interpolate_f0": true,
+          "original_unvoiced_fraction": 0.5484351713859911,
+          "seconds": 4.68,
+          "render_seconds": 0.5,
+          "gain": 1,
+          "sha256": "d9c24f7ae9b1dbe29091f51c5ae78822018b837a22556cdb5d276fe8efdaa4c4"
+        },
+        {
+          "source": "RU-X003",
+          "case": "normalization-only",
+          "file": "RU-X003-normalization-only.wav",
+          "normalize": false,
+          "interpolate_f0": false,
+          "original_unvoiced_fraction": 0.5484351713859911,
+          "seconds": 4.68,
+          "render_seconds": 0.4379999999946449,
+          "gain": 1,
+          "sha256": "90af68c055100e8436b72051eb4a155bbb638c447079a78ddf2ad6a189f155eb"
+        },
+        {
+          "source": "RU-X003",
+          "case": "both",
+          "file": "RU-X003-both.wav",
+          "normalize": false,
+          "interpolate_f0": true,
+          "original_unvoiced_fraction": 0.5484351713859911,
+          "seconds": 4.68,
+          "render_seconds": 0.4379999999946449,
+          "gain": 1,
+          "sha256": "d9c24f7ae9b1dbe29091f51c5ae78822018b837a22556cdb5d276fe8efdaa4c4"
+        },
+        {
+          "source": "RU-X003",
+          "case": "official",
+          "file": "RU-X003-official.wav",
+          "seconds": 4.68,
+          "sha256": "8ead23ac69e9b0919b1691fc4380e8348f7492dbfe10eb59727852a7a2e80cad"
+        }
+      ],
+      "sources": [
+        {
+          "id": "RU-R002",
+          "original_sha256": "4b4bb979db18b68d71744915f3558ec7aa117ceaf455be41194f4d843b85ee08",
+          "seconds": 11.85
+        },
+        {
+          "id": "RU-X003",
+          "original_sha256": "88fcdcdf7b7594b58d02dab0f387ae882a01a1eab81b552a2be1539bae2e627c",
+          "seconds": 4.7
+        }
+      ]
+    },
+    "comparison": [
+      {
+        "source": "RU-R002",
+        "normalization_noop_sha_confirmed": true,
+        "custom_corrected_seconds": 11.84,
+        "official_seconds": 11.84,
+        "corrected_vs_official_wave_correlation": 0.9999966025457782,
+        "rmse": 0.00023771884407573687,
+        "limits": [
+          "FP32 waveform numerical differences; alignment compared without time shift"
+        ]
+      },
+      {
+        "source": "RU-X003",
+        "normalization_noop_sha_confirmed": true,
+        "custom_corrected_seconds": 4.68,
+        "official_seconds": 4.68,
+        "corrected_vs_official_wave_correlation": 0.999999560059643,
+        "rmse": 8.141313705843734E-05,
+        "limits": [
+          "FP32 waveform numerical differences; alignment compared without time shift"
+        ]
+      }
+    ],
+    "asr": [
+      {
+        "file": "RU-R002-source.wav",
+        "exit": 0,
+        "text": " Это предприятие на дожденёк, чтобы сменить хвасон.\n Новая мода. И мамзель куда-то повезти, и конфеток, и новое то.\n Иначе ж не можно. Поверьте, сирковые деньги будут...\n",
+        "seconds": 8.64100000000326
+      },
+      {
+        "file": "RU-X003-source.wav",
+        "exit": 0,
+        "text": " Боже мой, вот влип.\n",
+        "seconds": 2.4060000000172295
+      },
+      {
+        "file": "RU-R002-baseline.wav",
+        "exit": 0,
+        "text": " (напряжённый репетит)\n",
+        "seconds": 2.3280000000086147
+      },
+      {
+        "file": "RU-R002-f0-only.wav",
+        "exit": 0,
+        "text": " (напряжённый репетит)\n",
+        "seconds": 2.264999999984866
+      },
+      {
+        "file": "RU-R002-normalization-only.wav",
+        "exit": 0,
+        "text": " (напряжённый репетит)\n",
+        "seconds": 2.39000000001397
+      },
+      {
+        "file": "RU-R002-both.wav",
+        "exit": 0,
+        "text": " (напряжённый репетит)\n",
+        "seconds": 2.4060000000172295
+      },
+      {
+        "file": "RU-R002-official.wav",
+        "exit": 0,
+        "text": " (напряжённый репетит)\n",
+        "seconds": 2.327999999979511
+      },
+      {
+        "file": "RU-X003-baseline.wav",
+        "exit": 0,
+        "text": " Боже мой!\n",
+        "seconds": 2.2969999999913853
+      },
+      {
+        "file": "RU-X003-f0-only.wav",
+        "exit": 0,
+        "text": " Боже мой!\n",
+        "seconds": 2.3910000000032596
+      },
+      {
+        "file": "RU-X003-normalization-only.wav",
+        "exit": 0,
+        "text": " Боже мой!\n",
+        "seconds": 2.6560000000172295
+      },
+      {
+        "file": "RU-X003-both.wav",
+        "exit": 0,
+        "text": " Боже мой!\n",
+        "seconds": 2.3589999999967404
+      },
+      {
+        "file": "RU-X003-official.wav",
+        "exit": 0,
+        "text": " Боже мой!\n",
+        "seconds": 2.202999999979511
+      }
+    ]
+  },
+  "pretrained": {
+    "manifest": {
+      "pretrained_sha256": "2332611297b8d88c7436de8f17ef5f07a2119353e962cd93cda5806d59a1133d",
+      "pipeline_sha256": "020038b9348d41133c8db82f5b972be2bef8a4e37c1a99e05b37826cff947cff",
+      "seed": 23,
+      "outputs": [
+        {
+          "source": "RU-R002",
+          "file": "RU-R002-pretrained.wav",
+          "seconds": 11.84,
+          "sha256": "4abc35a88f75aabf7ddf16a82473e65808baba2712cb3de65d2c808a1c322ceb"
+        },
+        {
+          "source": "RU-X003",
+          "file": "RU-X003-pretrained.wav",
+          "seconds": 4.68,
+          "sha256": "cd65777f337e834f4c9742bffa47148dee9d0d98c998fe8771e13cee26542fb5"
+        }
+      ],
+      "limits": [
+        "Generic pretrained speaker row0, not Borisov",
+        "Inference-only enc_q removed and emb_g first row selected; all inference keys matched",
+        "No training; diagnostic linguistic control, not actor output",
+        "Optional unused FAISS/PM imports omitted as in speech control"
+      ]
+    },
+    "asr": [
+      {
+        "file": "RU-R002-pretrained.wav",
+        "exit": 0,
+        "text": " Я в ответе на дождинёк,\n Шо всвинить вас он.\n Новая мода.\n И мамзель куда-то повезти,\n И конфеток,\n И на фуетон,\n Иначе ж не можно.\n Поверьте,\n Серковые деньги\n Будут.\n",
+        "seconds": 10.437000000005355
+      },
+      {
+        "file": "RU-X003-pretrained.wav",
+        "exit": 0,
+        "text": " Боже мой...\n Бот блин!\n",
+        "seconds": 2.3440000000118744
+      }
+    ]
+  },
+  "cached": {
+    "manifest": {
+      "training_chunk": "RU-R021-5",
+      "training_parent": "RU-R021",
+      "source_seconds": 3.63,
+      "output_seconds": 3.62,
+      "features_shape": [
+        181,
+        768
+      ],
+      "fresh_features_max_abs_difference": 0.0,
+      "fresh_f0_max_abs_difference": 0.00011563316863316686,
+      "limits": [
+        "Training example, not independent holdout",
+        "Cached conditioning reconstruction uses no context padding; edge artifacts possible"
+      ],
+      "outputs": [
+        {
+          "file": "source.wav",
+          "sha256": "38ed4bea9de6e023819b3e0bf737b74cc04f935ada79617ee8240a0a7b495623"
+        },
+        {
+          "file": "cached-reconstruction.wav",
+          "sha256": "172d1ba447d19c75dd0c2c859b84279ebd5fd812efebe6ae2342f420930e300a"
+        }
+      ]
+    },
+    "asr": [
+      {
+        "file": "source.wav",
+        "exit": 0,
+        "text": " Так ему уже свет переворачивается вверх ногами.\n",
+        "seconds": 6.48499999998603
+      },
+      {
+        "file": "cached-reconstruction.wav",
+        "exit": 0,
+        "text": " Этим уже свет переворачивается вверх ногами.\n",
+        "seconds": 2.3440000000118744
+      }
+    ]
+  },
+  "context": {
+    "manifest": {
+      "outputs": [
+        {
+          "file": "heldout-short-source.wav",
+          "sha256": "0db833b7ae4d1209b0f7bb4ecf42cf142dda0d9eae809880e07efb062cfd19dc"
+        },
+        {
+          "file": "heldout-short-converted.wav",
+          "sha256": "fc1c900436866892a73de75756a66020d9b367941e2dd3d08f1aecfb0472bd49"
+        },
+        {
+          "file": "heldout-full-source.wav",
+          "sha256": "064dd15fbeb99d28cf9ffbd56eaa11a0a3e0c51cd2de84396ad98348ca495f6b"
+        },
+        {
+          "file": "heldout-full-converted.wav",
+          "sha256": "b6a583de313123c50fbc83d041b68cd5bd8dc5e119770405ffb348874ff81434"
+        },
+        {
+          "file": "training-padded-source.wav",
+          "sha256": "38ed4bea9de6e023819b3e0bf737b74cc04f935ada79617ee8240a0a7b495623"
+        },
+        {
+          "file": "training-padded-converted.wav",
+          "sha256": "d6278eb6d26dd15887e316c44cc89fda237ba2ccc0fa2b143536a5e027a9fd16"
+        }
+      ],
+      "seed": 23,
+      "model_sha256": "62943c1e8922adf0480d7d1689118d2bdbd9898b207963bb1a3364f2d61c3893",
+      "limits": [
+        "Training-padded is not holdout",
+        "No-padding controls may have edge artifacts"
+      ]
+    },
+    "asr": [
+      {
+        "file": "heldout-short-source.wav",
+        "exit": 0,
+        "text": " Это подприятие на дожденях, чтобы сменить хвасон. Новая мода.\n",
+        "seconds": 6.937999999994645
+      },
+      {
+        "file": "heldout-short-converted.wav",
+        "exit": 0,
+        "text": " чтобы прятать на дожденёк, чтобы сменить чехла сон.\n Новое мода!\n",
+        "seconds": 2.8440000000118744
+      },
+      {
+        "file": "heldout-full-source.wav",
+        "exit": 0,
+        "text": " Это предприятие на дожденёк, чтобы сменить хвасон.\n Новая мода. И мамзель куда-то повезти, и конфеток, и новое то.\n Иначе ж не можно. Поверьте, сирковые деньги будут...\n",
+        "seconds": 3.2820000000065193
+      },
+      {
+        "file": "heldout-full-converted.wav",
+        "exit": 0,
+        "text": " Подприятия на дождинёх, что сменить хмасон.\n Новая мода. И мамзель куда-то повезти, и конфеток, и едем на флитоне, иначе с ним можно.\n Поверьте, серковые деньги будут...\n",
+        "seconds": 3.125
+      },
+      {
+        "file": "training-padded-source.wav",
+        "exit": 0,
+        "text": " Так ему уже свет переворачивается вверх ногами.\n",
+        "seconds": 2.3289999999979045
+      },
+      {
+        "file": "training-padded-converted.wav",
+        "exit": 0,
+        "text": " Таким уже свет переворачивается вверх ногами.\n",
+        "seconds": 2.312999999994645
+      }
+    ]
+  },
+  "song_line": {
+    "manifest": {
+      "outputs": [
+        {
+          "file": "line-no-pad-source.wav",
+          "sha256": "fc55d3352572afce384d657ebbdfe49b5a9e6a08e7b4660fa8e0199bf1336469"
+        },
+        {
+          "file": "line-no-pad-converted.wav",
+          "sha256": "b80f7c64c5daee77dc49e6d79ab82f4fea9699282eca88b34d37288bf1140429"
+        },
+        {
+          "file": "line-padded-source.wav",
+          "sha256": "fc55d3352572afce384d657ebbdfe49b5a9e6a08e7b4660fa8e0199bf1336469"
+        },
+        {
+          "file": "line-padded-converted.wav",
+          "sha256": "8cd4067796a5ec1c8232a6f5b952e95eaebf541661b6eac9ec8845a92628455b"
+        }
+      ],
+      "seed": 23,
+      "model_sha256": "62943c1e8922adf0480d7d1689118d2bdbd9898b207963bb1a3364f2d61c3893",
+      "limits": [
+        "First4.2s from held-out verse1 source; not training audio",
+        "No-padding controls may have edge artifacts",
+        "Short source ASR is also inaccurate; no listening approval"
+      ]
+    },
+    "asr": [
+      {
+        "file": "line-no-pad-source.wav",
+        "exit": 0,
+        "text": " Невіка-невеечка літає\n",
+        "seconds": 7.26600000000326
+      },
+      {
+        "file": "line-no-pad-converted.wav",
+        "exit": 0,
+        "text": " [співає]\n",
+        "seconds": 2.2339999999967404
+      },
+      {
+        "file": "line-padded-source.wav",
+        "exit": 0,
+        "text": " Невіка-невеечка літає\n",
+        "seconds": 2.3280000000086147
+      },
+      {
+        "file": "line-padded-converted.wav",
+        "exit": 0,
+        "text": " [співає]\n",
+        "seconds": 2.2820000000065193
+      }
+    ]
+  },
+  "findings": [
+    "F0 zeros were interpolated at training but preserved at earlier inference; corrected control alone did not restore long speech",
+    "HuBERT do_normalize=false; normalization toggle is an exact SHA no-op",
+    "Corrected wrapper and official no-index/RMVPE methods correlate >0.999996 on heldout speech",
+    "Long heldout speech ASR loses all words with 1s reflection padding, but recovers most words without it; short duration is not required",
+    "Cached training features match fresh extraction exactly; F0 maximum difference0.000116 Hz",
+    "Training cached reconstruction largely retains ASR words; this is not independent generalization",
+    "Short singing line not accepted: generated ASR only singing, source ASR also inaccurate; no full-verse render promoted"
+  ],
+  "limits": [
+    "ASR is a technical filter, not listening or verified transcription",
+    "Generic pretrained speaker is not Borisov and not a candidate voice",
+    "Optional unused FAISS/Parselmouth imports omitted for official-method controls",
+    "No user listening approval; no independent review",
+    "No new model training and no replacement of A91 approvals"
+  ]
+}

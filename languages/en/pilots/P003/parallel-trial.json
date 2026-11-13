@@ -1,0 +1,92 @@
+{
+  "status": "technical trial, proposed",
+  "score_sha256": "51bbd6a590ca21377d8f0bb4b93fc8fe3bd97b2c8120ebeb44ae1f9a1e8ec108",
+  "piper_model_sha256": "abf4c274862564ed647ba0d2c47f8ee7c9b717d27bdad9219100eb310db4047a",
+  "aligned_model_sha256": "655af3e263b0427e554e92148e7998a3b4c4cb9f1803e32439ea67de1ac0116d",
+  "script_sha256": "c10a260669a549a25f3231528b7384a0f4494ce30ba3fd28d9a3d90a8a3cc8d1",
+  "pyworld": "0.3.5",
+  "numpy": "1.26.4",
+  "piper": "1.8.0",
+  "bpm": 110,
+  "key": "Am",
+  "syllable_counts": [
+    10,
+    9,
+    10,
+    10
+  ],
+  "synthesis_noise_scale": 0,
+  "synthesis_noise_w": 0,
+  "pitch_frame_period_ms": 5,
+  "consonant_edge_cap_fraction": 0.28,
+  "diphthong_first_vowel_fraction": 0.82,
+  "phrase_release_gap_seconds": 0.035,
+  "original_unvoiced_consonant_blend": true,
+  "stats": {
+    "low": {
+      "octave_shift": -12,
+      "duration": 17.704580498866214,
+      "peak": 0.7771706755632748,
+      "clipping": 0,
+      "voiced_target_frames": 3403
+    },
+    "written": {
+      "octave_shift": 0,
+      "duration": 17.704580498866214,
+      "peak": 0.6867969311982628,
+      "clipping": 0,
+      "voiced_target_frames": 3403
+    }
+  },
+  "outputs": {
+    "guitar.wav": "ab521cae1e130b6b95705b608e5f5918d7e1b4c36133a76185a3ba019f71ce9b",
+    "mix-low.wav": "a116ebb92b794d335e2499ffc0c2488c27287d943d1986ab4e67934d495b297c",
+    "mix-written.wav": "aa8305d8c82fa9493ea0aafa9ffe258e86226bb3587be98598b1d357e7e925d3",
+    "spoken-line-1.wav": "d52211c37d665b4306642d0c6c239e353d266bb00d75069363a7bab672d1e548",
+    "spoken-line-2.wav": "5249da3147b73cfa40e80e98005c30a526a32b6bdbaba8ac45856f130d64a6b1",
+    "spoken-line-3.wav": "5c3d380926643035f9ff354e96b5ecb22d9a96282041dd32537bbc75ebba2fd1",
+    "spoken-line-4.wav": "7af7b1647df81c61085820cb930e1f5b9cb1451a95bcb713af8782325758f214",
+    "vocal-low.wav": "c85334d6196e09eddb8a58f0fb5bda4cf44e5fd7bb7de984444c5a49f3a41a45",
+    "vocal-written.wav": "6623510e0f4b4ea21a2a78ea32b8cd28029728d6c89a526e4aca678414477db4"
+  },
+  "limitations": [
+    "Piper speech resynthesis controlled by WORLD, not a trained expressive singing voice.",
+    "No character voice cloning or user performance approval.",
+    "Only automatic structural QA; intelligibility, stress, rhyme and literary effect require listening.",
+    "Low take sings one octave below written melody; written take follows original note octave.",
+    "Prompt punctuation is simplified for phonemization; readable candidate text unchanged."
+  ],
+  "readable_text": [
+    "Sweet little canary flies overhead,",
+    "And sings straight along a parallel.",
+    "We'll go, have a drink, and paint the town red—",
+    "That's our life's whole purpose, and all is well."
+  ],
+  "external_package": "exports/P003/parallel-trial/v4",
+  "generation_report_sha256": "c7d73cd32ebb07dcd4bcee6f84cee4f389e22c3b5f0402cb15a1271ef63382fe",
+  "qa": {
+    "slot_count": 39,
+    "slot_counts": [
+      10,
+      9,
+      10,
+      10
+    ],
+    "pcm_no_clipping": true,
+    "full_mix_decode": "passed",
+    "listening_approval": false,
+    "asr_diagnostic": "Earlier v2/v3 low takes recognized lines 1/2 broadly, but paint the town red and phrase boundary before Thats were misrecognized. This does not verify pronunciation. v4 retains original unvoiced consonants; not ASR-retested."
+  },
+  "listening_feedback": {
+    "id": "LC-001",
+    "date": "2026-11-10",
+    "file": "mix-low.wav",
+    "sha256": "a116ebb92b794d335e2499ffc0c2488c27287d943d1986ab4e67934d495b297c",
+    "markers": [
+      "parallel/well",
+      "paint the town red"
+    ],
+    "result": "User reports both markers sufficiently intelligible; supersedes earlier ASR doubts for these markers.",
+    "scope": "Marker intelligibility only; no full text/performance approval."
+  }
+}

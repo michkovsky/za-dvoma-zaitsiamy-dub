@@ -1,0 +1,1490 @@
+{
+  "id": "P003-voice-reference-set-v1",
+  "status": "proposed",
+  "source_id": "audio",
+  "method": "Candidate excerpts from existing Kim_Vocal_2 vocal separation; original mixture retained for comparison.",
+  "source_context_offset_seconds": 50,
+  "source_vocals_sha256": "561106654016f2e22029ceb2ec0d4ab41ce2db4e508bad8df388bce230ed2734",
+  "source_mixture_sha256": "c8fde9180e5f058d86d77c48850916225a9978ee16a0cce3b4af133723cb2a99",
+  "profiles": [
+    {
+      "id": "P003-V01",
+      "label": "verse-1",
+      "source_id": "audio",
+      "source_start_seconds": 62.0,
+      "source_end_seconds": 68.0,
+      "context_start_seconds": 12.0,
+      "context_end_seconds": 18.0,
+      "duration": 6.0,
+      "gain": 2.5,
+      "status": "legacy broad excerpt; arch echo; use narrow canary cut only for identity comparison, not primary conditioning",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": false,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.5823627287853578,
+        "f0_hz_p10_median_p90": [
+          149.60901086618927,
+          178.10438202125806,
+          214.53358346035074
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-V01-verse-1-vocal.wav",
+          "sha256": "615377eb5eadd2df0ad2484a2e4c1c85c76b0708c4aad26088d4559d6e636954"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-V01-verse-1-original.wav",
+          "sha256": "440d11d5599d6d024f758bf95eba37f57e0af22af7cee70a2b8874bf005250b3"
+        }
+      },
+      "listening_feedback": "LC-012: 1 і 4 скоріш за все один і той самий голос.",
+      "acoustic_context": "User LC-012 attributes reverberation to emerging from a building arch; do not encode room reverb as singer identity.",
+      "numeric_grouping_note": "LC-012 numeric 1/4 grouping cannot safely be mapped to V01/V04: LC-013 identifies father/shop as a distinct low role. Use sung phrase, not reel numbering, for identity.",
+      "candidate_role": "P003-R01"
+    },
+    {
+      "id": "P003-V02",
+      "label": "verse-2",
+      "source_id": "audio",
+      "source_start_seconds": 81.0,
+      "source_end_seconds": 87.5,
+      "context_start_seconds": 31.0,
+      "context_end_seconds": 37.5,
+      "duration": 6.5,
+      "gain": 2.5,
+      "status": "excluded from single-speaker conditioning; multiple voices per user LC-012",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": false,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.4254992319508449,
+        "f0_hz_p10_median_p90": [
+          167.3191030087245,
+          186.93151432126606,
+          218.04567277211942
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-V02-verse-2-vocal.wav",
+          "sha256": "0b36b469f490def6be46c23b233a271061e1afd37916273a60555776a0c2beda"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-V02-verse-2-original.wav",
+          "sha256": "6fe0bf47e9c38d121497ef7b2fb38af86d77eba88ddae3d5d78aaab872001386"
+        }
+      },
+      "listening_feedback": "LC-012: 2 і 3 багатоголосся."
+    },
+    {
+      "id": "P003-V03",
+      "label": "mother",
+      "source_id": "audio",
+      "source_start_seconds": 110.0,
+      "source_end_seconds": 112.8,
+      "context_start_seconds": 60.0,
+      "context_end_seconds": 62.8,
+      "duration": 2.8,
+      "gain": 2.5,
+      "status": "mother-line singer identity confirmed by user LC-018; former chorus exclusion was a numbering-mapping error",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": true,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.8825622775800712,
+        "f0_hz_p10_median_p90": [
+          157.15485482230724,
+          181.03799723371628,
+          194.33653500761994
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-V03-mother-vocal.wav",
+          "sha256": "b3a4c9be72125f49c53444da7a4a296d165e31f9a105f270675f9d2b92256eb3"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-V03-mother-original.wav",
+          "sha256": "4963388f9de331bdf9835e702e0fe8beca622c59a0ce0e3853c96bbd0f6553ff"
+        }
+      },
+      "listening_feedback": "LC-018: same singer as canary opening. Supersedes mistaken V03 exclusion from LC-012 file-number mapping.",
+      "candidate_role": "P003-R01"
+    },
+    {
+      "id": "P003-V04",
+      "label": "papa",
+      "source_id": "audio",
+      "source_start_seconds": 115.0,
+      "source_end_seconds": 117.6,
+      "context_start_seconds": 65.0,
+      "context_end_seconds": 67.6,
+      "duration": 2.5999773242630386,
+      "gain": 2.5,
+      "status": "father/shop singer distinct per user; new longer primary reference in solo-v2",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": true,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.7777777777777778,
+        "f0_hz_p10_median_p90": [
+          184.14410141347335,
+          214.73953694794147,
+          227.34135582703277
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-V04-papa-vocal.wav",
+          "sha256": "a3ccb53c5ebf14514dfa5274f748d1e6347b567d7df331afa6f866f07b25060b"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-V04-papa-original.wav",
+          "sha256": "0fcaba1317933ddbbad239e121b662fa74b5e71456728be7fd331084be74b3b0"
+        }
+      },
+      "listening_feedback": "LC-012: 1 і 4 скоріш за все один і той самий голос.",
+      "numeric_grouping_note": "LC-012 numeric 1/4 grouping cannot safely be mapped to V01/V04: LC-013 identifies father/shop as a distinct low role. Use sung phrase, not reel numbering, for identity.",
+      "candidate_role": "P003-R02"
+    },
+    {
+      "id": "P003-X01",
+      "label": "entrance-overlap",
+      "source_id": "audio",
+      "source_start_seconds": 112.0,
+      "source_end_seconds": 115.5,
+      "context_start_seconds": 62.0,
+      "context_end_seconds": 65.5,
+      "duration": 3.5,
+      "gain": 2.5,
+      "status": "candidate; listening verification pending",
+      "identity": "unassigned; no actor or character attribution",
+      "candidate_solo": false,
+      "voice_type": "not determined",
+      "qa": {
+        "clipping": 0,
+        "voiced_fraction": 0.6210826210826211,
+        "f0_hz_p10_median_p90": [
+          152.29447111220352,
+          181.2414512036268,
+          212.74214378495927
+        ]
+      },
+      "files": {
+        "vocal": {
+          "file": "exports/P003/voice-profiles/v1/P003-X01-entrance-overlap-vocal.wav",
+          "sha256": "4bcacf9e22dfff6e11c808c5e3383c26506dde88e5ab316015d4fb1fe0f00127"
+        },
+        "original": {
+          "file": "exports/P003/voice-profiles/v1/P003-X01-entrance-overlap-original.wav",
+          "sha256": "a92052514ecb9ee3479f2f9b019a0482125d5e6a4da68815a2fe5b3253b931ce"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Windows chosen conservatively from existing ASR phrase timing, not listening-confirmed syllable boundaries.",
+    "Candidate solo windows may retain other voices and separation artifacts.",
+    "Four sampled regions do not establish four singer identities.",
+    "F0 describes sung pitches, not tenor/baritone identity.",
+    "Short mother/papa excerpts require identity and cleanliness review before adopting experimental conditioning for final rendering.",
+    "Candidate embeddings and S3 conditioning now exist, but reference identity/cleanliness and generated voice quality remain unapproved."
+  ],
+  "reel": {
+    "file": "exports/P003/voice-profiles/v1/reference-reel.wav",
+    "sha256": "a7dc607a03c647f8a7eecef020125b1cbadab04a2a7a7287406bf936c384b6e2"
+  },
+  "unresolved_feedback": [],
+  "performer_roles": [
+    {
+      "id": "P003-R01",
+      "description": "Main voice, referred to by user as 1–4",
+      "identity": "Олег Борисов",
+      "status": "LC-047 user identifies song performer as Borisov; canary/mother grouping retained",
+      "confirmed_source_phrases": [
+        "В небі канареєчка літає",
+        "Моя мама серце добре має"
+      ],
+      "primary_reference": {
+        "profile_id": "P003-VOICE-BORISOV",
+        "reference_id": "P003-B01",
+        "file": "exports/P003/voice-profiles/borisov-v1/references/ru-speech.wav",
+        "sha256": "b7222b2cf875aacf30330d46b230c82f9e708418362febf91a16e402e8d665c2",
+        "use": "shared Borisov actor identity; native primary RU speech reference, not a final English voice approval"
+      },
+      "legacy_primary_reference": {
+        "role": "P003-R01",
+        "label": "mother",
+        "source_start": 109.75,
+        "source_end": 113.45,
+        "duration": 3.7,
+        "use": "primary identity reference",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R01-mother.wav",
+        "sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      },
+      "actor_profile_id": "P003-VOICE-BORISOV"
+    },
+    {
+      "id": "P003-R02",
+      "description": "Contrasting low delivery on papa/shop; performance lane, not independently established actor",
+      "source_text": "А папаша мають магазин",
+      "canonical_transcription": "І папаша мають магазин.",
+      "english_text": "And my papa has himself a shop.",
+      "status": "LC-052 user identifies low singer as Grudinin, bass; LC-053 processing deferred; do not use Borisov profile for this lane",
+      "overlap": "None. LC-015 supersedes prior overlap interpretation: low voice enters after the main phrase ends.",
+      "primary_reference": null,
+      "voice_direction": {
+        "label": "Bass per user identification of Grudinin, LC-052",
+        "scope": "deferred; older ordinary-baritone label is historical"
+      },
+      "legacy_primary_reference": {
+        "role": "P003-R02",
+        "label": "papa",
+        "source_start": 114.15,
+        "source_end": 118.0,
+        "duration": 3.85,
+        "use": "primary identity reference",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
+        "sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      },
+      "actor_profile_id": null,
+      "identity": "Валентин Грудинін",
+      "superseded_borisov_primary_reference": {
+        "profile_id": "P003-VOICE-BORISOV",
+        "reference_id": "P003-B01",
+        "file": "exports/P003/voice-profiles/borisov-v1/references/ru-speech.wav",
+        "sha256": "b7222b2cf875aacf30330d46b230c82f9e708418362febf91a16e402e8d665c2",
+        "use": "shared Borisov actor identity; native primary RU speech reference, not a final English voice approval"
+      },
+      "actor_name_as_supplied": "Грудинин Валентин Гурьевич",
+      "superseded_voice_direction_before_actor_identification": {
+        "label": "Ordinary baritone, possibly slightly low",
+        "basis": "LC-022 user clarification: this is the intended voice, not approval of a previous sample.",
+        "avoid": "Exaggerated heavy bass coloration; do not alter melodic notes to force a voice category."
+      }
+    }
+  ],
+  "role_mapping_note": "LC-052/053: R01 Borisov active; R02 Grudinin/bass per user, profile deferred. Stable lane IDs are not file numbers. Earlier same-Borisov modulation hypothesis superseded; polyphonic assignments remain unresolved.",
+  "experimental_profiles": {
+    "status": "revised candidate profiles from user-confirmed individual singer lines; generated sound listening pending",
+    "references": [
+      {
+        "role": "P003-R01",
+        "label": "mother",
+        "source_start": 109.75,
+        "source_end": 113.45,
+        "duration": 3.7,
+        "use": "primary identity reference",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R01-mother.wav",
+        "sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      },
+      {
+        "role": "P003-R02",
+        "label": "papa",
+        "source_start": 114.15,
+        "source_end": 118.0,
+        "duration": 3.85,
+        "use": "primary identity reference",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
+        "sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      },
+      {
+        "role": "P003-R01",
+        "label": "canary-arch",
+        "source_start": 61.9,
+        "source_end": 64.8,
+        "duration": 2.9,
+        "use": "identity comparison only; arch echo must not define dry timbre",
+        "file": "exports/P003/voice-profiles/solo-v2/P003-R01-canary-arch.wav",
+        "sha256": "045d52c84425f61292fd71552c23915d079840ca4c8f77a493b69a3d471835c2",
+        "identity_basis": "User LC-018 confirms canary and mother same singer; father/shop separate per LC-013",
+        "window_status": "Interior navigation cut, precise phoneme boundaries not claimed",
+        "gain": 2.5,
+        "clipping": 0
+      }
+    ],
+    "encoder": {
+      "encoder": "Chatterbox VoiceEncoder",
+      "model_sha256": "f0921cab452fa278bc25cd23ffd59d36f816d7dc5181dd1bef9751a7fb61f63c",
+      "script_sha256": "fc1ca206b06c9d8e0c6ee964231d72d6ae6fe598905456426e24f2ff6475710a",
+      "torch": "2.6.0+cu124",
+      "numpy": "1.26.4",
+      "device": "cpu",
+      "profiles": [
+        {
+          "role": "P003-R01",
+          "source_file": "exports/P003/voice-profiles/solo-v2/P003-R01-mother.wav",
+          "source_sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+          "duration_seconds": 3.7,
+          "embedding_file": "exports/P003/voice-profiles/embeddings-v3/P003-R01.npy",
+          "embedding_sha256": "e098f197dc16e7c0dc0ffcd89346f9d0b62bfc6c5a808834f4c90eb6b90ee25e",
+          "shape": [
+            1,
+            256
+          ],
+          "l2_norm": 0.9999999403953552,
+          "wall_seconds": 3.359000000054948,
+          "status": "candidate embedding, not approved conditioning"
+        },
+        {
+          "role": "P003-R02",
+          "source_file": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
+          "source_sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+          "duration_seconds": 3.85,
+          "embedding_file": "exports/P003/voice-profiles/embeddings-v3/P003-R02.npy",
+          "embedding_sha256": "3693634189b4ebcf57cbbfd14d5b4b620f40296f80e083414d3b6e0271e7b138",
+          "shape": [
+            1,
+            256
+          ],
+          "l2_norm": 1.0,
+          "wall_seconds": 0.0470000000204891,
+          "status": "candidate embedding, not approved conditioning"
+        }
+      ],
+      "cosine_similarity": 0.6868560314178467,
+      "limitations": [
+        "Solo singer identities grouped by lyrics per user LC-018.",
+        "Low-role source extended to 3.85 s; no repetition or silence used to pretend more source evidence.",
+        "Main-role reference now taken from mother line; arch excerpt excluded from primary conditioning.",
+        "Embeddings are not a verified singer count or voice-quality verdict.",
+        "No T3 prompt tokens or S3 decoder conditioning computed in this step."
+      ]
+    },
+    "s3_conditioning": {
+      "source_english_sha256": "2290b751270feb1fc3b63623ff6b1e8615cc1576d9efe835cd6756f830f2efad",
+      "model_s3_sha256": "2b78103c654207393955e4900aac14a12de8ef25f4b09424f1ef91941f161d4e",
+      "script_sha256": "1262cda1fb383e113ff58747764194a4f0464c28366150a81f3abfb668f84e59",
+      "sample_rate": 24000,
+      "device": "cpu",
+      "seed": 23,
+      "profiles": [
+        {
+          "role": "P003-R01",
+          "reference_sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-s3.pt",
+          "conditioning_sha256": "960b0f814288eb08c706b7564510c3b8e129bff98117a65807304d6c9921a5fa",
+          "conditioning_shapes": {
+            "prompt_token": [
+              1,
+              92
+            ],
+            "prompt_token_len": [
+              1
+            ],
+            "prompt_feat": [
+              1,
+              185,
+              80
+            ],
+            "prompt_feat_len": null,
+            "embedding": [
+              1,
+              192
+            ]
+          },
+          "probe_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-probe.wav",
+          "probe_sha256": "6513eb68cee9d80ae9c6f2ef67ed986f392536e4e85294b4fc5728950c3531da",
+          "duration": 3.26,
+          "peak": 0.2617705166339874,
+          "clipping": 0,
+          "gain": 1,
+          "wall_seconds": 28.21799999999348
+        },
+        {
+          "role": "P003-R02",
+          "reference_sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-s3.pt",
+          "conditioning_sha256": "b263f4e76ea1d2c13e027154b0e30cd618794cb4ed9a00d70b7e19aac5f0da24",
+          "conditioning_shapes": {
+            "prompt_token": [
+              1,
+              96
+            ],
+            "prompt_token_len": [
+              1
+            ],
+            "prompt_feat": [
+              1,
+              192,
+              80
+            ],
+            "prompt_feat_len": null,
+            "embedding": [
+              1,
+              192
+            ]
+          },
+          "probe_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-probe.wav",
+          "probe_sha256": "36537ff4fe307f56c99aeae5e0592110b9411b69215609af9524cb9760adde98",
+          "duration": 3.28,
+          "peak": 0.27182212471961975,
+          "clipping": 0,
+          "gain": 1,
+          "wall_seconds": 27.48499999998603
+        }
+      ],
+      "status": "experimental voice conditioning and conversion; listening pending",
+      "limitations": [
+        "S3 voice conversion has no guarantee of preserving sung notes; not a final singing renderer.",
+        "Reference assignments and short low-voice sample remain provisional.",
+        "Approved neutral singing is preserved; converted probes do not replace it.",
+        "Not a complete T3 text-to-speech conditioning set."
+      ]
+    },
+    "singing_probes": {
+      "method": "Chatterbox S3 voice conversion followed by WORLD pitch restoration from shared Am/110 BPM score, octave -12",
+      "score_sha256": "51bbd6a590ca21377d8f0bb4b93fc8fe3bd97b2c8120ebeb44ae1f9a1e8ec108",
+      "source_probes": [
+        {
+          "role": "P003-R01",
+          "reference_sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-s3.pt",
+          "conditioning_sha256": "960b0f814288eb08c706b7564510c3b8e129bff98117a65807304d6c9921a5fa",
+          "conditioning_shapes": {
+            "prompt_token": [
+              1,
+              92
+            ],
+            "prompt_token_len": [
+              1
+            ],
+            "prompt_feat": [
+              1,
+              185,
+              80
+            ],
+            "prompt_feat_len": null,
+            "embedding": [
+              1,
+              192
+            ]
+          },
+          "probe_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-probe.wav",
+          "probe_sha256": "6513eb68cee9d80ae9c6f2ef67ed986f392536e4e85294b4fc5728950c3531da",
+          "duration": 3.26,
+          "peak": 0.2617705166339874,
+          "clipping": 0,
+          "gain": 1,
+          "wall_seconds": 28.21799999999348
+        },
+        {
+          "role": "P003-R02",
+          "reference_sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+          "conditioning_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-s3.pt",
+          "conditioning_sha256": "b263f4e76ea1d2c13e027154b0e30cd618794cb4ed9a00d70b7e19aac5f0da24",
+          "conditioning_shapes": {
+            "prompt_token": [
+              1,
+              96
+            ],
+            "prompt_token_len": [
+              1
+            ],
+            "prompt_feat": [
+              1,
+              192,
+              80
+            ],
+            "prompt_feat_len": null,
+            "embedding": [
+              1,
+              192
+            ]
+          },
+          "probe_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-probe.wav",
+          "probe_sha256": "36537ff4fe307f56c99aeae5e0592110b9411b69215609af9524cb9760adde98",
+          "duration": 3.28,
+          "peak": 0.27182212471961975,
+          "clipping": 0,
+          "gain": 1,
+          "wall_seconds": 27.48499999998603
+        }
+      ],
+      "probes": [
+        {
+          "role": "P003-R01",
+          "file": "exports/P003/voice-profiles/note-locked-v2/P003-R01-probe.wav",
+          "sha256": "c8a81b9ed2116f0a9820f5fb2bf90e298e1abb9d6318059413363930b5fb25cc",
+          "duration": 3.26,
+          "clipping": 0,
+          "target_frames": 563
+        },
+        {
+          "role": "P003-R02",
+          "file": "exports/P003/voice-profiles/note-locked-v2/P003-R02-probe.wav",
+          "sha256": "1067c8ea0c9344d5033704714ebad8209e2fdb62cf67af945f7bd6ed738ae06f",
+          "duration": 3.28,
+          "clipping": 0,
+          "target_frames": 538
+        }
+      ],
+      "comparison_order": [
+        "P003-R01",
+        "P003-R02"
+      ],
+      "comparison_sha256": "08fef2ad05fd7ceae0f175d238ff598e349068daf6d812c4ea476c98022014cf",
+      "limitations": [
+        "Experimental two-stage conversion may change consonants or introduce vocoder artifacts.",
+        "No user voice-identity or singing-quality approval.",
+        "No overlapping duet assembled yet."
+      ]
+    },
+    "limitations": [
+      "Only two singer identities are confirmed by specific lyric lines; unresolved lines must not inherit R01 automatically.",
+      "No claim that arch acoustics were removed by dereverberation; arch recording excluded from primary conditioning.",
+      "Model probes remain proposed; not final voice quality or full rendering approval.",
+      "No singer overlap at mother/father transition per LC-015."
+    ]
+  },
+  "latest_feedback": [
+    {
+      "id": "LC-014",
+      "text": "Наче схоже",
+      "scope": "tentative similarity of short two-profile comparison, not full-render approval"
+    },
+    {
+      "id": "LC-015",
+      "text": "Нетреба, я переслухав - там нема перетину",
+      "decision": "No singer overlap at mother/father transition; supersedes LC-011/013 overlap interpretation."
+    },
+    {
+      "id": "LC-016",
+      "text": "давай просуватися до фінального рендерінгу",
+      "decision": "Prepare complete review render with current lyrics and candidate voice profiles."
+    },
+    {
+      "id": "LC-017",
+      "text": "Я б хотів, аби ти отримав голосові профілі хоча б співаків, що мають власні партії",
+      "decision": "First map all individual singer parts and prepare each profile. Do not substitute the current main profile for all unidentified singers."
+    },
+    {
+      "id": "LC-018",
+      "text": "Так, ці два рядки співає той самий виконавець",
+      "scope": "Canary opening and mother line are the same singer; group R01 by lyrics."
+    },
+    {
+      "id": "LC-019",
+      "text": "в небі канареєчка - іде з ехом бо персонажі виходять із арки",
+      "scope": "Arch echo is scene acoustics, excluded from primary identity conditioning."
+    }
+  ],
+  "phrase_audit": {
+    "file": "exports/P003/voice-profiles/phrase-audit-v1/manifest.json",
+    "sha256": "4a322467e7f3c2e05c05f26ab5d22693bdd64e5332b76c38b6b3659f48455617",
+    "count": 12,
+    "versions": [
+      "original",
+      "vocal"
+    ],
+    "status": "lexically named navigation clips; singer assignment pending; not conditioning"
+  },
+  "scene_acoustics": {
+    "arch_echo": {
+      "source_phrase": "В небі канареєчка літає",
+      "basis": "user LC-012 and LC-019: performers emerge from building arch",
+      "part_of_voice_identity": false,
+      "reference_use": "canary excerpt comparison only; primary R01 conditioning from mother line",
+      "rendering": "Apply separately during scene assembly; parameters not yet measured."
+    }
+  },
+  "superseded_profile_manifests": [
+    "exports/P003/voice-profiles/embeddings-v2/manifest.json",
+    "exports/P003/voice-profiles/conditioning-v1/manifest.json",
+    "exports/P003/voice-profiles/note-locked-v1/manifest.json"
+  ],
+  "phrase_role_map": [
+    {
+      "verse": 1,
+      "line": 1,
+      "text": "В небі канареєчка літає",
+      "role": "P003-R01",
+      "status": "user-confirmed singer grouping"
+    },
+    {
+      "verse": 1,
+      "line": 2,
+      "text": "І співає прямо — в горизонт",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 1,
+      "line": 3,
+      "text": "А ми підем, вип’єм, погуляєм",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 1,
+      "line": 4,
+      "text": "В цьому все життя і весь наш резон",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 2,
+      "line": 1,
+      "text": "Нас чекають баришні-коханки",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 2,
+      "line": 2,
+      "text": "Жизнь така, що просто мармелад",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 2,
+      "line": 3,
+      "text": "Так заграй, заграй же нам гітарка",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 2,
+      "line": 4,
+      "text": "На веселий дуже, на очень лад",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 3,
+      "line": 1,
+      "text": "Моя мама серце добре має",
+      "role": "P003-R01",
+      "status": "user-confirmed singer grouping"
+    },
+    {
+      "verse": 3,
+      "line": 2,
+      "text": "І папаша мають магазин",
+      "role": "P003-R02",
+      "status": "user-confirmed singer grouping"
+    },
+    {
+      "verse": 3,
+      "line": 3,
+      "text": "І вони меня не обіжають",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    },
+    {
+      "verse": 3,
+      "line": 4,
+      "text": "Бо один у них я шикарний син",
+      "role": null,
+      "status": "unassigned; do not infer a single singer from a mixed excerpt"
+    }
+  ],
+  "pitch_processing_trials": {
+    "feedback": "LC-020: user finds unnatural harmonics/vocoder quality; LC-021 authorizes continuing investigation.",
+    "trial": {
+      "method": "Raw neural S3 waveform -> FFmpeg Rubber Band dynamic pitch, formants preserved; WORLD used only for F0 analysis, never synthesis.",
+      "script_sha256": "b15810ed00a0e5ffbb7b71acb2c2d867706fabcda0863136f6b27e0e1f57fd10",
+      "preserved_pitch_deviation_cents": 20,
+      "pitch_command_interval_ms": 10,
+      "profiles": [
+        {
+          "role": "P003-R01",
+          "source_file": "exports/P003/voice-profiles/conditioning-v2/P003-R01-probe.wav",
+          "source_sha256": "6513eb68cee9d80ae9c6f2ef67ed986f392536e4e85294b4fc5728950c3531da",
+          "output_file": "exports/P003/natural-pitch/v1/P003-R01-rubberband.wav",
+          "sha256": "817492ec822851c222894520121949ed3daed8d3956dedfed37c5ef56ff9bdf0",
+          "commands_sha256": "9b52b7f889b8318040be00a009063e6aa27ac158a9edf0fd4695ea931460defd",
+          "duration": 3.26,
+          "clipping": 0,
+          "peak": 0.20635986328125,
+          "ratio_min_median_max": [
+            0.6787929340257154,
+            0.8565521582177106,
+            1.2009454098523673
+          ],
+          "output_samples": 78240,
+          "source_samples": 78240
+        },
+        {
+          "role": "P003-R02",
+          "source_file": "exports/P003/voice-profiles/conditioning-v2/P003-R02-probe.wav",
+          "source_sha256": "36537ff4fe307f56c99aeae5e0592110b9411b69215609af9524cb9760adde98",
+          "output_file": "exports/P003/natural-pitch/v1/P003-R02-rubberband.wav",
+          "sha256": "6e516787cb7f29b9303477471944d7dff4fa7b0db2bc694e0a10b77b1b078c27",
+          "commands_sha256": "369e2e593faaf5681372458f103f7ad87e30c3353777fc3dbe3950ea5f22d35e",
+          "duration": 3.28,
+          "clipping": 0,
+          "peak": 0.180816650390625,
+          "ratio_min_median_max": [
+            0.5818717351025342,
+            0.7895210992319044,
+            0.8658102755872699
+          ],
+          "output_samples": 78720,
+          "source_samples": 78720
+        }
+      ],
+      "status": "experimental alternative, listening pending",
+      "limitations": [
+        "Rubber Band is phase-vocoder waveform processing, not an unmodified natural recording or a new neural singing engine.",
+        "Upstream neutral guide itself was produced with WORLD; this experiment only removes the final WORLD resynthesis.",
+        "S3 may already alter articulation and sung pitch."
+      ]
+    },
+    "qa": {
+      "pitch_qa": [
+        {
+          "role": "P003-R01",
+          "method": "WORLD",
+          "median_absolute_pitch_error_cents": 2.036129398620671,
+          "measured_frames": 438,
+          "duration": 3.26,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R01",
+          "method": "RubberBand",
+          "median_absolute_pitch_error_cents": 21.41379646524734,
+          "measured_frames": 439,
+          "duration": 3.26,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R01",
+          "method": "Raw S3",
+          "median_absolute_pitch_error_cents": 287.4572260404433,
+          "measured_frames": 438,
+          "duration": 3.26,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R02",
+          "method": "WORLD",
+          "median_absolute_pitch_error_cents": 3.103884753236462,
+          "measured_frames": 421,
+          "duration": 3.28,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R02",
+          "method": "RubberBand",
+          "median_absolute_pitch_error_cents": 25.111939181562715,
+          "measured_frames": 430,
+          "duration": 3.28,
+          "finite": true,
+          "clipping": 0
+        },
+        {
+          "role": "P003-R02",
+          "method": "Raw S3",
+          "median_absolute_pitch_error_cents": 426.56616448833984,
+          "measured_frames": 425,
+          "duration": 3.28,
+          "finite": true,
+          "clipping": 0
+        }
+      ],
+      "comparisons": [
+        {
+          "role": "P003-R01",
+          "file": "exports/P003/natural-pitch/v1/P003-R01-WORLD-then-RubberBand.wav",
+          "sha256": "886c2ae23938e276d7938ed40935c13823958ee72a26ffad7e2355fb6d56cbf1",
+          "order": [
+            "WORLD",
+            "RubberBand"
+          ],
+          "gap_seconds": 0.65,
+          "normalization": "Both excerpts RMS 0.08 unless peak cap 0.93 is reached."
+        },
+        {
+          "role": "P003-R02",
+          "file": "exports/P003/natural-pitch/v1/P003-R02-WORLD-then-RubberBand.wav",
+          "sha256": "89d9c2b4854b1ac4057eb678bafd06bb58dc59dfec0efbe684cf03b6f1ed8b25",
+          "order": [
+            "WORLD",
+            "RubberBand"
+          ],
+          "gap_seconds": 0.65,
+          "normalization": "Both excerpts RMS 0.08 unless peak cap 0.93 is reached."
+        }
+      ],
+      "qualification": "Automatic F0 comparison is not listening approval; waveform naturalness and intelligibility unassessed by QA."
+    },
+    "adopted_for_final_render": false
+  },
+  "latest_solo_pair": {
+    "file": "exports/P003/solo-pair/v1/mix.wav",
+    "sha256": "3bb094d63966c13e79d49a04328b0129a1a41f854fe9ab96c13bd0622f590f54",
+    "manifest": "exports/P003/solo-pair/v1/manifest.json",
+    "manifest_sha256": "b0bdcb728484b3ff78d8724e6d709ade49c6d3a7b6fa7762227b0484cb1bf34b",
+    "status": "rejected for poor intelligibility per LC-023",
+    "duration": 8.97725,
+    "singer_overlap_samples": 0,
+    "intelligibility_diagnostic": {
+      "asr_text": "♪ Like your mother has a heart-warming kind ♪\n ♪ If my father has himself a jaw ♪",
+      "interpretation": "ASR confuses several words. This is not a listening verdict, but intelligibility is an open concern."
+    },
+    "accepted_scope": "Distance between voice pitches is acceptable; preserve register relationship while repairing articulation."
+  },
+  "calibration_direction": {
+    "basis": "LC-024/025: Ukrainian same-voice mother + father pair, compare to original, then transfer suitable processing parameters to English.",
+    "english_generation": "Deferred pending Ukrainian control evaluation.",
+    "reference_pitch": "Actual original vocal F0, not an assumed key or score approximation.",
+    "transfer_limit": "Transfer processing settings, not Ukrainian phoneme durations or a literal source pitch trajectory to unrelated English syllables."
+  },
+  "uk_calibration": {
+    "source_text": "Моя мама серце добре має І папаша мають магазин",
+    "comparisons": [
+      {
+        "label": "original separated vocal",
+        "file": "exports/P003/uk-calibration/v1/original-vocal.wav",
+        "sha256": "f9a5d34c8d69549088fe4356156672cbf3ba53b3200fec38910996888a8399c7",
+        "duration": 8.88,
+        "comparison_gain": 1.2508864531303547,
+        "clipping": 0,
+        "asr": "Моя мама серти добре має\n І папа шамають магадит!",
+        "diagnostic_cer_letters_only": 0.10256410256410256
+      },
+      {
+        "label": "Rubber Band +4 then -4 semitones, no S3",
+        "file": "exports/P003/uk-calibration/v1/rubberband-roundtrip.wav",
+        "sha256": "9418bccabe19a288b9707cd80e7b9de3bb1e9e3550dd410b8434a065a8f71f02",
+        "duration": 8.88,
+        "comparison_gain": 2.1425385619685,
+        "clipping": 0,
+        "asr": "Моя мама серпи добре має\n Віпа пошимають махати",
+        "diagnostic_cer_letters_only": 0.20512820512820512
+      },
+      {
+        "label": "S3 same-role conversion then Rubber Band matched to original F0",
+        "file": "exports/P003/uk-calibration/v1/processed-vocal.wav",
+        "sha256": "fed5cce678520b3808bc9c319316181ceccb791f70e87b08797813a65a568868",
+        "duration": 8.88,
+        "comparison_gain": 1.2508869910119043,
+        "clipping": 0,
+        "asr": "Моя мама серти, тьо, пребмає.\n Ні, гвапа, шимаю, малахати.",
+        "diagnostic_cer_letters_only": 0.41025641025641024
+      }
+    ],
+    "comparison_file": "exports/P003/uk-calibration/v1/original-modulation-neural.wav",
+    "comparison_sha256": "4a834637a1ddca438a633fdc3bb72d8d0320549eb2fb3e2e1211435baccb461b",
+    "comparison_duration": 28.64,
+    "gap_seconds": 1,
+    "status": "proposed; user listening needed before English parameter transfer",
+    "qualification": [
+      "ASR has errors even on original singing. CER is diagnostic, not a speech-quality acceptance score.",
+      "Two-pass +/-4 semitone roundtrip is a stress test, not identical to a single-pass English correction.",
+      "S3 references overlap these same Ukrainian lyric lines, so this is not independent generalization evidence."
+    ],
+    "listening_feedback": {
+      "id": "LC-026",
+      "original": "good",
+      "direct_modulation": "good",
+      "full_neural_chain": "trembling in both voices; not accepted"
+    }
+  },
+  "tremor_diagnostic": {
+    "feedback": "LC-026: blocks 1 and 2 still good; block 3 introduces trembling in both voices.",
+    "accepted_file": "exports/P003/uk-calibration/smooth-v1/accepted-direct-modulation.wav",
+    "accepted_sha256": "bf584ded61ca1f7b1b87f20b29cffbd692c30daa88c2830f70cdad5f02451250",
+    "accepted_extraction": {
+      "source": "exports/P003/uk-calibration/v1/original-modulation-neural.wav",
+      "start_sample": 237120,
+      "sample_count": 213120,
+      "sample_exact": true
+    },
+    "trial_file": "exports/P003/uk-calibration/smooth-v1/neural-raw-then-smooth.wav",
+    "trial_sha256": "09c0cbfa7828aaef2061f7c68e57e7af1d454d6ddec60329f0d924c6e0af8fc7",
+    "trial_order": [
+      "raw neural conversion pair, no pitch correction",
+      "1 second silence",
+      "same voices with smoother pitch correction"
+    ],
+    "parameters": {
+      "old_gaussian_sigma_ms": 15,
+      "new_gaussian_sigma_ms": 75,
+      "old_command_interval_ms": 10,
+      "new_command_interval_ms": 40
+    },
+    "status": "rejected per LC-027: dobre distorted in both blocks, shop additional distortion in second",
+    "qa": {
+      "all_finite": true,
+      "clipping": 0
+    },
+    "qualification": "Smoothing the controller does not prove that waveform tremor is removed; raw neural block may already contain the fault."
+  },
+  "neural_tuning_direction": {
+    "user_instruction": "LC-028: continue improving neural modulation, do not replace it with direct text-to-speech",
+    "direct_tts_started": false,
+    "latest_comparison": {
+      "comparison_file": "exports/P003/neural-tuning/v1/full-then-035.wav",
+      "sha256": "c6d0d3993b587c4497c387b039effb21282ced91f0f311366e1ae8b19ee3dbf5",
+      "duration": 18.76,
+      "order": [
+        "100 percent converted log-mel, measured source F0",
+        "1 second silence",
+        "35 percent converted + 65 percent original log-mel, same measured source F0"
+      ],
+      "qa": {
+        "finite": true,
+        "clipping": 0
+      },
+      "asr_diagnostics": {
+        "vocoder-predicted-f0": "♪ Моя мама серти добре має ♪\n ♪ Ті папа шамають мады ♪",
+        "vocoder-source-f0": "♪ Моя мама серти добре має ♪\n ♪ Ті папа шамають мады ♪",
+        "conversion-source-f0": "♪ Моя мама серти тьобре має ♪\n ♪ Нігла пошимаю махати ♪",
+        "conversion-strength-035": "♪ Моя мама серти добре має ♪\n ♪ Німа пошимають махати ♪"
+      },
+      "conclusion": "ASR still corrupts dobre after source-F0 injection at full conversion; weaker log-mel conversion recovers that word in the diagnostic, but shop-line remains uncertain. Human listening required.",
+      "qualification": "Reduced conversion strength also retains more source timbre; this is not proof of full identity transfer to English."
+    },
+    "bench_manifest": "exports/P003/neural-tuning/v1/manifest.json",
+    "bench_manifest_sha256": "16045aaeeb6e537eb2f1e754adcdc949e423266c8afe30e84ad4f263884b8f5b",
+    "adopted_for_english": false,
+    "feedback_LC030": "Second/35% variant slightly better, both still weakly sound like dyobre instead of dobre; no full acceptance."
+  },
+  "alternate_ru_source_trial": {
+    "source_id": "50A7fZbjrz8 original audio 251-2",
+    "source_sha256": "1f552e4f62aa34ecd3732b12a33be840faf7f861c87ba2f3128adac9b2cc7beb",
+    "local_mapping": {
+      "formula": "t_RU = slope * t_UK + intercept",
+      "slope": 1.0024460888921012,
+      "intercept": -5.018677311216932,
+      "anchor_range_UK": [
+        62.0,
+        115.0
+      ],
+      "residuals_ms": [
+        -0.04270009334561564,
+        0.2855220646296175,
+        -0.5174669141894128,
+        0.8770886252875698
+      ],
+      "qualification": "Local waveform fit, not global film sync. Short target end extrapolates past final anchor."
+    },
+    "uk_source_range": [
+      109.4,
+      118.28
+    ],
+    "ru_source_range": [
+      104.64892481357894,
+      113.5506460829408
+    ],
+    "separation_manifest": "exports/P003/ru-song/v1/separated/separation.json",
+    "neural_comparison": {
+      "comparison_file": "exports/P003/ru-song/v1/uk-then-ru-neural035.wav",
+      "sha256": "c6452e6a46031fd045ec0715a525d9c28a0e91a3389d844a4b36f08dca7e41b9",
+      "order": [
+        "UK recording, neural strength 0.35",
+        "1 second silence",
+        "RU recording, same neural settings and reference profiles"
+      ],
+      "duration": 18.76,
+      "fixed_parameters": [
+        "same original UK conditioning-v2 profiles",
+        "same pretrained weights",
+        "seed 23",
+        "0.35 converted log-mel + 0.65 source log-mel",
+        "measured F0 fed into neural harmonic source",
+        "no subsequent WORLD/Rubber Band synthesis"
+      ],
+      "changed_input": "Alternate RU source locally time-aligned to UK and RMS-matched per singer before conversion",
+      "status": "proposed; cleaner source and corrected dobre not claimed",
+      "qa": {
+        "finite": true,
+        "clipping": 0
+      }
+    },
+    "raw_comparison_file": "exports/P003/ru-song/v1/uk-then-ru-originals.wav",
+    "raw_comparison_sha256": "a8ddfb004a97e941852e9aac1aafcee20e5ab6ef3aacbd717aff4c978c3225bb",
+    "asr_diagnostic": "♪ Моя мама серце добре має ♪\n ♪ Ві папа шимають магазин ♪",
+    "quality_status": "LC-031: user prefers second/RU version; preferred source for further calibration, not full sound-quality approval",
+    "voice_references_changed": false
+  },
+  "current_alignment_trial": {
+    "file": "exports/P003/neural-tuning/ru-aligned-v1/aligned-035-then-020.wav",
+    "sha256": "6a786476a726edf91e948070567ed5ce01a3713cd25eecdf4fcb7f5983f65329",
+    "duration": 18.76,
+    "order": [
+      "RU source with temporal mel alignment, strength 0.35",
+      "1 second silence",
+      "same alignment and F0, strength 0.20"
+    ],
+    "alignment": {
+      "P003-R01": {
+        "method": "band-limited DTW on 18 energy-excluded cepstral coefficients",
+        "max_deviation_ms": 19.90867579908695,
+        "mean_deviation_ms": 10.26193441261926,
+        "band_ms": 200,
+        "source_frames": 220,
+        "generated_frames": 219,
+        "monotonic_verified": true,
+        "full_report_sha256": "589d72591234c6cfa752d9008dd8d41e6ef1c296e33ef6791dbbfa5f45ee1a46"
+      },
+      "P003-R02": {
+        "method": "band-limited DTW on 18 energy-excluded cepstral coefficients",
+        "max_deviation_ms": 0.0,
+        "mean_deviation_ms": 0.0,
+        "band_ms": 200,
+        "source_frames": 224,
+        "generated_frames": 224,
+        "monotonic_verified": true,
+        "full_report_sha256": "91bfa0d8e9da44aff5acbb37115d4a094a857a17671cd80098c2a63fa7a3e4af"
+      }
+    },
+    "qa": {
+      "all_finite": true,
+      "clipping": 0
+    },
+    "asr_diagnostics": {
+      "aligned-strength-035": "Моя мама серце добре має\n Ві папа шимають магазин",
+      "aligned-strength-020": "♪ Моя мама серце добре має ♪\n ♪ Ві папа шимають магазин ♪"
+    },
+    "status": "proposed; subtle palatalization and identity transfer require listening",
+    "limitations": [
+      "Lower conversion strength preserves more source timbre; same-voice Ukrainian reconstruction does not establish English identity transfer.",
+      "DTW is acoustic-shape alignment, not verified phoneme boundaries.",
+      "No claim that residual dyobre is fixed."
+    ],
+    "listening_feedback": {
+      "ids": [
+        "LC-033",
+        "LC-034"
+      ],
+      "text": "дьбре більше не зустрічається; так у відповідь на уточнення про обидва варіанти",
+      "scope": "Absence of named Ukrainian distortion in heard 0.35/0.20 controls only. Not full English or actor-identity approval."
+    }
+  },
+  "accepted_uk_calibration": [
+    {
+      "strength": 0.35,
+      "file": "exports/P003/neural-tuning/ru-aligned-v1/aligned-strength-035-pair.wav",
+      "sha256": "16bdc9df3342b636d2bb95530bdef1eb723b18e4c62849ee29a92e8a6fd3b974",
+      "accepted_scope": "LC-033/034: no dyobre in both heard Ukrainian blocks only; not full English approval."
+    },
+    {
+      "strength": 0.2,
+      "file": "exports/P003/neural-tuning/ru-aligned-v1/aligned-strength-020-pair.wav",
+      "sha256": "a2f78129ef6e707cbbcc4eee5244fdff57c199c95968e7935ed5aedcc5936518",
+      "accepted_scope": "LC-033/034: no dyobre in both heard Ukrainian blocks only; not full English approval."
+    }
+  ],
+  "latest_english_transfer": {
+    "assembly": {
+      "text": [
+        "My dear mother has a heart warm and kind.",
+        "And my papa has himself a shop."
+      ],
+      "roles": [
+        "P003-R01",
+        "P003-R02"
+      ],
+      "source_guide_manifest": "exports/P003/neural-tuning/english-guides-v1/manifest.json",
+      "source_guide_manifest_sha256": "d45ea50e228ca75ec5c6187866482a1fb7b42a647baa479d0d6727971a87934c",
+      "strength": 0.35,
+      "dtw": "Recomputed from English input, not copied from Ukrainian.",
+      "pitch": "Measured English neutral-guide F0 inside neural harmonic source.",
+      "singer_overlap_samples": 0,
+      "duration": 8.977333333333334,
+      "clipping": 0,
+      "mix_gain": 1.0,
+      "status": "English transfer trial, proposed",
+      "outputs": {
+        "vocal.wav": "14ad783480a7683d4af352937c450bfaddd1ed722ac86bd5b3b95e08bf02a0d5",
+        "guitar.wav": "31a79516a879ad4da14cd96d1c908ac288b5715d8959ff9c7319fa1d0c7b1126",
+        "mix.wav": "a412134ec9a0f4992bbda857af90858da9189717db1bdf2afdfca358d510eec8"
+      },
+      "limitations": [
+        "Successful Ukrainian word control does not establish English articulation or actor identity.",
+        "Source neutral guide is WORLD-derived; no final WORLD/Rubber Band resynthesis added here.",
+        "Only these two confirmed singer parts are rendered."
+      ]
+    },
+    "asr_diagnostic": "My dear mother has a heart-warming kind, and my papa has himself a shop.",
+    "intelligibility_note": "ASR recognizes both lines including papa/shop; warm and kind becomes heart-warming kind. Listening is required.",
+    "source_parameters": {
+      "strength": 0.35,
+      "why": "Stronger of two distortion-free Ukrainian controls, implementation choice after user confirmation.",
+      "dtw": "recomputed for English",
+      "profiles": "conditioning-v2 unchanged",
+      "seed": 23
+    },
+    "status": "not accepted per LC-035/036: electronic trembling on has and shop",
+    "listening_feedback": {
+      "has": "first/mother voice trembles",
+      "shop": "second/father voice trembles",
+      "quality": "electronic flavour, not ordinary expressive vibrato"
+    }
+  },
+  "local_envelope_repair": {
+    "status": "proposed; audible fix not yet confirmed",
+    "file": "exports/P003/neural-tuning/english-envelope-v3/mix.wav",
+    "sha256": "3da9779cef4624cf3b8490806f7dcb18c4b499357c33b5ed40e7bcd074c4790d",
+    "comparison_file": "exports/P003/neural-tuning/english-envelope-v3/before-then-envelope.wav",
+    "comparison_sha256": "27fe3f5755457d103ccd8b645536536a8e14fa61600587231befa3daa3aef87b",
+    "method": "Within has/shop only, neural converted log-mel contributes smooth cepstral envelope; source fine structure retained; HiFT generates waveform with unchanged measured source F0.",
+    "rows": [
+      {
+        "role": "P003-R01",
+        "word": "has",
+        "word_window_seconds": [
+          1.09,
+          1.91
+        ],
+        "source_pair_start_sample": 0,
+        "source_guide_sha256": "3fc7e734268619cf7b883cd0906e7d456ddca21ed1aeeca6b1fbe84b6df95fa5",
+        "feature_cache_sha256": "c56bb046e73760f1bb21a9ef714d383bf906c17ba88fc9601242160be73c568c",
+        "retained_cepstral_coefficients": 12,
+        "envelope_delta_temporal_sigma_ms": 50,
+        "strength": 0.35,
+        "f0_changed": false,
+        "gain_on_patch": 1.054542180007945,
+        "outside_patch_sample_exact": true,
+        "clipping": 0
+      },
+      {
+        "role": "P003-R02",
+        "word": "shop",
+        "word_window_seconds": [
+          3.27,
+          4.34
+        ],
+        "source_pair_start_sample": 104728,
+        "source_guide_sha256": "35b90b4bc908bc49b474fb8d304ea74c293a88c831eae8238b3c75122ec4f7a9",
+        "feature_cache_sha256": "3491307fe1d5125208179e6ac7f0d1b5d7baff9003c62889b86c4cc489ce3bc9",
+        "retained_cepstral_coefficients": 12,
+        "envelope_delta_temporal_sigma_ms": 50,
+        "strength": 0.35,
+        "f0_changed": false,
+        "gain_on_patch": 0.861571934595306,
+        "outside_patch_sample_exact": true,
+        "clipping": 0
+      }
+    ],
+    "qa": {
+      "outside_word_windows_pcm_equal": true,
+      "duration": 8.977333333333334,
+      "clipping": 0,
+      "output_pitch_diagnostic": [
+        {
+          "word": "has",
+          "output_f0_diagnostic": {
+            "before": {
+              "voiced_frames": 100,
+              "f0_p10_median_p90": [
+                147.8834789872262,
+                149.36657624040674,
+                151.5577158620737
+              ]
+            },
+            "repair": {
+              "voiced_frames": 100,
+              "f0_p10_median_p90": [
+                149.42715234776756,
+                149.8144144020511,
+                150.1591365590383
+              ]
+            }
+          }
+        },
+        {
+          "word": "shop",
+          "output_f0_diagnostic": {
+            "before": {
+              "voiced_frames": 120,
+              "f0_p10_median_p90": [
+                163.02600396817195,
+                164.7423277405842,
+                166.2701806975122
+              ]
+            },
+            "repair": {
+              "voiced_frames": 120,
+              "f0_p10_median_p90": [
+                162.40159650695912,
+                164.18286330373934,
+                167.02811893967788
+              ]
+            }
+          }
+        }
+      ],
+      "listening_status": "electronic flutter and naturalness not yet user-verified"
+    },
+    "limitations": [
+      "Electronic flutter cause remains a hypothesis; removing audible defect requires listening.",
+      "Local repair reduces fine-structure transfer inside the named words.",
+      "Guide still inherits upstream neutral WORLD synthesis; no final WORLD/Rubber Band added."
+    ]
+  },
+  "seed_vc_trial": {
+    "status": "English rendition rejected for electronic trembling; role references remain candidates",
+    "backend": "Seed-VC v1, F0-conditioned 44.1 kHz",
+    "code_revision": "51383efd921027683c89e5348211d93ff12ac2a8",
+    "model_revision": "257283f9f41585055e8f858fba4fd044e5caed6e",
+    "model_sha256": "42aef93ffe65857c840d270252fa040f7ba04514945ec460f3ac1ac2a96de684",
+    "reference_manifest": "exports/P003/voice-profiles/seed-vc-v1/manifest.json",
+    "reference_manifest_sha256": "4259bc9db2b6e832529d0fe0198611f242f8caa486d566fca0b12d45060d91e5",
+    "profiles": [
+      {
+        "role": "P003-R01",
+        "reference": "exports/P003/voice-profiles/solo-v2/P003-R01-mother.wav",
+        "reference_sha256": "302a0a5ca099c207a62de1ceb0eab0cf786da56cda5cd494b3979986a128c09a",
+        "embedding": "P003-R01-campplus.npy",
+        "embedding_sha256": "e77ddb165ba32b6c9b22a285967a7684f91faed585bac075478d8c1b7bfd75fa",
+        "dimension": 192,
+        "device": "cpu",
+        "status": "candidate; no listening approval; style embedding alone is not full SVC conditioning"
+      },
+      {
+        "role": "P003-R02",
+        "reference": "exports/P003/voice-profiles/solo-v2/P003-R02-papa.wav",
+        "reference_sha256": "7cb3ab87f46602557df0dde286781077d40544cf58672ca1ea2b277363ceda92",
+        "embedding": "P003-R02-campplus.npy",
+        "embedding_sha256": "29af8f3889501dec1c8dd9279daee7e8a2557f4f35e5e2593d3a4528c10ee547",
+        "dimension": 192,
+        "device": "cpu",
+        "status": "candidate; no listening approval; style embedding alone is not full SVC conditioning"
+      }
+    ],
+    "notes": [
+      "CAMPPlus embeddings are candidate style features, not complete SVC conditioning; full inference also uses reference audio mel and semantic/F0 features.",
+      "R01 mother reference; arch echo excluded. R02 papa reference; ordinary slightly low baritone target.",
+      "No overlap; no automatic F0 adjustment or post-synthesis pitch correction.",
+      "Accepted neutral guides remain unchanged. Other phrase speaker assignments remain unresolved."
+    ],
+    "listening_feedback": "LC-038: electronic trembling in English and the second (converted) Ukrainian block. This feedback does not identify a stage in old A32.",
+    "vocoder_control_feedback": "LC-039: trembling only in block 3 of A37; exact block 2 saved as A39 approved solely for absence of trembling. Specific conversion submodule cause remains unresolved.",
+    "cfg_control": {
+      "manifest": "exports/P003/neural-tuning/seed-cfg-control-v1/assembly.json",
+      "manifest_sha256": "7091036b0a556e7473dd3a0c42add95fb57eb2d1b1af26a718e8fd689b40d896",
+      "status": "LC-040: A41 approved only for absence of pronounced electronic flutter; residual slight trembling possible; relative preference uncertain",
+      "conditions": [
+        0.7,
+        0.0
+      ],
+      "seed_reset_per_phrase": 23,
+      "same_references": true
+    },
+    "english_cfg0_trial": {
+      "status": "LC-041: A42 rejected for mother flutter and unclear shop ending; has clear",
+      "manifest": "exports/P003/neural-tuning/seed-english-cfg0-v1/assembly.json",
+      "manifest_sha256": "2b64341ff44c721864eac5d89370d694b0d83e3b0d9103bc0509a60bd79462ce",
+      "cfg": 0.0,
+      "steps": 30,
+      "seed_per_phrase": 23,
+      "same_guides_and_references": true,
+      "overlap_seconds": 0
+    },
+    "english_fp32_trial": {
+      "status": "proposed; A44/A45",
+      "manifest": "exports/P003/neural-tuning/seed-english-fp32-v1/assembly.json",
+      "manifest_sha256": "a3ac2851bd30f6d83fe9ba3966ae07fc28eae486380ac83719c57ec4124eef25",
+      "diffusion_precision": "float32",
+      "cfg": 0,
+      "steps": 30,
+      "seed_per_phrase": 23,
+      "R01_guide": "unchanged",
+      "R02_guide": "full natural Piper /p/ replacement at 4.24s plus 150ms silent context; original retained",
+      "same_speaker_references": true
+    },
+    "english_fp32_100_trial": {
+      "status": "LC-042: mother corrected; whole A46 rejected for shop shAaagh and remaining vibrations",
+      "manifest": "exports/P003/neural-tuning/seed-english-fp32-100-v1/assembly.json",
+      "manifest_sha256": "8dc01e142f8aaeb0c3b89d56013035cde8d117be09667e8128c1cfa815566189",
+      "diffusion_precision": "float32",
+      "cfg": 0,
+      "steps": 100,
+      "seed_per_phrase": 23,
+      "same_inputs_as_fp32_30": true
+    },
+    "shop_release_trial": {
+      "status": "LC-043: tentative due fatigue; vowel trembling in guide and conversion, possibly wider after conversion; no final approval",
+      "manifest": "exports/P003/neural-tuning/seed-shop-release-v1/assembly.json",
+      "manifest_sha256": "819ded2e18b6398f91f9cce5f3c11bc26c1485f6a4c429b13c95fe6acfa2b179",
+      "R01_PCM_source": "P003-A46",
+      "R01_frames_copied_exactly": 192436,
+      "R02_source": "new /p/ closure/release transition from same Piper phonetic context; readable text unchanged",
+      "remaining_vibrations": "unresolved; requested affected words/timestamps"
+    },
+    "uk_fp32_100_trial": {
+      "status": "LC-044: neural rendition rejected for repeated vowel decay/vibrations in sertse/dobre",
+      "manifest": "exports/P003/neural-tuning/seed-uk-fp32-100-v1/assembly.json",
+      "manifest_sha256": "0ec140d7f81aadc2d5c2b707c1dd187cb156633daf880fcc2041f2c4a2a16f73",
+      "method": "same-speaker neural reconstruction of original Ukrainian performance; not new text synthesis",
+      "diffusion_precision": "float32",
+      "steps": 100,
+      "cfg": 0,
+      "seed_per_phrase": 23,
+      "same_solo_references": true
+    },
+    "uk_exact_self_reference_trial": {
+      "status": "LC-045: A53 approved only for nearly eliminated trembling including sertse; exact self-reference, not English acceptance",
+      "manifest": "exports/P003/neural-tuning/seed-uk-self-reference-v1/assembly.json",
+      "manifest_sha256": "69cf1cd4d889ebb955f0181adfcec40399e74461192dd4cb0170a94465f7c13d",
+      "role": "P003-R01",
+      "source_equals_reference_sha256": true,
+      "profile_replacement": false
+    },
+    "english_ru_reference_trial": {
+      "status": "LC-046: A54 rejected for reverberant quality on all vowels",
+      "manifest": "exports/P003/neural-tuning/seed-english-ru-reference-v1/assembly.json",
+      "manifest_sha256": "ef63de9b9ae13a25b0713cd86ab479cfebb8ead80eccbccf9e2c0ed76cfad0ec",
+      "reference_manifest": "exports/P003/voice-profiles/ru-solo-v1/manifest.json",
+      "reference_manifest_sha256": "67bb86146a0b68943da266bfc25ca6d6c1e2a9f2b4f1feee02dd82474911d85c",
+      "profiles": [
+        {
+          "role": "P003-R01",
+          "source": "exports/P003/ru-song/v1/P003-R01-vocal.wav",
+          "source_sha256": "dfb1cbfcdedbbc5aca7f9cbd96c137924cc5c6b4fd7e475f73bb998322821a78",
+          "file": "P003-R01-reference.wav",
+          "sha256": "dfb1cbfcdedbbc5aca7f9cbd96c137924cc5c6b4fd7e475f73bb998322821a78",
+          "status": "candidate solo audio reference; same original singer; no English identity acceptance"
+        },
+        {
+          "role": "P003-R02",
+          "source": "exports/P003/ru-song/v1/P003-R02-vocal.wav",
+          "source_sha256": "181b130063585726313166dc2f83d7c8a220cb483697a0858556b21262988b36",
+          "file": "P003-R02-reference.wav",
+          "sha256": "181b130063585726313166dc2f83d7c8a220cb483697a0858556b21262988b36",
+          "status": "candidate solo audio reference; same original singer; no English identity acceptance"
+        }
+      ],
+      "steps": 100,
+      "cfg": 0,
+      "diffusion_precision": "float32",
+      "seed_per_phrase": 23,
+      "same_English_guides_as": "P003-A48",
+      "old_profiles_preserved": true
+    }
+  },
+  "actor_identity_model": {
+    "id": "P003-VOICE-BORISOV",
+    "profile": "pilots/P003/borisov-profile.json",
+    "external_profile": "exports/P003/voice-profiles/borisov-v1/profile.json",
+    "external_profile_sha256": "2e34691fea20794e34c2d6c9c9cb23c7ed9358e6496a1e429ff753bc651294bd",
+    "actor": "Олег Борисов",
+    "character_id": "golokhvostyi",
+    "basis": "LC-047 user correction and published performer metadata; character credit CR001",
+    "status": "LC-048: original-reference foundation accepted; new English performance pending",
+    "role_semantics": "R01 Borisov active; R02 Grudinin per user attribution, separate actor profile deferred",
+    "papa_identity": "LC-052 supersedes Borisov modulation hypothesis: Valentin Grudinin, bass, per user. LC-053: not currently processed",
+    "source_preference": {
+      "primary_track": "ru",
+      "basis": "LC-049 user: historically cleaner Russian track; Borisov voiced both original versions",
+      "same_actor_for_uk_ru_speech": true
+    },
+    "english_trial": {
+      "status": "LC-051: A58 rejected for buzzing and unintelligible shop",
+      "manifest": "exports/P003/neural-tuning/seed-english-borisov-v1/assembly.json",
+      "manifest_sha256": "9357beea575ccd9e40b80da25f2def5bf61f1998d5d4e071dc122ef25deb05a9",
+      "primary_reference_id": "P003-B01",
+      "same_reference_for_both_lanes": true,
+      "low_modulation_applied": false,
+      "ASR": "exports/P003/neural-tuning/seed-english-borisov-v1/asr.txt",
+      "ASR_sha256": "f8d13d73337ba59ee51b353ca23dde78bb78fca1303ea1970e1d3d605da79b5f",
+      "ASR_scope": "possible intelligibility losses; no listening approval"
+    },
+    "track_specific_articulation": {
+      "basis": "LC-050 user: UK version may have distinctive Щ and other sounds",
+      "handling": "Same actor identity; retain UK-specific articulation as a separate track/delivery feature, not a universal actor-timbre property",
+      "english_policy": "Primary RU speech reference; English guide/text define target articulation; cross-language accent transfer remains a listening check"
+    },
+    "direct_score_trial": {
+      "status": "LC-052 rejected for khhh at has/heart and trembling open A; R02 not in current scope",
+      "manifest": "exports/P003/neural-tuning/seed-direct-score-v1/assembly.json",
+      "manifest_sha256": "4fe4180082c86640d319a44661c0609e410d0f1d51718bae1cfa8d24e14924da",
+      "method": "natural spoken semantic features warped to score durations; direct score F0; no WORLD waveform",
+      "reference_id": "P003-B01",
+      "reference_cache_unchanged": true,
+      "ASR": "exports/P003/neural-tuning/seed-direct-score-v1/asr.txt",
+      "ASR_sha256": "6369f7f206ae608a0165ce03f0de3ba35c1b8332118bacccc1fc86bf612b6cb3",
+      "limitations": [
+        "Approximate Piper phone windows and editorial closure masks",
+        "ASR reads shop but confuses warm and kind",
+        "Buzz/timbre/word accuracy not listening-approved",
+        "Some R02 output-F0 estimates octave-ambiguous"
+      ]
+    },
+    "current_scope": "Borisov-only diagnostics, including full-third-verse single-actor audition; Grudinin profile deferred",
+    "borisov_vowel_repair": {
+      "status": "LC-054: h works; open/semi-open A flutter remains; A64 whole recording rejected",
+      "active_scope": "Borisov R01 only",
+      "manifest": "exports/P003/neural-tuning/seed-borisov-h-boundary-v1/assembly.json",
+      "manifest_sha256": "93f3d893901c7b7548ae19151177bfaaa39fba55f3afdee68bfd503d8c9f9b76",
+      "control_qa": "exports/P003/neural-tuning/seed-borisov-vowel-fix-v1/assembly.json",
+      "reference_id": "P003-B01",
+      "mask_bug_fixed": true,
+      "old_unvoiced_vowel_nucleus_frames": {
+        "has": 39,
+        "heart": 4
+      },
+      "new_unvoiced_vowel_nucleus_frames": {
+        "has": 0,
+        "heart": 0
+      },
+      "ASR_scope": "still inaccurate; no listening approval",
+      "low_singer_rendered": false
+    },
+    "vowel_am_control": {
+      "status": "proposed; A66/A67",
+      "manifest": "exports/P003/neural-tuning/borisov-vowel-envelope-v1/manifest.json",
+      "manifest_sha256": "c82193bc2c1ae62d9e6724dccddf188693de7973ddd409a96c113505aa9b0c2e",
+      "method": "local amplitude-only causal diagnostic; no new neural generation",
+      "h_and_outside_PCM_exact": true,
+      "pitch_corrected": false,
+      "active_scope": "Borisov R01 only",
+      "interpretation": "AM reduced numerically; no claim that F0/formant flutter or perceived trembling is removed",
+      "latest_feedback": "LC-055: has clear, heart flutter remains, warm and kind unintelligible; A/B block unspecified"
+    },
+    "full_verse3_trial": {
+      "status": "LC-057: A69 rejected for intelligibility and remaining trembling; A68 dry not independently reviewed",
+      "manifest": "exports/P003/neural-tuning/borisov-verse3-full-v1/assembly.json",
+      "manifest_sha256": "7539a631727b254199aee949762ba39c7204571b8f96dd560c7190dbcd5759bd",
+      "scope": "single Borisov diagnostic performance of all four lines; not final casting",
+      "reference_id": "P003-B01",
+      "one_contiguous_neural_context": true,
+      "GPU_strategy": "Whisper/RMVPE then CFM then BigVGAN on CUDA; inactive modules parked on CPU",
+      "GPU_peak_allocated_MB": 2102.28369140625,
+      "generation_seconds_excluding_input_preparation": 56.21709418296814,
+      "ASR": "exports/P003/neural-tuning/borisov-verse3-full-v1/asr.txt",
+      "ASR_sha256": "4bd38706c3e2136d878fef6361cc3e97908e8024cbd32e80151bedabd32932e4",
+      "listening_approval": false,
+      "Grudinin_voice_synthesized": false
+    }
+  },
+  "superseded_role_mapping_note_before_LC047": "User clarification maps the low voice by father/shop lyrics; do not infer that four reel regions equal the user numeric labels.",
+  "research_handoff": {
+    "file": "pilots/P003/research-handoff.md",
+    "status": "context prepared at explicit user request; no new researcher or background generation started",
+    "failed_trials_included": true,
+    "current_scope": "Borisov only; Grudinin deferred"
+  },
+  "superseded_role_mapping_note_LC047": "LC-047: R01/R02 are performance lanes. One Borisov actor profile; papa same-actor modulation remains possible, not proven. Other polyphonic assignments remain unresolved. Historical experiments below retain original metadata."
+}
