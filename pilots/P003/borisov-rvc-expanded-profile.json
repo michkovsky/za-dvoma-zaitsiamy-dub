@@ -36,5 +36,6 @@
     "First two test stanzas excluded from training",
     "Audio-to-audio conversion; not text-only singing",
     "Full portable build not verified"
-  ]
+  ],
+  "diagnostics": "pilots/P003/rvc-diagnostics-v1.json"
 }
